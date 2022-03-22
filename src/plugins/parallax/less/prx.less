@@ -1,0 +1,26 @@
+.prx-down(@type, @to, @rule, @acc: "&[data-@{type}='-']", @i: 1) when (@i <= @to) {
+  .prx-down(@type, @to, @rule, "@{acc},&[data-@{type}='@{i}']", @i + 1);
+}
+
+.prx-down(@type, @to, @rule, @acc, @i) when (@i > @to) {
+  @tmp: ~"@{acc}";
+  @{tmp} { @rule(); }
+}
+
+.prx-up(@type, @to, @rule, @acc: "&[data-@{type}='+']", @i: 9) when (@i >= @to) {
+  .prx-up(@type, @to, @rule, "@{acc},&[data-@{type}='@{i}']", @i - 1);
+}
+
+.prx-up(@type, @to, @rule, @acc, @i) when (@i < @to) {
+  @tmp: ~"@{acc}";
+  @{tmp} { @rule(); }
+}
+
+.progress-up(@to, @rule) { .prx-up("p", @to, @rule); }
+.progress-down(@to, @rule) { .prx-down("p", @to, @rule); }
+
+.intro-up(@to, @rule) { .prx-up("i", @to, @rule); }
+.intro-down(@to, @rule) { .prx-down("i", @to, @rule); }
+
+.outro-up(@to, @rule) { .prx-up("o", @to, @rule); }
+.outro-down(@to, @rule) { .prx-down("o", @to, @rule); }
