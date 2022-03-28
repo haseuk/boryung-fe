@@ -10,24 +10,43 @@ Vue.use(Meta);
 const routes = [
   {
     path: '/',
-    component: page('/home')
-  },
-  {
-    path: 'about',
-    component: page('/about')
-  },
-  {
-    path: 'main',
-    component: page('/main')
+    component: page('/Main')
   },
   {
     path: 'ceo',
-    component: page('/ceo')
-  }
-  ,
+    component: page('/Ceo')
+  },
+  {
+    path: 'our-mission',
+    component: page('/OurMission')
+  },
+  {
+    path: 'our-history',
+    component: page('/OurHistory')
+  },
+  {
+    path: 'main',
+    component: page('/Main')
+  },
   {
     path: 'reports',
-    component: page('/reports')
+    component: page('/Reports')
+  },
+  {
+    path: 'news',
+    component: page('/News')
+  },
+  {
+    path: 'news-detail',
+    component: page('/NewsDetail')
+  },
+  {
+    path: 'care',
+    component: page('/Care')
+  },
+  {
+    path: 'link',
+    component: page('/Link')
   }
 ]
 

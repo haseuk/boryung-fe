@@ -1,6 +1,7 @@
 <template>
   <div id="app" :class="[lang, touch ? 'touch' : 'no-touch', fetching]">
     <AppHeader />
+    <SideNavBar />
     <scroll-holder container-class="scroll-container" body-class="scroll-body">
       <router-view/>
     </scroll-holder>
@@ -11,9 +12,10 @@
 <script>
 import AppHeader from '@/views/common/AppHeader';
 import AppFooter from "@/views/common/AppFooter";
+import SideNavBar from "@/views/common/SideNavBar";
 export default {
   name: 'App',
-  components: {AppFooter, AppHeader },
+  components: {SideNavBar, AppFooter, AppHeader },
   data() {
     return {
     };
@@ -42,4 +44,16 @@ export default {
 <style lang="less">
 @import "~@/less/common";
 #app { color:#2d2d2f; }
+@media screen and(min-width:1200px) {
+  #app {
+    &:after { .cnt; .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-670); }
+  }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>
