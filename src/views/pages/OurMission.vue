@@ -1,5 +1,5 @@
 <template>
-  <div mission>
+  <div mission :class="{ready}">
     <h2>Our Mission.</h2>
     <p class="top-tit">언제 어디서나,<br class="mo">누구나 행복한 삶을 누릴 수 있도록<br>
       <em>인류의 건강을 위해 꼭 필요한<br class="mo"> 헬스케어 기업이 되겠습니다.</em>
@@ -34,9 +34,11 @@ export default {
   name: 'Mission',
   data() {
     return {
+      ready:true,
     };
   },
   mounted() {
+    setTimeout(() =>{ this.ready = false },500)
   },
 };
 </script>
@@ -48,14 +50,15 @@ export default {
 
 [mission] { .fs(0); .mt(140); .tc;
   .mo { .ib; }
-  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70); }
+  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70);}
   .top-tit { .fs(30); .medium; color:#2d2d2f; .ls(-0.05em);
     em { .fs(48); }
   }
   .bg-tit { .fs(120); .lh(150); color:#e3d7cb; .bold; .ls(-0.05em); opacity: 0.4; }
   .core-values { .mt(127);
     .c-tit { .fs(48); .semi-bold; .ls(-0.05em); .w(252); .ib; .bgc(#fff); .rel;
-      &:after { .cnt; .bgc(#e3d7cb); .wh(650,1); .abs; .lt(50%,50%); .ml(-325); z-index: -1; }
+      &:before { .cnt; .wh(252,100%); .bgc(#fff); .abs; .lt(50%,0); .ml(-126); z-index: -1; }
+      &:after { .cnt; .bgc(#e3d7cb); .wh(650,1); .abs; .lt(50%,50%); .ml(-325); z-index: -2; }
     }
     ul { .mt(75);
       li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(40);
@@ -64,6 +67,19 @@ export default {
         &:last-child:after { .t(-15); }
       }
     }
+  }
+  h2, .top-tit, .bg-tit, .c-tit, li { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  .top-tit { transition-delay: 1s; }
+  .bg-tit { transition-delay: 1.4s; opacity: 0.4; }
+  .c-tit { transition-delay: 1.8s; }
+  li {
+    &:nth-child(1) { transition-delay: 2.2s; }
+    &:nth-child(2) { transition-delay: 2.6s; }
+    &:nth-child(3) { transition-delay: 3.0s; }
+    &:nth-child(4) { transition-delay: 3.4s; }
+  }
+  &.ready {
+    h2, .top-tit, .bg-tit, .c-tit, li { opacity: 0; transform: translateY(100%); transition: all 1s; }
   }
 }
 @media screen and(min-width: 1200px) {

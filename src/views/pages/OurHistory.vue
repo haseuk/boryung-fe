@@ -1,5 +1,5 @@
 <template>
-  <div history>
+  <div history :class="{ready}">
     <h2>Our History.</h2>
     <ul>
       <li><p class="tit">2020 ~</p></li>
@@ -50,9 +50,11 @@ export default {
   name: 'History',
   data() {
     return {
+      ready: true,
     };
   },
   mounted() {
+    setTimeout(() =>{ this.ready = false },500)
   },
 };
 </script>
@@ -77,6 +79,15 @@ export default {
         &.txt { .fs(24); }
       }
     }
+  }
+  h2, ul { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  ul {
+    &:nth-of-type(1) { transition-delay: 1s; }
+    &:nth-of-type(2) { transition-delay: 1.4s; }
+    &:nth-of-type(3) { transition-delay: 1.8s; }
+  }
+  &.ready {
+    h2, ul { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {

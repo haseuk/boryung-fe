@@ -1,5 +1,5 @@
 <template>
-  <div detail>
+  <div detail :class="{ready}">
     <h2>News.</h2>
     <div class="news-visual"><img src="/images/mo/img4.png" alt=""></div>
     <div class="v-tit">보령제약, 조현병 치료제 ‘자이프렉사’ 국내 권리 인수</div>
@@ -27,7 +27,7 @@
       <br>
       보령제약 장두현 대표이사는 “자이프렉사 인수로 CNS 치료제 사업의 새로운 도약의 계기를 마련하게 됐다”며 “앞으로도 보령제약의 성장에 기여할 수 있는 제품을 지속적으로 인수하기 위해, 국내외에서 임상적 가치를 인정받으며 치료제 시장을 리딩하고 있는 다수의 제품을 검토하고 있다”고 말했다.
     </div>
-    <RouterLink to="/ko/news"><img src="/images/mo/before.png" alt="">List</RouterLink>
+    <RouterLink to="news" class="list-go"><img src="/images/mo/before.png" alt="">List</RouterLink>
   </div>
 </template>
 
@@ -35,8 +35,13 @@
 export default {
   name: "NewsDetail",
   data() {
-    return {}
-  }
+    return {
+      ready: true,
+    }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500)
+  },
 }
 </script>
 
@@ -52,8 +57,16 @@ export default {
   }
   .v-tit { .fs(30); .lh(37); .bold; color:#3b3b3c; .ls(-0.05em); .mt(48); }
   .v-txt { .fs(24); .lh(30); color:#a29992; .mt(40); .p(25,0,50); .-box; .-t(#a29992); .-b(#a29992); }
-  a { .fs(30); .ls(-0.05em); .block; .mh-c; .mt(30); .tc;
+  .list-go { .fs(30); .ls(-0.05em); .block; .mh-c; .mt(30); .tc;
     img { .wh(28,24); .ib; pointer-events: none; .mr(25); }
+  }
+  h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  .news-visual { transition-delay: 1s; }
+  .v-tit { transition-delay: 2s; }
+  .v-txt { transition-delay: 2.6s; }
+  .list-go { transition-delay: 3.2s; }
+  &.ready {
+    h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {
@@ -62,7 +75,7 @@ export default {
     .news-visual { .w(800px); }
     .v-tit { .fs(24px); .lh(37px); .mt(30px); }
     .v-txt { .fs(16px); .lh(24px); .mt(24px); .p(45px,0,45px); }
-    a { .fs(30px); .mt(40px);
+    .list-go { .fs(30px); .mt(40px);
       img { .wh(28px,24px); .mr(20px); }
     }
   }

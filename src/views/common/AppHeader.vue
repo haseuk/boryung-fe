@@ -26,23 +26,23 @@
                 <RouterLink to="ceo">장두현 대표이사</RouterLink>
               </div>
             </li>
-            <li><a>Our<br class="web"> Mission</a></li>
-            <li><a>Our<br class="web"> History</a></li>
+            <li><RouterLink to="our-mission">Our<br class="web"> Mission</RouterLink></li>
+            <li><RouterLink to="our-history">Our<br class="web"> History</RouterLink></li>
             <li><a>Reports</a>
               <div class="depth">
-                <RouterLink to="report">연차보고서</RouterLink>
-                <RouterLink to="report">감사보고서</RouterLink>
-                <RouterLink to="report">IR</RouterLink>
+                <RouterLink to="reports">연차보고서</RouterLink>
+                <RouterLink to="reports">감사보고서</RouterLink>
+                <RouterLink to="reports">IR</RouterLink>
               </div>
             </li>
-            <li><a>News</a></li>
+            <li><RouterLink to="news">News</RouterLink></li>
             <li><a>Care In<br class="web"> Space</a>
               <div class="depth">
                 <RouterLink to="care">Intro</RouterLink>
                 <RouterLink to="care">CIS Challenge</RouterLink>
               </div>
             </li>
-            <li><a>Link to<br class="web"> Sub. Co.</a></li>
+            <li><RouterLink to="link">Link to<br class="web"> Sub. Co.</RouterLink></li>
           </ul>
           <a class="close" @click="gnb = false">닫기</a>
         </div>

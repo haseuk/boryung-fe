@@ -3,9 +3,9 @@
     <h2>{{ title }}</h2>
     <div class="select-box">
       <ul>
-        <li><a><i class="kr">{{ list1 }}</i></a></li>
-        <li><a><i class="kr">{{ list2 }}</i></a></li>
-        <li><a><i class="kr">{{ list3 }}</i></a></li>
+        <li v-if="list1"><a><i class="kr">{{ list1 }}</i></a></li>
+        <li v-if="list2"><a><i class="kr">{{ list2 }}</i></a></li>
+        <li v-if="list3"><a><i class="kr">{{ list3 }}</i></a></li>
       </ul>
     </div>
   </div>
@@ -21,7 +21,14 @@ export default {
     list3: { type: String, default: null },
   },
   data() {
-    return {}
+    return {
+    }
+  },
+  mounted() {
+
+  },
+  methods: {
+
   }
 }
 </script>

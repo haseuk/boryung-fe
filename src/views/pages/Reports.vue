@@ -1,5 +1,5 @@
 <template>
-  <div reports>
+  <div reports :class="{ready}">
     <SelectContent title="Reports" list1="연차보고서" list2="감사보고서" list3="IR"/>
     <div class="cont cont1">
       <table cellpadding="0" cellspacing="0" border="0">
@@ -124,9 +124,13 @@ export default {
   name: "reports",
   components: {Pagination, SelectContent},
   data() {
-    return {}
-  }
-
+    return {
+      ready: true,
+    }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500)
+  },
 }
 </script>
 
@@ -159,7 +163,7 @@ export default {
     }
     &.cont3 { .tc;
       ul {
-        li { .fs(36); .lh(48); .wh(295,142); .ib; .m(0,22,30,0); .-a(#a29992); .p(45,0,0,40); .-box; .rel; .tl; .ls(-0.05em);
+        li { .fs(36); .lh(48); .wh(48%,142); .ib; .m(0,4%,30,0); .-a(#a29992); .p(45,0,0,40); .-box; .rel; .tl; .ls(-0.05em);
           &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(28,62); pointer-events: none; }
           a { .f; }
           &:nth-child(even) { .mr(0); }
@@ -168,17 +172,12 @@ export default {
       .noti { .fs(24); color:#3b3b3c; .tl; }
     }
   }
-}
-@media screen and (min-width: 520px) {
-  [reports] {
-    .cont.cont3 {
-      ul {
-        li {
-          &:nth-child(even) { .mr(20); }
-          &:nth-child(3n) { .mr(0); }
-        }
-      }
-    }
+  h2, .select-box, .cont, [pagination] { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  .select-box { transition-delay: 0.8s; }
+  .cont { transition-delay: 1.6s; }
+  [pagination] { transition-delay: 2.4s; }
+  &.ready {
+    h2, .select-box, .cont, [pagination] { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {

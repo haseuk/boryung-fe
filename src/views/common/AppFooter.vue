@@ -2,7 +2,7 @@
   <div app-footer>
     <div class="inner">
       <div class="copy">03127 서울특별시 종로구 창경궁로 136 보령빌딩<br class="mo"> Copyright (C) 2022 by Boryung Co.,Ltd. All Rights Reserved.</div>
-      <a class="go-top">TOP</a>
+      <a class="go-top" @click="goTop">TOP</a>
     </div>
   </div>
 </template>
@@ -11,8 +11,15 @@
 export default {
   name: "AppFooter",
   data() {
-    return {}
+    return {
+    }
+  },
+  methods: {
+    goTop() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
   }
+
 }
 </script>
 

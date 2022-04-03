@@ -37,7 +37,7 @@ export default {
     fetching() { return this.$store.state.fetchingAsyncData && 'fetching'; },
   },
   methods: {
-  }
+  },
 }
 </script>
 

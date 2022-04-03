@@ -1,5 +1,5 @@
 <template>
-  <div ceo>
+  <div ceo :class="{ready}">
     <SelectContent title="CEO Letter." list1="김정균 대표이사" list2="장두현 대표이사"/>
     <div class="ceo-letter">
       <div class="cont cont1">
@@ -46,9 +46,12 @@ export default {
   components: {SelectContent},
   data() {
     return {
-
+      ready: true,
     }
-  }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500)
+  },
 }
 </script>
 
@@ -79,6 +82,27 @@ export default {
         .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
       }
     }
+  }
+  h2, .select-box, .cont .tit, .cont .txt p { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  .select-box { transition-delay: 0.8s; }
+  .cont .tit { transition-delay: 1.6s; }
+  .cont .txt p { transition-duration: 1s;
+    &:nth-child(1) { transition-delay: 3s; }
+    &:nth-child(2) { transition-delay: 3.3s; }
+    &:nth-child(3) { transition-delay: 3.6s; }
+    &:nth-child(4) { transition-delay: 3.9s; }
+    &:nth-child(5) { transition-delay: 4.2s; }
+    &:nth-child(6) { transition-delay: 4.5s; }
+    &:nth-child(7) { transition-delay: 4.8s; }
+    &:nth-child(8) { transition-delay: 5.1s; }
+    &:nth-child(9) { transition-delay: 5.4s; }
+    &:nth-child(10) { transition-delay: 5.7s; }
+    &:nth-child(11) { transition-delay: 6.0s; }
+    &:nth-child(12) { transition-delay: 6.3s; }
+    &:nth-child(13) { transition-delay: 6.6s; }
+  }
+  &.ready {
+    h2, .select-box, .cont .tit, .cont .txt p { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {
