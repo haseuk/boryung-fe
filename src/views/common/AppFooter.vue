@@ -28,21 +28,19 @@ export default {
 @use-rem: true;
 @rem: 32;
 [app-footer] { .wf; .rel; .pb(20); .-box; .mt(190);
-  .inner {
+  .inner { .p(0,20,0,70); .-box;
     .mo { .ib; }
-    &:after { .cnt; .wh(83vw,4); .bgc(#000); .abs; .lt(70,0); }
-    .copy { .fs(18); .lh(31); color:#a29992; .tl; .p(30,0,0,70); .-box; }
+    .copy { .fs(18); .lh(31); color:#a29992; .tl; .pt(30); .-box; .-t(#000,2px); }
     .go-top { .fs(20); .black; color:#3b3b3c; .tc; .wh(80,70); .-a(#3b3b3c,2px); .-box; .abs; .rt(20,-37); .pt(25); .bgc(#fff); z-index: 5;
       &:after { .cnt; .wh(17,10); .abs; .lt(30,14); .contain('/images/mo/go-top.png'); pointer-events: none; }
     }
   }
 }
 @media screen and(min-width:1200px) {
-  [app-footer] { .pb(0); .mt(0); .-t(#3b3b3c);
+  [app-footer] { .pb(0); .mt(0); .-t(#3b3b3c); z-index: 1;
     .inner { .max-w(1200px); .mh-c; .p(25px,0); .-box; .rel;
       .mo { .hide; }
-      &:after { .hide; }
-      .copy { .fs(14px); .lh(31px); .medium; .p(0); }
+      .copy { .fs(14px); .lh(31px); .medium; .p(0); .-t; }
       .go-top { .fs(20px); .wh(80px,70px); .-a(#3b3b3c,2px); .rt(-42px,-27px); .pt(25px);
         &:after { .wh(17px,10px); .lt(32px,14px); }
       }

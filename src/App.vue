@@ -44,11 +44,6 @@ export default {
 <style lang="less">
 @import "~@/less/common";
 #app { color:#2d2d2f; }
-@media screen and(min-width:1200px) {
-  #app {
-    &:after { .cnt; .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-670); }
-  }
-}
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }

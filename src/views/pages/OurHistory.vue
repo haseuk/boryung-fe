@@ -80,7 +80,7 @@ export default {
       }
     }
   }
-  h2, ul { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2, ul { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   ul {
     &:nth-of-type(1) { transition-delay: 1s; }
     &:nth-of-type(2) { transition-delay: 1.4s; }

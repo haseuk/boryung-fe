@@ -1,7 +1,7 @@
 <template>
   <div reports :class="{ready}">
     <SelectContent title="Reports" list1="연차보고서" list2="감사보고서" list3="IR"/>
-    <div class="cont cont1">
+    <div class="cont cont1" v-if="cont1">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -33,7 +33,7 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont2">
+    <div class="cont cont2" v-else-if="cont2">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -90,7 +90,7 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont3">
+    <div class="cont cont3" v-else>
       <ul>
         <li>
           <a>재무정보</a>
@@ -126,6 +126,9 @@ export default {
   data() {
     return {
       ready: true,
+      cont1: true,
+      cont2: false,
+      cont3: false
     }
   },
   mounted() {
@@ -172,7 +175,7 @@ export default {
       .noti { .fs(24); color:#3b3b3c; .tl; }
     }
   }
-  h2, .select-box, .cont, [pagination] { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont, [pagination] { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .select-box { transition-delay: 0.8s; }
   .cont { transition-delay: 1.6s; }
   [pagination] { transition-delay: 2.4s; }

@@ -68,7 +68,7 @@ export default {
       }
     }
   }
-  h2, .top-tit, .bg-tit, .c-tit, li { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2, .top-tit, .bg-tit, .c-tit, li { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .top-tit { transition-delay: 1s; }
   .bg-tit { transition-delay: 1.4s; opacity: 0.4; }
   .c-tit { transition-delay: 1.8s; }
@@ -79,7 +79,7 @@ export default {
     &:nth-child(4) { transition-delay: 3.4s; }
   }
   &.ready {
-    h2, .top-tit, .bg-tit, .c-tit, li { opacity: 0; transform: translateY(100%); transition: all 1s; }
+    h2, .top-tit, .bg-tit, .c-tit, li { opacity: 0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {
@@ -92,6 +92,7 @@ export default {
     .bg-tit { .fs(120px); .lh(150px); .mt(10px); }
     .core-values { .mt(150px);
       .c-tit { .fs(48px); .w(252px);
+        &:before { .cnt; .wh(252px,100%); .ml(-126px); }
         &:after { .wh(652px,1px); .lt(50%,50%); .ml(-326px); }
       }
       ul { .mt(75);

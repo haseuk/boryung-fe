@@ -2,7 +2,7 @@
   <div ceo :class="{ready}">
     <SelectContent title="CEO Letter." list1="김정균 대표이사" list2="장두현 대표이사"/>
     <div class="ceo-letter">
-      <div class="cont cont1">
+      <div class="cont cont1" v-if="cont1">
         <p class="tit"></p>
         <div class="txt">
           <p>2021년 보령의 제약사업은 전년대비 인상적인 성장을 이뤄낸 한 해 였습니다. 2020년 대비 별도 기준 매출액은 10%, 영업이익은 25% 성장하였고, 이는 Covid-19라는 환경 속에서 단발성 호재가 아닌 사업 자체의 경쟁력을 바탕으로 이룬 결과 이기에 더욱이 그렇다고 생각합니다. 보령컨슈머헬스케어와의 연결 기준으로는 성장률이 둔화되어 보이지만, 회사의 미래 성장을 위한 공격적인 투자에 바탕을 둔 결과이기에, 2022년부터는 연결 기준의 실적도 의미 있는 성장을 해나갈 것입니다. 2022년은 보령의 주력인 제약사업은 장두현 대표님을 필두로 이루어진 훌륭한 경영진을 바탕으로 견조한 성장 기조를 이어 갈 것이라고 생각하며, 장두현 대표님의 Annual Letter에 제약 사업에 대한 보다 자세한 내용이 담겨 있으니, 읽어 보실 것을 추천 드립니다.</p>
@@ -17,7 +17,7 @@
           <p class="sign">㈜ 보령 대표이사 김정균 <img src="/images/mo/sign1.png" alt=""></p>
         </div>
       </div>
-      <div class="cont cont2">
+      <div class="cont cont2" v-else>
         <p class="tit"></p>
         <div class="txt">
           <p>보령 제약사업부문은 지난해 ‘코로나19’ 인한 경영 환경 악화 속에서도 괄목할만한 재무적 성과를 이뤄냈습니다. 2021년 실적을 보면, 매출은 5444억원으로 전년 대비 10% 성장하였고, 영업이익 또한 501억원으로 24% 성장하며, 매출과 영업이익 모두 창사 이래 사상 최대 실적을 기록했습니다.</p>
@@ -47,11 +47,15 @@ export default {
   data() {
     return {
       ready: true,
+      cont1: true,
+      cont2: false
     }
   },
   mounted() {
     setTimeout(() =>{ this.ready = false },500)
   },
+  methods: {
+  }
 }
 </script>
 
@@ -83,7 +87,7 @@ export default {
       }
     }
   }
-  h2, .select-box, .cont .tit, .cont .txt p { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont .tit, .cont .txt p { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .tit { transition-delay: 1.6s; }
   .cont .txt p { transition-duration: 1s;

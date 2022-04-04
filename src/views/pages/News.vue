@@ -61,7 +61,7 @@ export default {
       .l-txt { .fs(24); color:#a29992; .ls(-0.025em); .wf; overflow: hidden; text-overflow: ellipsis; display: -webkit-inline-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word;  }
     }
   }
-  h2,  ul li, [pagination] { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2,  ul li, [pagination] { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   ul li {
     &:nth-child(1) { transition-delay: 1s; }
     &:nth-child(2) { transition-delay: 1.6s; }

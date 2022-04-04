@@ -1,11 +1,11 @@
 <template>
-  <div care>
+  <div care :class="{ready}">
     <SelectContent title="Care In Space" list1="Intro" list2="CIS Challenge"/>
-    <div class="cont cont1">
+    <div class="cont cont1" v-if="cont1">
       <div class="vision">
         <p class="bg-tit">Vision</p>
         <p class="tit">We <b>Care</b><br class="mo"> More Humanity<br> <b>in Space</b></p>
-        <ul>
+        <ul class="vision-ul">
           <li>우주 환경에서 발생할 수 있는<br class="mo"> 다양한 Healthcare 관점의 문제 해결에 대한 접근</li>
           <li>기존 Human Health 관련<br class="mo"> 미 연구 분야에 대한 확장 및 투자</li>
           <li>다양한 건강 상태의 사람들을<br class="mo"> 더 많이 우주에 보낼 수 있게 하는 연구</li>
@@ -53,13 +53,13 @@
         </li>
       </ul>
     </div>
-    <div class="cont cont2">
+    <div class="cont cont2" v-else>
       <p class="tit">국제CIS챌린지란?</p>
       <p class="txt">
         국제CIS챌린지 (Care in Space Challenge)는 최초의 제약/헬스케어 분야 스타트업 엑셀러레이터 프로그램(accelerator program)으로서 현재 우주에서 실현가능한 사업분야 확장을 목표로 삼고 있으며, 제약, 헬스케어 업계와 우주산업 사이의 간극 메우기 위해 노력할 것입니다. 이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트(Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.
         이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다. 프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL)증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객관관리, 차기 투자 유치 등을 지원하고, 프로그램 참여 팀들은 스타버스트의 대규모 글로벌 네트워크 접근성을 얻게 되고, 스타버스트, 보령, 액시엄의 운영진, 저명한 항공우주 기업가, 투자자, 기업파트너, 학술연구가 등으로 구성된 우주산업 생태계의 일원이 될 것입니다.
       </p>
-      <ul>
+      <ul class="cont2-ul">
         <li>
           <b>Accelerator program</b>
           스타트업을 위한 창업기획 / 지원프로그램
@@ -103,9 +103,14 @@ export default {
   components: {SelectContent},
   data() {
     return {
-
+      ready: true,
+      cont1: true,
+      cont2: false
     }
-  }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500)
+  },
 }
 </script>
 
@@ -124,7 +129,7 @@ export default {
         .tit { .fs(72); .lh(74); .light; .ls(-0.05em); .mb(100);
           b { .bold; }
         }
-        ul { .mt(75);
+        .vision-ul { .mt(75);
           li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(40);
             &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-25); .ml(-11); }
           }
@@ -174,7 +179,7 @@ export default {
     &.cont2 { .tl;
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
       .txt { .fs(24); .lh(36); .ls(-0.05em); .medium; }
-      ul { .mt(60);
+      .cont2-ul { .mt(60);
         li { .fs(24); .medium; .ls(-0.05em); .mb(35);
           b { .fs(30); .lh(42); .bold; .block; }
         }
@@ -183,6 +188,25 @@ export default {
         img { .wh(372,45); }
       }
     }
+  }
+
+  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  .select-box { transition-delay: 0.8s; }
+  .cont .bg-tit { transition-delay: 1.6s; }
+  .cont .tit { transition-delay: 2.0s; }
+  .vision-ul { transition-delay: 2.4s; }
+  .divs li {
+    &:nth-child(1) { transition-delay: 2.8s; }
+    &:nth-child(2) { transition-delay: 3.2s; }
+    &:nth-child(3) { transition-delay: 3.6s; }
+    &:nth-child(4) { transition-delay: 4.0s; }
+  }
+  .cont2 .tit { transition-delay: 1.6s; }
+  .cont2 .txt { transition-delay: 2.0s; }
+  .cont2-ul { transition-delay: 2.4s; }
+  .care-logo { transition-delay: 2.8s; }
+  &.ready {
+    h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {

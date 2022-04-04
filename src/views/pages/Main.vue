@@ -37,12 +37,12 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-
+[app-header] header .h-inner .logo { .hide; }
 [main] { .fs(0); .h(1313); .pt(275); .-box;
   .inner {
-    h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: all 1.3s; transition-timing-function: ease-in-out; }
+    h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1.3s, transform 1.3s; transition-timing-function: ease-in-out; }
     .page-link { .tl; .abs; .lt(50%,456); .ml(-52);
-      li { .fs(54); .ls(-0.05em); opacity: 1; transition-duration: 1.5s;
+      li { .fs(54); .ls(-0.05em); opacity: 1; transition: opacity 1.5s;
         &:nth-child(1) { transition-delay: 1.0s; }
         &:nth-child(2) { transition-delay: 1.6s; }
         &:nth-child(3) { transition-delay: 1.2s; }
@@ -53,18 +53,24 @@ export default {
         &:last-child { color:#a29992; }
       }
     }
-    .home { .wh(330,100); .tl; .abs; .lt(50%,1069); .ml(-52); transform: translateY(0); overflow: hidden; opacity: 1; transition-delay: 2.8s; transition-duration: 1s; transition-timing-function: ease-in-out;
+    .home { .wh(330,100); .tl; .abs; .lt(50%,1069); .ml(-52); overflow: hidden; opacity: 1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-delay: 2.8s; transition-timing-function: ease-in-out;
       a { .fs(30); .ls(-0.025em); .bold; .lh(96); .f; .-a(#2d2d2f,2px); .-box; .ib; .pl(25); .rel;
         &:after { .cnt; .wh(35,20); .contain('/images/mo/arr-r.png'); .abs; .rt(25,40); }
       }
     }
-    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transition-delay: 3.4s; transition-duration: 1.2s; transition-timing-function: ease-in-out;  }
+    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-in-out;  }
 
     &.ready {
       .h1, .home { transform: translateY(100%); opacity: 0; }
       .page-link li { opacity: 0; }
       .v-bg { opacity:0; .l(-13.2vw); }
     }
+  }
+}
+[app-footer] { .mt(0);
+  .inner {
+    &:after { .hide; }
+    .go-top { .hide; }
   }
 }
 @media screen and(min-width:1200px) {
@@ -82,9 +88,8 @@ export default {
           &:after {  .wh(35px,20px); .rt(25px,38px); }
         }
       }
-      .v-bg { .hide; }
+      .v-bg { .wh(170px,1141px); .contain('/images/pc/boryung-ver.png'); .fix; .lt(50%,32px); .ml(-670px); }
     }
-
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div link>
+  <div link :class="{ready}">
     <h2>Link to Sub. Co.</h2>
     <a class="boryung"><img src="/images/mo/boryung-xs.png" alt=""></a>
     <ul class="other-link">
@@ -15,8 +15,13 @@
 export default {
   name: "Link",
   data() {
-    return {}
-  }
+    return {
+      ready: true,
+    }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500)
+  },
 }
 </script>
 
@@ -26,7 +31,7 @@ export default {
 @rem: 32;
 
 [link] { .fs(0); .p(0,70); .-box; .mt(140); .tl; .rel;
-  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70); }
+  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); }
   .boryung { .w(86%); .p(37,0); .-box; .-t(#2d2d2f,2px); .-b(#2d2d2f,2px); .ib; .rel;
     img { .wh(303,45); }
     &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); pointer-events: none; .abs; .rt(10,58); }
@@ -34,6 +39,7 @@ export default {
   .other-link { .w(86%); .pl(21%); .-box; .mt(80);
     li { .wh(100%,63); .rel; .mb(56);
       &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(5,42);  }
+      &:last-child:after { .hide; }
       a { .wh(100%,63); .rel;
         &:after { .cnt; .wh(240,63); }
         &.br-health:after { .contain('/images/mo/br-health.png'); }
@@ -42,6 +48,18 @@ export default {
         &.recuon:after { .contain('/images/mo/recuon.png'); }
       }
     }
+  }
+  h2, .boryung, .other-link li { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2 { transition-delay: 0.8s; }
+  .boryung { transition-delay: 1.6s; }
+  .other-link li {
+    &:nth-child(1) { transition-delay: 2.0s; }
+    &:nth-child(2) { transition-delay: 2.4s; }
+    &:nth-child(3) { transition-delay: 2.8s; }
+    &:nth-child(4) { transition-delay: 3.2s; }
+  }
+  &.ready {
+    h2, .boryung, .other-link li { opacity:0; transform: translateY(100%); }
   }
 }
 @media screen and(min-width: 1200px) {
