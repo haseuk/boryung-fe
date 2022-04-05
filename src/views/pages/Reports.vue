@@ -114,6 +114,7 @@
       <p class="noti">* Pharma Home > IR 세부페이지가 새탭으로 열립니다.</p>
     </div>
     <Pagination />
+    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -175,42 +176,49 @@ export default {
       .noti { .fs(24); color:#3b3b3c; .tl; }
     }
   }
-  h2, .select-box, .cont, [pagination] { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  .v-bg { .hide; }
+
+  h2, .select-box, .cont, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .select-box { transition-delay: 0.8s; }
   .cont { transition-delay: 1.6s; }
   [pagination] { transition-delay: 2.4s; }
+  .v-bg { transform: translateX(0); transition-delay: 3.0s; }
   &.ready {
     h2, .select-box, .cont, [pagination] { opacity:0; transform: translateY(100%); }
+    .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }
-@media screen and(min-width: 1200px) {
-  [reports] { .p(0); .mt(287px); .max-w(1200px); .mh-c; .pb(320px);
-    .cont { .pl(60px); .-box;
-      table { .w(820px);
+@media screen and(min-width: 1240px) {
+  [reports] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+    [select-cont] { .pl(0);
+      .select-box { .r(0); }
+    }
+    .cont {
+      table { .w(820);
         tbody tr {
-          &:nth-child(1) td { .pt(25px); }
-          &:last-child td { .pb(30px); }
+          &:nth-child(1) td { .pt(25); }
+          &:last-child td { .pb(30); }
         }
         tr {
-          th { .fs(20px); .p(20px,0); }
-          td { .fs(20px); .p(15px,0);
+          th { .fs(20); .p(20,0); }
+          td { .p(15,0);
             .down {
-              img { .wh(60px,45px); .pr(20px); }
+              img { .pr(20); }
             }
           }
         }
       }
       &.cont3 {
-        ul { .w(725px);
-          li { .fs(36px); .lh(48px); .wh(345px,142px); .m(0,32px,29px,0); .p(45px,0,0,40px);
-            &:after { .wh(56px,20px); .rt(48px,62px); }
-            &:nth-child(even) { .mr(0); }
-            &:nth-child(3) { .mr(32px); }
+        ul { .w(725);
+          li { .wh(345,142); .m(0,32,29,0);
+            &:after { .rt(48,62); }
+            &:nth-child(3) { .mr(32); }
           }
         }
-        .noti { .fs(18px); .mt(5px); }
+        .noti { .fs(18); .mt(5); }
       }
     }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
 }
 </style>

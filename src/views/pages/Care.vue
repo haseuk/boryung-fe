@@ -93,6 +93,7 @@
         <img src="/images/mo/care-logo.png" alt="">
       </div>
     </div>
+    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -121,7 +122,7 @@ export default {
 
 [care] { .fs(0); .p(0,70); .-box; .mt(140); .rel;
   .mo { .ib; }
-  &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
+  &:after { .cnt; .wh(100vw,147.87vw); background: url('/public/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
   .cont { .tl;
     &.cont1 { .tc;
       .vision { .mb(180);
@@ -189,8 +190,10 @@ export default {
       }
     }
   }
+  .v-bg { .hide; }
 
-  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+
+  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .bg-tit { transition-delay: 1.6s; }
   .cont .tit { transition-delay: 2.0s; }
@@ -201,80 +204,68 @@ export default {
     &:nth-child(3) { transition-delay: 3.6s; }
     &:nth-child(4) { transition-delay: 4.0s; }
   }
+  .v-bg { transform: translateX(0); transition-delay: 3.8s; }
+
   .cont2 .tit { transition-delay: 1.6s; }
   .cont2 .txt { transition-delay: 2.0s; }
   .cont2-ul { transition-delay: 2.4s; }
   .care-logo { transition-delay: 2.8s; }
   &.ready {
     h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100%); }
+    .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }
-@media screen and(min-width: 1200px) {
-  [care] { .p(0); .mt(287px); .max-w(1200px); .mh-c; .pb(320px);
+@media screen and(min-width: 1240px) {
+  [care] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+    [select-cont] { .pl(0);
+      .select-box { .r(0); }
+    }
     .mo { .hide; }
-    &:after { .h(984px); background: url('/images/pc/care-bg1.png') center top; .lt(50%,-287px); .ml(-50vw); }
-    .cont {
+    &:after { .h(984); background: url('/public/images/pc/care-bg1.png') center top; .lt(50%,-287); .ml(-50vw); }
+    .cont { .mt(20);
       &.cont1 {
-        .vision { .mb(120px);
-          .bg-tit { .fs(60px); .lh(72px); .mb(14px); }
-          .tit { .fs(60px); .lh(72px); .mb(100); }
-          ul { .mt(100px);
-            li { .fs(24px); .mb(38px);
-              &:after { .cnt; .wh(22px,22px); .m(-10px,0,0,-11px); }
+        .vision { .mb(120);
+          .bg-tit { .mb(14); }
+          .tit { .fs(60); .lh(72); .mb(100); }
+          ul { .mt(100);
+            li { .fs(24); .mb(38);
+              &:after { .cnt; .wh(22,22); .m(-10,0,0,-11); }
             }
           }
         }
         .divs {
-          li { .pb(135px);
-            .l-tit { .fs(48px); .w(250px); .mb(30px);
-              &:after { .wh(650px,1px); .ml(-325px); }
-            }
-            .txt { .fs(20px); .lh(30px); }
-
-            &:nth-child(1) {
-              .txt { .w(560px); }
-              .num { .fs(36px); .lh(36px); .w(70px); }
-              > div { .pl(20px);
-                &:nth-of-type(1) { .mb(35px); }
-              }
-            }
+          li { .pb(135);
+            .l-tit { .w(250); .mb(30); }
+            .txt { .fs(20); }
 
             &:nth-child(2) {
-              > div { .w(650px); .pl(20px); }
-              .date, .txt { .fs(20px); .lh(30px); }
-              .date { .w(170px); }
-              .txt { .w(460px); }
-            }
-            &:nth-child(3) {
-              .txt { .fs(36px); }
+              .date, .txt { .fs(20); }
             }
             &:nth-child(4) {
-              .txt { .lh(36px); }
-              .network { .max-w(612px); .mt(45px);
-                p { .fs(20px); .lh(28px);
-                  &:nth-of-type(1) { .lt(5px,50%); .mt(-110px); }
-                  &:nth-of-type(2) { .rt(0px,50%); .mt(-110px); }
-                  &:nth-of-type(3) { .lt(5px,50%); .mt(50px); }
-                  &:nth-of-type(4) { .rt(0px,50%); .mt(50px); }
+              .network { .max-w(612); .mt(45);
+                p {
+                  &:nth-of-type(1) { .mt(-110); }
+                  &:nth-of-type(2) { .mt(-110); }
+                  &:nth-of-type(3) { .mt(50); }
+                  &:nth-of-type(4) { .mt(50); }
                 }
               }
             }
           }
         }
       }
-      &.cont2 { .w(860px); .pl(60px); .-box;
-        .tit { .fs(36px); .lh(50px); .mb(15px); }
-        .txt { .fs(18px); .lh(30px); }
-        ul { .mt(30px);
-          li { .fs(18px); .lh(32px); .mb(5px);
-            b { .fs(24px); .lh(32px); .ib; .mr(10px); }
+      &.cont2 { .w(860); .pl(60); .-box;
+        .tit { .fs(36); .lh(50); .mb(15); }
+        .txt { .fs(18); .lh(30); }
+        .cont2-ul { .mt(30);
+          li { .fs(18); .lh(32); .mb(5);
+            b { .fs(24); .lh(32); .ib; .mr(10); }
           }
         }
-        .care-logo { .wh(610px,100px); .mt(40px); .p(28px,119px); .ib;
-          img { .wh(372px,45px); }
-        }
+        .care-logo { .mt(40); }
       }
     }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
 }
 </style>

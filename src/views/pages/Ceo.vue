@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -87,7 +88,7 @@ export default {
       }
     }
   }
-  h2, .select-box, .cont .tit, .cont .txt p { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont .tit, .cont .txt p, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .tit { transition-delay: 1.6s; }
   .cont .txt p { transition-duration: 1s;
@@ -105,32 +106,36 @@ export default {
     &:nth-child(12) { transition-delay: 6.3s; }
     &:nth-child(13) { transition-delay: 6.6s; }
   }
+  .v-bg { transform: translateX(0); transition-delay: 4.0s; }
   &.ready {
     h2, .select-box, .cont .tit, .cont .txt p { opacity:0; transform: translateY(100%); }
+    .v-bg { opacity:0; transform: translateX(-100%); }
   }
+  .v-bg { .hide; }
 }
-@media screen and(min-width: 1200px) {
-  [ceo] { .p(0); .mt(287px); .pb(320px);
-    .ceo-letter { .max-w(1200px); .pl(60px); .-box; .mh-c; .mt(0);
+@media screen and(min-width: 1240px) {
+  [ceo] { .p(180,0); .mt(0);
+    .ceo-letter { .max-w(1240); .p(0,40,0,60); .-box; .mh-c; .mt(0);
       .cont {
-        .txt { .fs(18px); .lh(36px); .mt(32px); .keep-all;
-          p { .mb(40px);
-            &.date { .fs(24px); .m(10px,0,0); }
-            &.sign { .fs(24px); .mt(10px); .semi-bold; }
+        .txt { .fs(18); .lh(36); .mt(32); .keep-all;
+          p { .mb(40);
+            &.date { .fs(24); .m(10,0,0); }
+            &.sign { .fs(24); .mt(10); .semi-bold; }
           }
         }
         &.cont1 {
-          .tit { .wh(596px,52px); .contain('/images/pc/ceo-img1.png'); }
-          .txt .sign { .mt(-10px);
-            img { .wh(196px,110px); .m(-25px,0,0,25px); }
+          .tit { .wh(596,52); .contain('/images/pc/ceo-img1.png'); }
+          .txt .sign { .mt(-10);
+            img { .wh(196,110); .m(-25,0,0,25); }
           }
         }
         &.cont2 {
-          .tit { .wh(708px,53px); .contain('/images/pc/ceo-img1.png'); }
-          .txt .sign img { .wh(82px,33px); .ib; .vam; .m(-15px,0,0,25px); }
+          .tit { .wh(708,53); .contain('/images/pc/ceo-img1.png'); }
+          .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
         }
       }
     }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
 }
 </style>

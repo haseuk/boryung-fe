@@ -26,6 +26,7 @@
         </li>
       </ul>
     </div>
+    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -68,41 +69,47 @@ export default {
       }
     }
   }
-  h2, .top-tit, .bg-tit, .c-tit, li { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .top-tit, .bg-tit, .c-tit, ul li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
   .top-tit { transition-delay: 1s; }
   .bg-tit { transition-delay: 1.4s; opacity: 0.4; }
   .c-tit { transition-delay: 1.8s; }
-  li {
-    &:nth-child(1) { transition-delay: 2.2s; }
-    &:nth-child(2) { transition-delay: 2.6s; }
-    &:nth-child(3) { transition-delay: 3.0s; }
-    &:nth-child(4) { transition-delay: 3.4s; }
+  ul {
+    li {
+      &:nth-child(1) { transition-delay: 2.2s; }
+      &:nth-child(2) { transition-delay: 2.6s; }
+      &:nth-child(3) { transition-delay: 3.0s; }
+      &:nth-child(4) { transition-delay: 3.4s; }
+    }
   }
+  .v-bg { transform: translateX(0); transition-delay: 3.8s; }
   &.ready {
-    h2, .top-tit, .bg-tit, .c-tit, li { opacity: 0; transform: translateY(100%); }
+    h2, .top-tit, .bg-tit, .c-tit, ul li { opacity: 0; transform: translateY(100%); }
+    .v-bg { opacity:0; transform: translateX(-100%); }
   }
+  .v-bg { .hide; }
 }
 @media screen and(min-width: 1200px) {
-  [mission] { .p(0); .mt(287px); .max-w(1200px); .mh-c; .pb(320px);
+  [mission] { .p(180,40,180,60); .max-w(1240); .-box; .mh-c; .mt(0);
     .mo { .hide; }
-    h2 { .fs(80px); .lh(80px); .mb(105px); .ml(60px); }
-    .top-tit { .fs(24px);
-      em { .fs(36px); .mt(13px); .ib; }
+    h2 { .lh(80); .mb(105); .ml(0); }
+    .top-tit { .fs(24);
+      em { .fs(36); .mt(13); .ib; }
     }
-    .bg-tit { .fs(120px); .lh(150px); .mt(10px); }
-    .core-values { .mt(150px);
-      .c-tit { .fs(48px); .w(252px);
-        &:before { .cnt; .wh(252px,100%); .ml(-126px); }
-        &:after { .wh(652px,1px); .lt(50%,50%); .ml(-326px); }
+    .bg-tit { .fs(120); .lh(150); .mt(10); }
+    .core-values { .mt(150);
+      .c-tit { .fs(48); .w(252);
+        &:before { .cnt; .wh(252,100%); .ml(-126); }
+        &:after { .wh(652,1); .lt(50%,50%); .ml(-326); }
       }
       ul { .mt(75);
-        li { .fs(30px); .mb(50px);
-          &:after { .cnt; .wh(22px,22px); .lt(50%,-10px); .ml(-11px); }
-          em { .fs(48px); .lh(67px); }
-          &:last-child:after { .t(-15px); }
+        li { .fs(30); .mb(50);
+          &:after { .cnt; .wh(22,22); .lt(50%,-10); .ml(-11); }
+          em { .fs(48); .lh(67); }
+          &:last-child:after { .t(-15); }
         }
       }
     }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
 }
 </style>

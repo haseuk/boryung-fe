@@ -1,11 +1,11 @@
 <template>
   <div id="app" :class="[lang, touch ? 'touch' : 'no-touch', fetching]">
-    <AppHeader />
-    <SideNavBar />
     <scroll-holder container-class="scroll-container" body-class="scroll-body">
+      <AppHeader />
+      <SideNavBar />
       <router-view/>
+      <AppFooter />
     </scroll-holder>
-    <AppFooter />
   </div>
 </template>
 
@@ -44,6 +44,14 @@ export default {
 <style lang="less">
 @import "~@/less/common";
 #app { color:#2d2d2f; }
+
+@media screen and(min-width:768px) {
+  html { font-size: 24px; }
+}
+@media screen and(min-width:1240px) {
+  html { font-size: 32px; }
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }

@@ -36,13 +36,16 @@ export default {
     }
   }
 }
-@media screen and(min-width:1200px) {
+@media screen and(min-width:768px) {
+  [app-footer] .inner .copy { .lh(24); }
+}
+@media screen and(min-width:1240px) {
   [app-footer] { .pb(0); .mt(0); .-t(#3b3b3c); z-index: 1;
-    .inner { .max-w(1200px); .mh-c; .p(25px,0); .-box; .rel;
+    .inner { .max-w(1240); .mh-c; .p(25,0); .-box; .rel;
       .mo { .hide; }
-      .copy { .fs(14px); .lh(31px); .medium; .p(0); .-t; }
-      .go-top { .fs(20px); .wh(80px,70px); .-a(#3b3b3c,2px); .rt(-42px,-27px); .pt(25px);
-        &:after { .wh(17px,10px); .lt(32px,14px); }
+      .copy { .fs(14); .medium; .p(0,0,0,60); .-t; }
+      .go-top { .fs(20); .wh(80,70); .-a(#3b3b3c,2); .lt(50%,-27); .ml(540); .pt(25);
+        &:after { .wh(17,10); .lt(32,14); }
       }
     }
   }

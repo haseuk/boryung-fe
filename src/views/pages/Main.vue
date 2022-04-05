@@ -58,38 +58,41 @@ export default {
         &:after { .cnt; .wh(35,20); .contain('/images/mo/arr-r.png'); .abs; .rt(25,40); }
       }
     }
-    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-in-out;  }
+    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-in-out;  }
 
     &.ready {
       .h1, .home { transform: translateY(100%); opacity: 0; }
       .page-link li { opacity: 0; }
-      .v-bg { opacity:0; .l(-13.2vw); }
+      .v-bg { opacity:0; transform: translateX(-100%); }
     }
   }
 }
 [app-footer] { .mt(0);
   .inner {
     &:after { .hide; }
+    .copy { .-t; }
     .go-top { .hide; }
   }
 }
-@media screen and(min-width:1200px) {
-  [main] { height: auto; .pt(330px); .tl;
-    .inner { .max-w(1200px); .mh-c; .pl(60px); .-box; .rel;
-      h1 { .wh(592px,89px); .contain('/images/pc/boryung.png'); .ib; }
-      .page-link { .rel; .lt; .ml(0); .mt(70px);
-        li { .fs(48px); .medium; .ls(-0.05em); .rel; .mb(5px);
-          a { .w(490px); .ib; }
-          &.news:after { .cnt; .wh(143px,20px); .contain('/images/pc/arr-r.png'); .abs; .lb(345px,0); }
+
+@media screen and(min-width:1240px) {
+  [main] { height: auto; .pt(220); .tl;
+    .inner { .max-w(1240); .mh-c; .pl(60); .-box; .rel;
+      h1 { .wh(592,89); .contain('/images/pc/boryung.png'); .ib; }
+      .page-link { .rel; .lt; .ml(0); .mt(70);
+        li { .fs(48); .medium; .rel; .mb(5);
+          a { .w(490); .ib; }
+          &.news:after { .cnt; .wh(143,20); .contain('/images/pc/arr-r.png'); .abs; .lb(345,0); }
         }
       }
-      .home { .wh(330px,100px); .tl; .abs; top:auto; .lb(50%,15px); .ml(270px);
-        a { .fs(30px); .lh(100px); .pl(30px);
-          &:after {  .wh(35px,20px); .rt(25px,38px); }
+      .home { top:auto; .rb(40,15);
+        a { .lh(100); .pl(30);
+          &:after { .rt(25,38); }
         }
       }
-      .v-bg { .wh(170px,1141px); .contain('/images/pc/boryung-ver.png'); .fix; .lt(50%,32px); .ml(-670px); }
+      .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(-70,-300); }
     }
   }
+  [app-footer] { .mt(110); }
 }
 </style>
