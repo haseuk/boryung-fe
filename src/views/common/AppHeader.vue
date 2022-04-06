@@ -60,6 +60,11 @@ export default {
       gnb: false,
     }
   },
+  watch: {
+    $route() {
+      this.gnb = false
+    }
+  },
   mounted() {
   }
 };
