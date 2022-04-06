@@ -27,7 +27,7 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-[app-footer] { .wf; .rel; .pb(20); .-box; .mt(190);
+[app-footer] { .wf; .rel; .pb(20); .-box;
   .inner { .p(0,20,0,70); .-box;
     .mo { .ib; }
     .copy { .fs(18); .lh(31); color:#a29992; .tl; .pt(30); .-box; .-t(#000,2px); }
@@ -36,9 +36,15 @@ export default {
     }
   }
 }
-@media screen and(min-width:768px) {
-  [app-footer] .inner .copy { .lh(24); }
+
+#app.home [app-footer] {
+  .inner {
+    &:after { .hide; }
+    .copy { .-t; }
+    .go-top { .hide; }
+  }
 }
+
 @media screen and(min-width:1240px) {
   [app-footer] { .pb(0); .mt(0); .-t(#3b3b3c); z-index: 1;
     .inner { .max-w(1240); .mh-c; .p(25,0); .-box; .rel;

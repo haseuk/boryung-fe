@@ -3,7 +3,9 @@
     <scroll-holder container-class="scroll-container" body-class="scroll-body">
       <AppHeader />
       <SideNavBar />
-      <router-view/>
+      <div content-holder>
+        <router-view/>
+      </div>
       <AppFooter />
     </scroll-holder>
   </div>
@@ -45,12 +47,18 @@ export default {
 <style lang="less">
 @import "~@/less/common";
 #app { color:#2d2d2f; }
+[content-holder] {
+  min-height: calc(100vh - 3rem);
+}
 
 @media screen and(min-width:768px) {
   html { font-size: 24px; }
 }
 @media screen and(min-width:1240px) {
   html { font-size: 32px; }
+  [content-holder] {
+    min-height: calc(100vh - 109px - 87px);
+  }
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -60,4 +68,6 @@ export default {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
+
+
 </style>
