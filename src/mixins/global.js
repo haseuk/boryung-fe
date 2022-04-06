@@ -12,7 +12,7 @@ export default {
       return this.$route.matched.reduce((acc, route) => ({...acc, ...route.meta}), {});
     },
     lang() {
-      return this.$store.state.route.params.lang || 'en';
+      return this.$store.state.route.params.lang || 'ko';
     },
   },
   methods: {

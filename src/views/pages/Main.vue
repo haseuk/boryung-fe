@@ -37,7 +37,6 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-[app-header] header .h-inner .logo { .hide; }
 [main] { .fs(0); .h(1313); .pt(275); .-box;
   .inner {
     h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }

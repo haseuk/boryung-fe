@@ -5,7 +5,7 @@ import createStore from '@/store';
 import { sync } from 'vuex-router-sync';
 import ssrMixin from '@/mixins/ssr';
 import globalMixin from '@/mixins/global';
-import lng from '@/plugins/lng';
+import i18n from '@/plugins/lng';
 import lngData from '@/lng-data';
 import prxData from '@/prx-data';
 import parallax from '@/plugins/parallax';
@@ -24,7 +24,7 @@ export default () => {
   const router = createRouter();
 
   Vue.use(modal);
-  Vue.use(lng, { data: lngData });
+  Vue.use(i18n, { data: lngData });
   Vue.use(scrollAgency, { store });
   Vue.use(parallax, { store, data: prxData, scrollAgency: Vue.prototype.$scroll, offset: { MS: 60, DM: 80 } });
 

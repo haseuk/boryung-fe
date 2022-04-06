@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="[lang, touch ? 'touch' : 'no-touch', fetching]">
+  <div id="app" :class="[lang, touch ? 'touch' : 'no-touch', fetching, home]">
     <scroll-holder container-class="scroll-container" body-class="scroll-body">
       <AppHeader />
       <SideNavBar />
@@ -35,6 +35,7 @@ export default {
   computed: {
     touch() { return this.$store.state.browser.touch; },
     fetching() { return this.$store.state.fetchingAsyncData && 'fetching'; },
+    home() { return this.$route.path === '/'+this.lang+'/' && 'home'; }
   },
   methods: {
   },

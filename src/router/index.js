@@ -14,6 +14,10 @@ const routes = [
   },
   {
     path: 'ceo',
+    redirect: 'ceo/kim'
+  },
+  {
+    path: 'ceo/:ceo(chang|kim)',
     component: page('/Ceo')
   },
   {
@@ -55,9 +59,9 @@ export default () => new VueRouter({
   scrollBehavior: () => null,
   base: process.env.BASE_URL,
   routes: [
-    { path: '/', redirect: '/en/' },
+    { path: '/', redirect: '/ko/' },
     {
-      path: '/:lang(en|ko|ja|zh)',
+      path: '/:lang(en|ko)',
       component: page('/language-root'),
       children: routes
     }

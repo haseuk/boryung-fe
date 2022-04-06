@@ -17,7 +17,7 @@ export default {
   props: {
     title: { type: String, default: null },
     list: { type: Array, default: null },
-    active: { type: String, default: null }
+    active: { type: null, default: null }
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 import LngLink from './components/LngLink';
 
 export default {
-  install(Vue, { data, fallback = 'en' }) {
+  install(Vue, { data, fallback = 'ko' }) {
     const translate = (key, lang, options) => {
       if (!key || key.length < 1) throw 'vue-lng : empty key';
       let i = 0, curr = data;

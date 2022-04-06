@@ -2,11 +2,11 @@
   <div app-header>
     <header>
       <div class="h-inner">
-        <a href="/" class="logo">BORYUNG</a>
+        <LngLink to="/" class="logo">BORYUNG</LngLink>
         <a class="menu" @click="gnb = true">메뉴열기</a>
         <div class="lang-ch">
-          <a class="eng-lang">ENG</a>
-          <a class="kr-lang">KR</a>
+          <a class="eng-lang" v-if="lang === 'ko'" @click="changeLang('en')">ENG</a>
+          <a class="kr-lang" v-if="lang === 'en'" @click="changeLang('ko')">KR</a>
         </div>
       </div>
     </header>
@@ -22,8 +22,8 @@
           <ul>
             <li><RouterLink to="ceo">CEO<br class="web"> Letter</RouterLink>
               <div class="depth">
-                <RouterLink to="ceo">김정균 대표이사</RouterLink>
-                <RouterLink to="ceo">장두현 대표이사</RouterLink>
+                <RouterLink to="ceo">{{ $t('gnb.ceo.kim') }}</RouterLink>
+                <RouterLink to="ceo">{{ $t('gnb.ceo.chang') }}</RouterLink>
               </div>
             </li>
             <li><RouterLink to="our-mission">Our<br class="web"> Mission</RouterLink></li>
@@ -65,6 +65,11 @@ export default {
       this.gnb = false
     }
   },
+  methods: {
+    changeLang(lang) {
+      this.$router.push({ params: { lang } });
+    }
+  },
   mounted() {
   }
 };
@@ -74,8 +79,8 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-
 [app-header] { .fs(0);
+  #app.home & header .h-inner .logo { .hide; }
   .web { .hide; }
   header { .rel; z-index: 20;
     .h-inner { .rel; .h(80);
@@ -107,9 +112,6 @@ export default {
       }
     }
   }
-}
-@media screen and(min-width:768px) {
-  html { font-size: 24px; }
 }
 @media screen and(min-width:1240px) {
   [app-header] {
