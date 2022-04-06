@@ -20,7 +20,7 @@
           </div>
           <h1>BORYUNG</h1>
           <ul>
-            <li><a>CEO<br class="web"> Letter</a>
+            <li><RouterLink to="ceo">CEO<br class="web"> Letter</RouterLink>
               <div class="depth">
                 <RouterLink to="ceo">김정균 대표이사</RouterLink>
                 <RouterLink to="ceo">장두현 대표이사</RouterLink>
@@ -28,7 +28,7 @@
             </li>
             <li><RouterLink to="our-mission">Our<br class="web"> Mission</RouterLink></li>
             <li><RouterLink to="our-history">Our<br class="web"> History</RouterLink></li>
-            <li><a>Reports</a>
+            <li><RouterLink to="reports">Reports</RouterLink>
               <div class="depth">
                 <RouterLink to="reports">연차보고서</RouterLink>
                 <RouterLink to="reports">감사보고서</RouterLink>
@@ -36,7 +36,7 @@
               </div>
             </li>
             <li><RouterLink to="news">News</RouterLink></li>
-            <li><a>Care In<br class="web"> Space</a>
+            <li><RouterLink to="care">Care In<br class="web"> Space</RouterLink>
               <div class="depth">
                 <RouterLink to="care">Intro</RouterLink>
                 <RouterLink to="care">CIS Challenge</RouterLink>
