@@ -81,7 +81,7 @@ export default {
       }
     }
   }
-  h2, ul li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, ul li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   ul li { transition: opacity 0.5s, transform 0.8s; }
   @li: 35;
   .loop(@i) when (@i > 0){
@@ -93,9 +93,9 @@ export default {
   .loop(@li);
   .v-bg { transition-delay: 3s; }
   &.ready {
-    h2 { opacity:0; transform: translateY(100%); }
+    h2 { opacity:0; transform: translateY(100px); }
     ul li.tit { opacity:0; transform: translateY(80%); }
-    ul li { opacity:0; transform: translateY(100%); }
+    ul li { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
   .v-bg { .hide; }

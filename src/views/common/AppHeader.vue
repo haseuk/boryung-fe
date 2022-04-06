@@ -20,29 +20,29 @@
           </div>
           <h1>BORYUNG</h1>
           <ul>
-            <li><RouterLink to="ceo">CEO<br class="web"> Letter</RouterLink>
+            <li><LngLink to="ceo">CEO<br class="web"> Letter</LngLink>
               <div class="depth">
-                <RouterLink to="ceo">{{ $t('gnb.ceo.kim') }}</RouterLink>
-                <RouterLink to="ceo">{{ $t('gnb.ceo.chang') }}</RouterLink>
+                <LngLink to="ceo">{{ $t('gnb.ceo.kim') }}</LngLink>
+                <LngLink to="ceo">{{ $t('gnb.ceo.chang') }}</LngLink>
               </div>
             </li>
-            <li><RouterLink to="our-mission">Our<br class="web"> Mission</RouterLink></li>
-            <li><RouterLink to="our-history">Our<br class="web"> History</RouterLink></li>
-            <li><RouterLink to="reports">Reports</RouterLink>
+            <li><LngLink to="our-mission">Our<br class="web"> Mission</LngLink></li>
+            <li><LngLink to="our-history">Our<br class="web"> History</LngLink></li>
+            <li><LngLink to="reports">Reports</LngLink>
               <div class="depth">
-                <RouterLink to="reports">연차보고서</RouterLink>
-                <RouterLink to="reports">감사보고서</RouterLink>
-                <RouterLink to="reports">IR</RouterLink>
+                <LngLink to="reports">연차보고서</LngLink>
+                <LngLink to="reports">감사보고서</LngLink>
+                <LngLink to="reports">IR</LngLink>
               </div>
             </li>
-            <li><RouterLink to="news">News</RouterLink></li>
-            <li><RouterLink to="care">Care In<br class="web"> Space</RouterLink>
+            <li><LngLink to="news">News</LngLink></li>
+            <li><LngLink to="care">Care In<br class="web"> Space</LngLink>
               <div class="depth">
-                <RouterLink to="care">Intro</RouterLink>
-                <RouterLink to="care">CIS Challenge</RouterLink>
+                <LngLink to="care">Intro</LngLink>
+                <LngLink to="care">CIS Challenge</LngLink>
               </div>
             </li>
-            <li><RouterLink to="link">Link to<br class="web"> Sub. Co.</RouterLink></li>
+            <li><LngLink to="link">Link to<br class="web"> Sub. Co.</LngLink></li>
           </ul>
           <a class="close" @click="gnb = false">닫기</a>
         </div>

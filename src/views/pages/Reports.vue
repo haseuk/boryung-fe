@@ -178,13 +178,13 @@ export default {
   }
   .v-bg { .hide; }
 
-  h2, .select-box, .cont, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
   .cont { transition-delay: 1.6s; }
   [pagination] { transition-delay: 2.4s; }
   .v-bg { transform: translateX(0); transition-delay: 3.0s; }
   &.ready {
-    h2, .select-box, .cont, [pagination] { opacity:0; transform: translateY(100%); }
+    h2, .select-box, .cont, [pagination] { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }

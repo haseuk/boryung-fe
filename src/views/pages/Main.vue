@@ -52,15 +52,15 @@ export default {
         &:last-child { color:#a29992; }
       }
     }
-    .home { .wh(330,100); .tl; .abs; .lt(50%,1069); .ml(-52); overflow: hidden; opacity: 1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-delay: 2.8s; transition-timing-function: ease-in-out;
+    .home { .wh(330,100); .tl; .abs; .lt(50%,1069); .ml(-52); overflow: hidden; opacity: 1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-delay: 2.8s; transition-timing-function: ease-out;
       a { .fs(30); .ls(-0.025em); .bold; .lh(96); .f; .-a(#2d2d2f,2px); .-box; .ib; .pl(25); .rel;
         &:after { .cnt; .wh(35,20); .contain('/images/mo/arr-r.png'); .abs; .rt(25,40); }
       }
     }
-    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-in-out;  }
+    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-out;  }
 
     &.ready {
-      .h1, .home { transform: translateY(100%); opacity: 0; }
+      .h1, .home { transform: translateY(100px); opacity: 0; }
       .page-link li { opacity: 0; }
       .v-bg { opacity:0; transform: translateX(-100%); }
     }

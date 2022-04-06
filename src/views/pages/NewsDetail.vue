@@ -60,13 +60,13 @@ export default {
   .list-go { .fs(30); .ls(-0.05em); .block; .mh-c; .mt(30); .tc;
     img { .wh(28,24); .ib; pointer-events: none; .mr(25); }
   }
-  h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-in-out; }
+  h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-out; }
   .news-visual { transition-delay: 1s; }
   .v-tit { transition-delay: 2s; }
   .v-txt { transition-delay: 2.6s; }
   .list-go { transition-delay: 3.2s; }
   &.ready {
-    h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:0; transform: translateY(100%); }
+    h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:0; transform: translateY(100px); }
   }
 }
 @media screen and(min-width: 1200px) {

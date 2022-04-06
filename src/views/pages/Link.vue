@@ -53,7 +53,7 @@ export default {
   .v-bg { .hide; }
 
 
-  h2, .boryung, .other-link li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .boryung, .other-link li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   h2 { transition-delay: 0.8s; }
   .boryung { transition-delay: 1.6s; }
   .other-link li {
@@ -64,7 +64,7 @@ export default {
   }
   .v-bg { transform: translateX(0); transition-delay: 3.8s; }
   &.ready {
-    h2, .boryung, .other-link li { opacity:0; transform: translateY(100%); }
+    h2, .boryung, .other-link li { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }

@@ -69,7 +69,7 @@ export default {
       }
     }
   }
-  h2, .top-tit, .bg-tit, .c-tit, ul li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .top-tit, .bg-tit, .c-tit, ul li, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .top-tit { transition-delay: 1s; }
   .bg-tit { transition-delay: 1.4s; opacity: 0.4; }
   .c-tit { transition-delay: 1.8s; }
@@ -83,7 +83,7 @@ export default {
   }
   .v-bg { transform: translateX(0); transition-delay: 3.8s; }
   &.ready {
-    h2, .top-tit, .bg-tit, .c-tit, ul li { opacity: 0; transform: translateY(100%); }
+    h2, .top-tit, .bg-tit, .c-tit, ul li { opacity: 0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
   .v-bg { .hide; }

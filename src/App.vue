@@ -61,6 +61,16 @@ export default {
   }
 }
 
+@media screen and(min-width:1600px) {
+  [app-header] { .pr(200) }
+  [content-holder] { .pr(200) }
+  [app-footer] { .pr(200) }
+}
+@media screen and(min-width:1800px) {
+  [app-header] { .pr(0) }
+  [content-holder] { .pr(0) }
+  [app-footer] { .pr(0) }
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;
 }

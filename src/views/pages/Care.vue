@@ -193,7 +193,7 @@ export default {
   .v-bg { .hide; }
 
 
-  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .bg-tit { transition-delay: 1.6s; }
   .cont .tit { transition-delay: 2.0s; }
@@ -211,7 +211,7 @@ export default {
   .cont2-ul { transition-delay: 2.4s; }
   .care-logo { transition-delay: 2.8s; }
   &.ready {
-    h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100%); }
+    h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }
