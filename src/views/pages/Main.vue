@@ -37,7 +37,7 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-[main] { .fs(0); .h(1313); .pt(275); .-box;
+[main] { .fs(0); .h(1313); .pt(275); .-box; .rel;
   .inner {
     h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
     .page-link { .tl; .abs; .lt(50%,456); .ml(-52);
@@ -57,7 +57,7 @@ export default {
         &:after { .cnt; .wh(35,20); .contain('/images/mo/arr-r.png'); .abs; .rt(25,40); }
       }
     }
-    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-out;  }
+    .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,32); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-out; }
 
     &.ready {
       .h1, .home { transform: translateY(100px); opacity: 0; }

@@ -15,8 +15,8 @@
         <div class="dim"></div>
         <div class="gnb-list">
           <div class="lang-ch">
-            <a class="eng-lang">ENG</a>
-            <a class="kr-lang">KR</a>
+            <a class="eng-lang" v-if="lang === 'ko'" @click="changeLang('en')">ENG</a>
+            <a class="kr-lang" v-if="lang === 'en'" @click="changeLang('ko')">KR</a>
           </div>
           <h1>BORYUNG</h1>
           <ul>
@@ -96,7 +96,7 @@ export default {
   .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30;
     .dim { .fix; .f; .lt; .bgc(#000); opacity: 0.85; }
     .gnb-list { .abs; .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,0,70); .-box; .tl;
-      .lang-ch { .abs; .rt(122,45);
+      .lang-ch { .abs; .rt(129,45);
         a { .fs(30); color:#a29992; .medium; }
       }
       h1 { .wh(367,56); .contain('/images/mo/boryung-s.png'); .mt(313); }
@@ -107,7 +107,7 @@ export default {
           }
         }
       }
-      .close { .wh(104,80); .abs; .rt;
+      .close { .wh(110,80); .abs; .rt;
         &:after { .cnt; .wh(38,38); .contain('/images/mo/x.png'); .abs; .rt(66,42); pointer-events: none; }
       }
     }

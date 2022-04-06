@@ -30,7 +30,7 @@ export default {
 [app-footer] { .wf; .rel; .pb(20); .-box;
   .inner { .p(0,20,0,70); .-box;
     .mo { .ib; }
-    .copy { .fs(18); .lh(31); color:#a29992; .tl; .pt(30); .-box; .-t(#000,2px); }
+    .copy { .fs(18); .lh(31); color:#a29992; .tl; .-t(#000,2px); }
     .go-top { .fs(20); .black; color:#3b3b3c; .tc; .wh(80,70); .-a(#3b3b3c,2px); .-box; .abs; .rt(20,-37); .pt(25); .bgc(#fff); z-index: 5;
       &:after { .cnt; .wh(17,10); .abs; .lt(30,14); .contain('/images/mo/go-top.png'); pointer-events: none; }
     }
