@@ -40,7 +40,7 @@ export default {
 [app-header] header .h-inner .logo { .hide; }
 [main] { .fs(0); .h(1313); .pt(275); .-box;
   .inner {
-    h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1.3s, transform 1.3s; transition-timing-function: ease-in-out; }
+    h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
     .page-link { .tl; .abs; .lt(50%,456); .ml(-52);
       li { .fs(54); .ls(-0.05em); opacity: 1; transition: opacity 1.5s;
         &:nth-child(1) { transition-delay: 1.0s; }

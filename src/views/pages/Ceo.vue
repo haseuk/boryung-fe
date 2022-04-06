@@ -1,8 +1,8 @@
 <template>
   <div ceo :class="{ready}">
-    <SelectContent title="CEO Letter." list1="김정균 대표이사" list2="장두현 대표이사"/>
-    <div class="ceo-letter">
-      <div class="cont cont1" v-if="cont1">
+    <SelectContent title="CEO Letter." :list="[{key: 'kim', label: '김정균 대표이사'}, {key: 'jang', label:'장두현 대표이사'}]" :active="active" @select="select"/>
+    <div class="ceo-letter" :class="{refresh}">
+      <div class="cont cont1" v-if="active === 'kim'">
         <p class="tit"></p>
         <div class="txt">
           <p>2021년 보령의 제약사업은 전년대비 인상적인 성장을 이뤄낸 한 해 였습니다. 2020년 대비 별도 기준 매출액은 10%, 영업이익은 25% 성장하였고, 이는 Covid-19라는 환경 속에서 단발성 호재가 아닌 사업 자체의 경쟁력을 바탕으로 이룬 결과 이기에 더욱이 그렇다고 생각합니다. 보령컨슈머헬스케어와의 연결 기준으로는 성장률이 둔화되어 보이지만, 회사의 미래 성장을 위한 공격적인 투자에 바탕을 둔 결과이기에, 2022년부터는 연결 기준의 실적도 의미 있는 성장을 해나갈 것입니다. 2022년은 보령의 주력인 제약사업은 장두현 대표님을 필두로 이루어진 훌륭한 경영진을 바탕으로 견조한 성장 기조를 이어 갈 것이라고 생각하며, 장두현 대표님의 Annual Letter에 제약 사업에 대한 보다 자세한 내용이 담겨 있으니, 읽어 보실 것을 추천 드립니다.</p>
@@ -17,7 +17,7 @@
           <p class="sign">㈜ 보령 대표이사 김정균 <img src="/images/mo/sign1.png" alt=""></p>
         </div>
       </div>
-      <div class="cont cont2" v-else>
+      <div class="cont cont2" v-if="active === 'jang'">
         <p class="tit"></p>
         <div class="txt">
           <p>보령 제약사업부문은 지난해 ‘코로나19’ 인한 경영 환경 악화 속에서도 괄목할만한 재무적 성과를 이뤄냈습니다. 2021년 실적을 보면, 매출은 5444억원으로 전년 대비 10% 성장하였고, 영업이익 또한 501억원으로 24% 성장하며, 매출과 영업이익 모두 창사 이래 사상 최대 실적을 기록했습니다.</p>
@@ -48,16 +48,23 @@ export default {
   data() {
     return {
       ready: true,
-      cont1: true,
-      cont2: false
+      refresh: true,
+      active: 'kim',
     }
   },
   mounted() {
-    setTimeout(() =>{ this.ready = false },500)
+    setTimeout(() => { this.ready = false },100)
+    setTimeout(() => { this.refresh = false },1600)
+  },
+  watch: {
+    active() {
+      this.refresh = true;
+      setTimeout(() => { this.refresh = false },200)
+    }
   },
   methods: {
     select(v) {
-      console.log(v)
+      this.active = v
     }
   }
 }
@@ -86,33 +93,29 @@ export default {
         }
       }
       &.cont2 {
-        .tit { .wh(604,44); .contain('/images/mo/ceo-img1.png'); }
+        .tit { .wh(604,44); .contain('/images/mo/ceo-img2.png'); }
         .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
       }
     }
   }
-  h2, .select-box, .cont .tit, .cont .txt p, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-in-out; }
+  h2, .select-box, .cont .tit, .cont .txt p, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
-  .cont .tit { transition-delay: 1.6s; }
-  .cont .txt p { transition-duration: 1s;
-    &:nth-child(1) { transition-delay: 3s; }
-    &:nth-child(2) { transition-delay: 3.3s; }
-    &:nth-child(3) { transition-delay: 3.6s; }
-    &:nth-child(4) { transition-delay: 3.9s; }
-    &:nth-child(5) { transition-delay: 4.2s; }
-    &:nth-child(6) { transition-delay: 4.5s; }
-    &:nth-child(7) { transition-delay: 4.8s; }
-    &:nth-child(8) { transition-delay: 5.1s; }
-    &:nth-child(9) { transition-delay: 5.4s; }
-    &:nth-child(10) { transition-delay: 5.7s; }
-    &:nth-child(11) { transition-delay: 6.0s; }
-    &:nth-child(12) { transition-delay: 6.3s; }
-    &:nth-child(13) { transition-delay: 6.6s; }
+  .cont .tit { transition: opacity 0.8s, transform 0.8s; }
+  .cont .txt p { transition: opacity 0.8s, transform 0.8s;
+    &:nth-child(1) { transition-delay: 0.4s; }
+    &:nth-child(2) { transition-delay: 0.7s; }
+    &:nth-child(3) { transition-delay: 1.0s; }
+    &:nth-child(4) { transition-delay: 1.3s; }
+    &:nth-child(5) { transition-delay: 1.6s; }
+    &:nth-child(n+6) { transition-delay: 1.9s; }
   }
   .v-bg { transform: translateX(0); transition-delay: 4.0s; }
   &.ready {
-    h2, .select-box, .cont .tit, .cont .txt p { opacity:0; transform: translateY(100%); }
+    h2, .select-box { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
+  }
+  .refresh {
+    .cont .tit, .cont .txt p { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
   }
   .v-bg { .hide; }
 }
@@ -133,7 +136,7 @@ export default {
           }
         }
         &.cont2 {
-          .tit { .wh(708,53); .contain('/images/pc/ceo-img1.png'); }
+          .tit { .wh(708,53); .contain('/images/pc/ceo-img2.png'); }
           .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
         }
       }
