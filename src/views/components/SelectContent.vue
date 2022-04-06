@@ -31,7 +31,7 @@ export default {
   methods: {
     listToggle() {
       this.isOpen = !this.isOpen
-    }
+    },
   }
 }
 </script>

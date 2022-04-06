@@ -56,6 +56,9 @@ export default {
     setTimeout(() =>{ this.ready = false },500)
   },
   methods: {
+    select(v) {
+      console.log(v)
+    }
   }
 }
 </script>
