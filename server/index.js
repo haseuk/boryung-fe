@@ -20,10 +20,9 @@ const serve = (urlPath, cache) => express.static(resolve(urlPath), { maxAge: cac
 const getLanguageFromHeader = req => (/^(?:ko|ja|zh|en)/.exec(req.header('Accept-Language')) || ['en'])[0];
 
 server.use('/css', serve('../dist/css', true));
-server.use('/img', serve('../dist/img', true));
-server.use('/font', serve('../dist/font', true));
+server.use('/images', serve('../dist/images', true));
+server.use('/fonts', serve('../dist/fonts', true));
 server.use('/js', serve('../dist/js', true));
-server.use('/video', serve('../dist/video', true));
 server.use('/favicon.ico', serve('../dist/favicon.ico', true));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
 

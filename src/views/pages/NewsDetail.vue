@@ -27,7 +27,7 @@
       <br>
       보령제약 장두현 대표이사는 “자이프렉사 인수로 CNS 치료제 사업의 새로운 도약의 계기를 마련하게 됐다”며 “앞으로도 보령제약의 성장에 기여할 수 있는 제품을 지속적으로 인수하기 위해, 국내외에서 임상적 가치를 인정받으며 치료제 시장을 리딩하고 있는 다수의 제품을 검토하고 있다”고 말했다.
     </div>
-    <RouterLink to="news" class="list-go"><img src="/images/mo/before.png" alt="">List</RouterLink>
+    <LngLink to="/news" class="list-go"><img src="/images/mo/before.png" alt="">List</LngLink>
   </div>
 </template>
 
