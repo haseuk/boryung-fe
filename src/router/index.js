@@ -10,7 +10,7 @@ Vue.use(Meta);
 const routes = [
   {
     path: '/',
-    component: page('/Main')
+    component: page('/Home')
   },
   {
     path: 'ceo',

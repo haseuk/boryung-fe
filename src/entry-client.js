@@ -102,5 +102,5 @@ router.onReady(async () => {
   await prepComponentsInitial(router.getMatchedComponents(), router.currentRoute, initialData, restoreData);
 
   browser.sync(store);
-  app.$mount('#app');
+  app.$mount('#app')
 });
