@@ -1,6 +1,6 @@
 <template>
   <div care :class="{ready, refresh}">
-    <SelectContent title="Care In Space" :list="selectList" :active="active" @select="select"/>
+    <SelectContent title="Care In Space." :list="selectList" :active="active" @select="select"/>
     <div class="cont cont1" v-if="active === 'cont1'">
       <div class="vision">
         <p class="bg-tit">Vision</p>
@@ -77,7 +77,7 @@
             <p class="date">2021. Jan.-Dec.</p><p class="txt"> Networking and partnership forged with aerospace partners at home and abroad</p>
           </div>
           <div>
-            <p class="date">２022. Feb.</p><p class="txt"> Axiom Space partnership signed and investment executed</p>
+            <p class="date">2022. Feb.</p><p class="txt"> Axiom Space partnership signed and investment executed</p>
           </div>
           <div>
             <p class="date">2022. Apr.</p><p class="txt"> Opening of CIS Challenge</p>
@@ -101,41 +101,75 @@
       </ul>
     </div>
     <div class="cont cont2" v-if="active === 'cont2'">
-      <p class="tit">국제CIS챌린지란?</p>
-      <p class="txt">국제CIS챌린지 (Care in Space Challenge)는 최초의 제약/헬스케어 분야 스타트업 엑셀러레이터 프로그램(accelerator program)으로서 현재 우주에서 실현가능한 사업분야 확장을 목표로 삼고 있으며, 제약, 헬스케어 업계와 우주산업 사이의 간극 메우기 위해 노력할 것입니다. 이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트(Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.</p>
-      <p class="txt">이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다. 프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL)증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객관관리, 차기 투자 유치 등을 지원하고, 프로그램 참여 팀들은 스타버스트의 대규모 글로벌 네트워크 접근성을 얻게 되고, 스타버스트, 보령, 액시엄의 운영진, 저명한 항공우주 기업가, 투자자, 기업파트너, 학술연구가 등으로 구성된 우주산업 생태계의 일원이 될 것입니다.</p>
-      <ul class="cont2-ul">
-        <li>
-          <b>Accelerator program</b>
-          스타트업을 위한 창업기획 / 지원프로그램
-        </li>
-        <li>
-          <b>Axiom Space</b>
-          미국 우주탐사 / 관광 스타트업(민간 우주정거장건설예정)
-        </li>
-        <li>
-          <b>Starburst</b>
-          글로벌 항공우주 스타트업 엑셀러레이터
-        </li>
-        <li>
-          <b>Demo day</b>
-          스타트업홍보, 투자유치를 위한 행사
-        </li>
-        <li>
-          <b>Project milestone</b>
-          프로젝트 중 중요 이정표 수립
-        </li>
-        <li>
-          <b>Technology Readiness Level</b>
-          (TRL, 기술성숙도)
-        </li>
-        <li>
-          <b>Product-Market Fit</b>
-          (PMF, 제품시장적합성)
-        </li>
-      </ul>
-      <div class="care-logo">
-        <img src="/images/mo/care-logo.png" alt="">
+      <div class="c-ko">
+        <p class="tit">CIS Challenge.</p>
+        <div class="txt">
+          <p class="top">개요</p>
+          <p>CIS Challenge는 최초의 제약/헬스케어 분야 스타트업 엑셀러레이터 프로그램으로서 현재 우주에서 실현 가능한 사업 분야 확장을 목표로 삼고 있습니다.</p>
+          <p>최근 기술의 발달로 우주 탐사 비용이 감소하면서 제약/헬스케어 분야에서 무중력의 이점을 활용할 수 있는 기회들이 열리고 있습니다. 또한 가까운 미래에 행성간 여행을 포함한 스페이스 투어가 현실화되고 이를 뒷받침할 민간 우주 관련 기업들이 대거 출현할 것으로 예상됩니다. 이에 따라 우주에서의 인간의 활동이 더욱 활발해질 것이고 이때 자연스럽게 발생할 수 있는 다양한 건강 상태들에 대해 선제적으로 고민해 볼 시점입니다.</p>
+          <p>CIS Challenge를 통한 창의적이고 기술력 있는 우주 스타트업들의 참여로 이 모든 문제들에 대한 해법을 모색하려고 합니다.</p>
+        </div>
+        <div class="txt">
+          <p class="top">진행 절차</p>
+          <p><i></i><b>참가자 선정</b></p>
+          <div class="step">
+            <span>신청서 제출</span>
+            <span>서류 심사</span>
+            <span>프레젠테이션</span>
+            <span>10팀 선정</span>
+          </div>
+          <p class="sub"><i></i><b>Starburst 엑셀러레이터 프로그램 운영(13주)</b></p>
+          <p>투자금 10만달러 부여, 프로젝트 마일스톤 설정, 기술력 및 제품 발굴을 위한 맞춤 교육, 고객관리, 차기 투자유치 등 지원</p>
+          <p class="sub"><i></i><b>CIS 데모데이(2022년 12월 생중계)</b></p>
+        </div>
+        <div class="txt">
+          <p class="top">일정</p>
+          <p>2022년 4월 18일부터 7월18일까지(13주간)</p>
+        </div>
+        <div class="txt">
+          <p class="top">파트너</p>
+          <p><em>(주)보령</em>이 주관하며 우주 탐사 / 관광 전문기업 <b>Axiom Space</b>, 글로벌 항공우주 스타트업 엑셀러레이터 <b>Starburst</b>가 함께 합니다. </p>
+        </div>
+<!--        <ul class="cont2-ul">-->
+<!--          <li>-->
+<!--            <b>Accelerator program</b>-->
+<!--            스타트업을 위한 창업기획 / 지원프로그램-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Axiom Space</b>-->
+<!--            미국 우주탐사 / 관광 스타트업(민간 우주정거장건설예정)-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Starburst</b>-->
+<!--            글로벌 항공우주 스타트업 엑셀러레이터-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Demo day</b>-->
+<!--            스타트업홍보, 투자유치를 위한 행사-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Project milestone</b>-->
+<!--            프로젝트 중 중요 이정표 수립-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Technology Readiness Level</b>-->
+<!--            (TRL, 기술성숙도)-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <b>Product-Market Fit</b>-->
+<!--            (PMF, 제품시장적합성)-->
+<!--          </li>-->
+<!--        </ul>-->
+      </div>
+      <div class="c-en">
+        <p class="tit">WHAT IS THE INTERNATIONAL<br class="web"> CARE IN SPACE CHALLENGE?</p>
+        <p class="txt txt1">The International Care In Space (CIS) Challenge is a first-of-its-kind startup accelerator program that will challenge the status quo of what is currently possible in space. The program will seek to bridge the gap between the pharmaceutical industry, healthcare broadly, and space. Boryung, Axiom Space, and Starburst are strategically coming together to offer aspiring entrepreneurs and participating startup companies the opportunity to receive admission into a 13-week accelerator program along with a $100,000 equity investment that will help bring healthcare manufacturing capabilities into space aboard an Axiom Spacecraft.<br><br></p>
+        <p class="txt txt2">The program is designed to equip companies with the skills, connections, and expertise they need to successfully develop and grow their businesses. The program is composed of lectures, workshops, pitch practice sessions, networking opportunities, and special events, culminating with a demo day. Each team selected for the program will receive personalized instruction and engage with industry leaders, subject matter experts, potential partners, customers, and investors. CIS will helps teams set milestones, advance Technology Readiness Level, define product-market fit, build customer relationships, and secure their next round of funding. Teams will have access to Starburst’s extensive global network and become part of an ecosystem that includes Starburst, Boryung, and Axiom's executive teams, established aerospace entrepreneurs, investors, corporate partners, customers, academic researchers, and more</p>
+      </div>
+      <div class="care-logo c-en">
+        <a href="https://asher735.wixsite.com/cis-20222" target="_blank">
+          <img src="/images/mo/care-logo.png" alt="">
+        </a>
       </div>
     </div>
   </div>
@@ -187,8 +221,9 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[care] { .fs(0); .p(0,70); .-box; .m(140,0); .rel;
+[care] { .fs(0); .p(0,70); .rel; .mt(140); .pb(140); .-box;
   .mo { .ib; }
+  .web { .hide; }
   &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
   .cont { .tl;
     &.cont1 { .tc;
@@ -246,14 +281,30 @@ export default {
     }
     &.cont2 { .tl;
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
-      .txt { .fs(24); .lh(36); .ls(-0.05em); .medium; }
+      .txt { .mb(50);
+        p { .fs(24); .lh(36); .ls(-0.05em); .medium;
+          &.top { .lh(28); .-l(#2d2d2f); .-r(#2d2d2f); .p(0,20); .-box; .ib; .mb(10); }
+          i { .wh(7,7); .br(50%); .bgc(#e3d7cb); .ib; .vam; .mr(10); }
+          &.sub { .mt(30); }
+          em { .bold; }
+        }
+        .step {
+          span { .fs(18); color:#2d2d2f; .ib; .p(8,15); .-a(#e3d7cb); .-box; .mr(28); .rel;
+            &:after { .cnt; .wh(14,23); .contain('/images/mo/arrow-r.png'); .abs; .rt(-23,10); }
+            &:last-child { .mr(0);
+              &:after { .hide; }
+            }
+          }
+        }
+      }
       .cont2-ul { .mt(60);
         li { .fs(24); .medium; .ls(-0.05em); .mb(35);
           b { .fs(30); .lh(42); .bold; .block; }
         }
       }
-      .care-logo { .wh(610,100); .block; .mt(80); .bgc(#000); .p(28,119); .-box;
-        img { .wh(372,45); }
+      .care-logo { .wh(610,100); .block; .mt(80); .bgc(#000); .rel;
+        a { .wh(610,100); .ib; .pointer; .abs; .lt; }
+        img { .wh(372,45); .abs; .lt(50%,50%); transform: translate(-50%,-50%); }
       }
     }
   }
@@ -271,10 +322,10 @@ export default {
     &:nth-child(4) { transition-delay: 2.1s; }
   }
 
-  .cont2 p {
-    &:nth-child(1) {transition-delay: 0.4s; }
-    &:nth-child(2) {transition-delay: 0.7s; }
-    &:nth-child(3) {transition-delay: 1.0s; }
+  .cont2 {
+    .tit {transition-delay: 0.4s; }
+    .txt1 { transition-delay: 0.7s; }
+    .txt2 { transition-delay: 1.0s; }
   }
   .cont2-ul { transition-delay: 1.3s; }
   .care-logo { transition-delay: 1.6s; }
@@ -291,7 +342,7 @@ export default {
     &.c-ko { .block; }
     &.c-en { .hide; }
   }
-  &.en [care] { .p(0,50);
+  &.en [care] { .p(0,50,140);
     [select-cont] { .pl(20); .-box; }
     .cont .divs {
       &.c-ko { .hide; }
@@ -309,7 +360,8 @@ export default {
       .select-box { .r(0); }
     }
     .mo { .hide; }
-    &:after { .h(984); background: url('/images/pc/care-bg1.png') center top; .lt(50%,-287); .ml(-50vw); }
+    .web { .ib; }
+    &:after { .h(984); background: url('/images/pc/care-bg1.png') center top; .lt(50%,-109); .ml(-50vw); }
     .cont { .mt(20);
       &.cont1 {
         .vision { .mb(120);
@@ -343,8 +395,8 @@ export default {
           }
         }
       }
-      &.cont2 { .w(860);
-        .tit { .fs(36); .lh(50); .mb(15); }
+      &.cont2 {
+        .tit { .fs(36); .lh(50); .mb(25); }
         .txt { .fs(18); .lh(30); }
         .cont2-ul { .mt(30);
           li { .fs(18); .lh(32); .mb(5);
@@ -358,8 +410,13 @@ export default {
   #app {
     &.en [care] {
       [select-cont] { .pl(0); }
-      .cont.cont1 .divs li {
-        > div { .pl(0);  }
+      .cont.cont1 .divs li { width:auto; .mh-c;
+        > div { .pl(240); .tl;
+          .txt { .w(670); }
+        }
+        &:nth-child(2) > div { width:auto;
+          .txt { .w(730); }
+        }
         &:nth-child(4) .network p:nth-of-type(4) { .mt(25); }
       }
     }

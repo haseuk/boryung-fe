@@ -30,8 +30,8 @@
             <li><LngLink to="our-history">Our<br class="web"> History</LngLink></li>
             <li><LngLink to="reports">Reports</LngLink>
               <div class="depth">
-                <LngLink to="reports">연차보고서</LngLink>
-                <LngLink to="reports">감사보고서</LngLink>
+                <LngLink to="reports">{{ $t('gnb.reports.cont1') }}</LngLink>
+                <LngLink to="reports">{{ $t('gnb.reports.cont2') }}</LngLink>
                 <LngLink to="reports">IR</LngLink>
               </div>
             </li>
@@ -88,7 +88,7 @@ export default {
       .menu { .wh(110,80); .abs; .rt; .pointer;
         &:after { .cnt; .wh(60,24); .contain('/images/mo/ham.png'); .abs; .lb; pointer-events: none; }
       }
-      .lang-ch { .abs; .rt(129,45);
+      .lang-ch { .abs; .rt(129,49);
         a { .fs(30); color:#a29992; .medium; }
       }
     }
@@ -122,7 +122,7 @@ export default {
         .menu { .wh(60,109); .r(40);
           &:after { .wh(60,24); }
         }
-        .lang-ch { .abs; .rt(125,76);
+        .lang-ch { .abs; .rt(125,79);
           a { .lh(36); }
         }
       }

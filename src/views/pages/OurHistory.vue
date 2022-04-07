@@ -62,7 +62,7 @@
       <li><p class="date">2017. 10</p><p class="txt">60th anniversary celebrated</p></li>
       <li><p class="date">2017. 04</p><p class="txt">Boryung’s subsidiary established in China</p></li>
       <li><p class="date">2017. 03</p><p class="txt">Construction start of new factory in Yesan</p></li>
-      <li><p class="date">2016. 09</p><p class="txt">Participated in 26th Seoul Meeting of International Society of Hypertension (Five solo symposiums held)</p></li>
+      <li><p class="date">2016. 09</p><p class="txt">Participated in 26th Seoul Meeting of International Society of Hypertension (Five solo<br class="web"> symposiums held)</p></li>
       <li><p class="date">2014. 12</p><p class="txt">Kanarb selected as “World Class Product” (Ministry of Commerce, KOTRA)</p></li>
       <li><p class="date">2011. 03</p><p class="txt">Kanarb, Korea’s first antihypertensive drug, launched</p></li>
       <li><p class="date">2010. 12</p><p class="txt">Boryung’s annual revenue hit KRW300bn</p></li>
@@ -102,7 +102,8 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[history] { .fs(0); .p(0,70); .-box; .m(140,0);
+[history] { .fs(0); .p(0,70); .-box; .mt(140); .pb(140); .-box;
+  .web { .hide; }
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   ul {
     &:last-child { .mb(0); }
@@ -152,6 +153,7 @@ export default {
 }
 @media screen and(min-width: 1240px) {
   [history] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
+    .web { .ib; }
     h2 { .lh(80); .mb(105); }
     ul { .pl(150); .-box;
       li {

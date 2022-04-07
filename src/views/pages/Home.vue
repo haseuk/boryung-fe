@@ -72,8 +72,11 @@ export default {
       }
     }
     .home { .wh(330,100); .tl; .abs; .lt(50%,1069); .ml(-52); overflow: hidden; opacity: 1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-delay: 2.8s; transition-timing-function: ease-out;
-      a { .fs(30); .ls(-0.025em); .bold; .lh(96); .f; .-a(#2d2d2f,2px); .-box; .ib; .pl(25); .rel;
+      a { .fs(30); .ls(-0.025em); .bold; .lh(96); .f; .-a(#2d2d2f,2px); .-box; .ib; .pl(25); .rel; transition: background-color 0.5s;
         &:after { .cnt; .wh(35,20); .contain('/images/mo/arr-r.png'); .abs; .rt(25,40); }
+        &:hover { color:#fff; .bgc(#333132);
+          &:after { .cnt; .contain('/images/mo/arr-r-w.png'); }
+        }
       }
     }
     .v-bg { .wh(198,1322); .contain('/images/mo/boryung-ver.png'); .abs; .lt(-12,32); opacity: 1; transform: translateX(0); transition: opacity 1s, transform 1s; transition-delay: 3.4s;  transition-timing-function: ease-out; }
@@ -102,6 +105,13 @@ export default {
         }
       }
       .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(-70,-300); }
+    }
+  }
+}
+@media screen and(min-width:1600px) {
+  [main] {
+    .inner {
+      .v-bg { .ml(0)!important; }
     }
   }
 }

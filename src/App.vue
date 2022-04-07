@@ -65,11 +65,13 @@ export default {
   [app-header] { .pr(200) }
   [content-holder] { .pr(200) }
   [app-footer] { .pr(200) }
+  .v-bg { .ml(-785)!important; }
 }
 @media screen and(min-width:1800px) {
   [app-header] { .pr(0) }
   [content-holder] { .pr(0) }
   [app-footer] { .pr(0) }
+  .v-bg { .ml(-690)!important; }
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity .3s;

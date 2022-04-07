@@ -74,7 +74,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[mission] { .fs(0); .m(140,0); .tc;
+[mission] { .fs(0); .mt(140); .tc; .pb(140); .-box;
   .mo { .ib; }
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70); .rel; z-index: 1; }
   .top-tit { .fs(30); .medium; color:#2d2d2f; .ls(-0.05em);

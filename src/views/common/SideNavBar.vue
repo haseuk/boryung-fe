@@ -30,8 +30,14 @@ export default {
 @media screen and(min-width: 1600px) {
   [snb] { .bgc(#fbf9f7); .p(518,0,0,40); .-box; .ib; .wh(260,100%); .abs; .rt; .tl; z-index: 1; opacity: 1; transform: translateY(0); transition: opacity 0.8s, transform 0.8s; transition-timing-function: ease-out;
     a { .fs(18); .lh(26); color:#e3d7cb; .medium; .ls(-0.05em); .block; .mb(20); .rel;
+      &:before { .cnt; .wh(0,1); .bgc(#2d2d2f); .abs; .lt(140,14); transition: width 0.7s; }
       &:after { .cnt; .wh(100%,1); .bgc(#e3d7cb); .abs; .lt(140,14); }
-      &.router-link-active { .c(#000) }
+      &.router-link-active { .c(#2d2d2f);
+        &:after { .cnt; .bgc(#2d2d2f); }
+      }
+      &:hover { color:#2d2d2f;
+        &:before { .wf; z-index: 1; }
+      }
     }
   }
 }

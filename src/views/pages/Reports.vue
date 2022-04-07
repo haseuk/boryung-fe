@@ -1,6 +1,6 @@
 <template>
   <div reports :class="{ready, refresh}">
-    <SelectContent title="Reports" :list="selectList" :active="active" @select="select"/>
+    <SelectContent title="Reports." :list="selectList" :active="active" @select="select"/>
     <div class="cont cont1" v-if="active === 'cont1'">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
@@ -94,25 +94,43 @@
       <div class="c-ko">
         <ul>
           <li>
-            <a>재무정보</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/financial.do">재무정보</a>
           </li>
           <li>
-            <a>공시</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/report.do">공시</a>
           </li>
           <li>
-            <a>주가정보</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/stock.do">주가정보</a>
           </li>
           <li>
-            <a>주주문의</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/contactir.do">주주문의</a>
           </li>
           <li>
-            <a>사업보고서</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/Businessreport.do">사업보고서</a>
           </li>
           <li>
-            <a>IR 자료실</a>
+            <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
+              <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
+            </svg>
+            <a href="https://www.boryung.co.kr/ir/resource.do">IR 자료실</a>
           </li>
         </ul>
-        <p class="noti">* Pharma Home > IR 세부페이지가 새탭으로 열립니다.</p>
+        <p class="noti">* 보령제약 > IR 세부페이지가 새탭으로 열립니다.</p>
       </div>
       <div class="c-en">
         <ul>
@@ -191,7 +209,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[reports] { .p(0,70); .-box; .m(140,0);
+[reports] { .p(0,70); .-box; .mt(140); .pb(140); .-box;
   .cont {
     table { .wf; table-layout: fixed; border-collapse: collapse; .-t(#a29992); .-b(#a29992);
       tbody tr {
@@ -217,11 +235,12 @@ export default {
       ul {
         li { .fs(36); .lh(48); .wh(48%,142); .ib; .m(0,4%,30,0); .-a(#a29992); .rel; .tl; .ls(-0.05em); .vat; .-box;
           &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(28,62); pointer-events: none; }
-          a { .f; .ib; .p(45,0,0,40); .-box; }
+          a { .f; .ib; .p(45,0,0,35); .-box; }
           &:nth-child(even) { .mr(0); }
+          .box { .hide; }
         }
       }
-      .noti { .fs(24); color:#3b3b3c; .tl; .ls(-0.025em); .nowrap; }
+      .noti { .fs(24); color:#3b3b3c; .tl; .ls(-0.025em); .nowrap; .mt(60); }
       .c-en ul li { .lh(40);
         &:nth-child(2) a, &:nth-child(4) a, &:nth-child(5) a, &:nth-child(6) a { .pt(30)}
       }
@@ -278,7 +297,8 @@ export default {
       }
       &.cont3 {
         ul { .w(725);
-          li { .wh(345,142); .m(0,32,29,0);
+          li { .wh(345,142); .m(0,32,29,0); .-a;
+            a { .abs; .lt; }
             &:after { .rt(48,62); }
             &:nth-child(3) { .mr(32); }
           }
@@ -287,6 +307,16 @@ export default {
       }
     }
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
+    .cont.cont3 ul li {
+      .box { .ib; }
+      &:hover {
+        .box { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: dash 0.5s linear; animation-fill-mode: both; }
+      }
+    }
+    @keyframes dash {
+      from { stroke-dashoffset: 1000; }
+      to { stroke-dashoffset: 0; }
+    }
   }
 }
 </style>

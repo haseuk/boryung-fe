@@ -50,12 +50,12 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[news] { .m(140,0); .p(0,70); .-box; .tl;
+[news] { .mt(140); .p(0,70); .tl; .pb(140); .-box;
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; }
   ul { .mt(75);
     li { .pb(50); .mb(50); .-b(#a29992); .-box;
       a { .f; .pointer; }
-      .list-vis { .wh(520,142); .ib; .-a(#e3d7cb); .mb(43);
+      .list-vis { .wh(520,142); .ib; .-a(#e3d7cb); .mb(43); .bgc(#fff);
         img { .f; }
       }
       .l-tit { .fs(24); .bold; color:#3b3b3c; .mb(30); .ls(-0.05em); }
@@ -87,7 +87,7 @@ export default {
         .l-txt { .fs(16); -webkit-line-clamp: 2; }
       }
     }
-    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; z-index: -1; }
   }
 }
 </style>

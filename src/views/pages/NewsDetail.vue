@@ -50,7 +50,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[detail] { .mt(140); .p(0,70); .-box; .tl;
+[detail] { .mt(140); .p(0,70); .tl; .pb(140); .-box;
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); }
   .news-visual { .w(610); .mh-c; .-a(#e3d7cb);
     img { .f; }

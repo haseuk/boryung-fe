@@ -5,7 +5,7 @@
       <div class="cont cont1" v-if="active === 'kim'">
         <p class="tit"></p>
         <div class="txt" v-if="lang === 'ko'">
-          <p>2021년 보령의 제약사업은 전년대비 인상적인 성장을 이뤄낸 한 해 였습니다. 2020년 대비 별도 기준 매출액은 10%, 영업이익은 25% 성장하였고, 이는 Covid-19라는 환경 속에서 단발성 호재가 아닌 사업 자체의 경쟁력을 바탕으로 이룬 결과 이기에 더욱이 그렇다고 생각합니다. 보령컨슈머헬스케어와의 연결 기준으로는 성장률이 둔화되어 보이지만, 회사의 미래 성장을 위한 공격적인 투자에 바탕을 둔 결과이기에, 2022년부터는 연결 기준의 실적도 의미 있는 성장을 해나갈 것입니다. 2022년은 보령의 주력인 제약사업은 장두현 대표님을 필두로 이루어진 훌륭한 경영진을 바탕으로 견조한 성장 기조를 이어 갈 것이라고 생각하며, 장두현 대표님의 Annual Letter에 제약 사업에 대한 보다 자세한 내용이 담겨 있으니, 읽어 보실 것을 추천 드립니다.</p>
+          <p>2021년 보령의 제약사업은 전년대비 인상적인 성장을 이뤄낸 한 해 였습니다. 2020년 대비 별도 기준 매출액은 10%, 영업이익은 24% 성장하였고, 이는 Covid-19라는 환경 속에서 단발성 호재가 아닌 사업 자체의 경쟁력을 바탕으로 이룬 결과 이기에 더욱이 그렇다고 생각합니다. 보령컨슈머헬스케어와의 연결 기준으로는 성장률이 둔화되어 보이지만, 회사의 미래 성장을 위한 공격적인 투자에 바탕을 둔 결과이기에, 2022년부터는 연결 기준의 실적도 의미 있는 성장을 해나갈 것입니다. 2022년은 보령의 주력인 제약사업은 장두현 대표님을 필두로 이루어진 훌륭한 경영진을 바탕으로 견조한 성장 기조를 이어 갈 것이라고 생각하며, 장두현 대표님의 Annual Letter에 제약 사업에 대한 보다 자세한 내용이 담겨 있으니, 읽어 보실 것을 추천 드립니다.</p>
           <p>제가 장두현 대표님의 Annual Letter와는 별도로 이 글을 쓰는 목적은 주주총회에서 결정이 난 것처럼 회사의 이름이 ‘보령제약’에서 ‘보령’으로 변경된 것과 궤를 같이 합니다. 또한 임직원들과 주주 여러분, 그리고 향후 보령이 가는 방향에 함께 가게 될 잠재적 파트너분들께 저의 관점에서 지난 한 해를 되돌아 보고, 앞으로 나아가는 방향에 대해서 공유 드리려고 합니다.</p>
           <p>저를 포함한 보령에서 함께 일하고 있는 구성원들은 제약 사업에서뿐만 아니라 범위를 넓혀 Healthcare 산업 전반에서 회사를 성장시킬 수 있는 기회가 무궁무진하다고 믿고 있습니다. 따라서 우리는 그러한 기회들을 적극적으로 찾고, 투자하여, 회사를 성장시킬 것 입니다. 이해도가 높은 분야에서 기회를 찾을 것이며, 소수 지분 투자보다는 회사나 자산에 대한 전체 인수를 우선적으로 볼 것이고, 이러한 적극적인 투자를 통해 장기적으로 회사의 이익 창출력(earning power)을 성장 시키는데 집중할 것입니다.</p>
           <p>우리는 회사 또는 자산이 장기적으로 누군가에게 꼭 필요한 지와 그 사업을 이끌고 있는 경영진의 능력을 투자의 가장 중요한 기준으로 삼을 것 입니다. 사업이 장기적으로 누군가에게 꼭 필요하고, 그 사업을 이끄는 경영진이 훌륭하다면, 우리 회사의 성장에 절대적으로 도움이 되리라 믿기 때문입니다.</p>
@@ -17,7 +17,7 @@
           <p class="sign">㈜ 보령 대표이사 김정균 <img src="/images/mo/sign1.png" alt=""></p>
         </div>
         <div class="txt" v-else>
-          <p>Boryung Corp. achieved impressive growth in 2021 compared to a year ago. In fact, stand-alone revenue climbed 10% year-on-year (YoY) and operating profit soared 25%YoY. The phenomenal financial performance was achieved through our intrinsic business competitiveness in the face of the COVID-19 pandemic, rather than due to one-off events. On a consolidated basis (including Boryung Consumer Healthcare), growth could appear sluggish, but this was caused by aggressive investments for future growth. Hence, Boryung is forecast to achieve meaningful growth even in consolidated earnings starting in 2022. Our pharmaceutical business, the flagship growth driver of Boryung, should continue to display solid growth this year, backed by Daniel Chang and our excellent management team. Investors are advised to read his 2022 annual letter for more detailed information on the pharmaceutical business.</p>
+          <p>Boryung Corp. achieved impressive growth in 2021 compared to a year ago. In fact, stand-alone revenue climbed 10% year-on-year (YoY) and operating profit soared 24%YoY. The phenomenal financial performance was achieved through our intrinsic business competitiveness in the face of the COVID-19 pandemic, rather than due to one-off events. On a consolidated basis (including Boryung Consumer Healthcare), growth could appear sluggish, but this was caused by aggressive investments for future growth. Hence, Boryung is forecast to achieve meaningful growth even in consolidated earnings starting in 2022. Our pharmaceutical business, the flagship growth driver of Boryung, should continue to display solid growth this year, backed by Daniel Chang and our excellent management team. Investors are advised to read his 2022 annual letter for more detailed information on the pharmaceutical business.</p>
           <p>I decided to write a separate annual letter from Daniel in the same vein as the decision made at the latest shareholders’ meeting to change our name to Boryung Corp. to set out our new direction. To this end, I intend to review the past year from my point of view and examine the direction Boryung is taking with our employees, shareholders and potential partners.</p>
           <p>We believe not only pharmaceuticals, but the healthcare businesses also offer limitless opportunities for growth to our company. We are determined to aggressively find new opportunities in areas familiar to us and invest in them in order to take our company one step further. To this end, we intend to acquire a promising company or assets as a whole, rather than secure a minor stake in it. With such aggressive investments, we aim to strengthen our earning power over the long term.</p>
           <p>We will make investment decisions based on the following criteria: 1) whether the corresponding company is essential to a specific population and 2) whether its management is capable of leading the corresponding business successfully. If these two preconditions are met, the company or assets should offer tremendous opportunities for our future growth.</p>
@@ -47,7 +47,7 @@
           <p class="sign">㈜ 보령 대표이사 장두현 <img src="/images/mo/sign2.png" alt=""></p>
         </div>
         <div class="txt" v-else>
-          <p>Boryung delivered remarkable financial results in 2021, in spite of the unfavorable operating environment amid the COVID-19 pandemic. We achieved record-high earnings last year, with revenue rising 10%YoY to KRW594.4bn and operating profit soaring 25%YoY to KRW50.1bn.</p>
+          <p>Boryung delivered remarkable financial results in 2021, in spite of the unfavorable operating environment amid the COVID-19 pandemic. We achieved record-high earnings last year, with revenue rising 10%YoY to KRW594.4bn and operating profit soaring 24%YoY to KRW50.1bn.</p>
           <p>Our Kanarb line-up, which celebrated its 10th anniversary last year, posted KRW110bn in sales, demonstrating the superb quality and commercial competitiveness of domestic new drugs. Our oncology business, which boasts a dominant standing in Korea, grew 17%YoY and topped KRW100bn in sales. Furthermore, we acquired the entire rights of original drugs that retain solid brand loyalty even after patent expiry. The strategy of acquiring legacy brands led to the assetization of Zyprexa, a major medicine for schizophrenia.</p>
           <p>We also achieved sales growth in co-promoted items, which is a remarkable feat. For instance, Trulicity, the No. 1 injection drug for diabetes in Korea that hit the domestic market in 2016, exhibited a CAGR of staggering 43% during 2017-2021 and posted KRW46.9bn in sales last year. Our OTC drugs also stood out. Two steady sellers, Gelfos and Yonggaksan, are still achieving sales growth. Gelfos, Korea’s first drug export item to China, extended its distribution networks across that country last year in collaboration with Sinopharm International of China. As for Yonggaksan Cool, B2C sales more than doubled YoY and led overall market growth even as the respiratory disease treatment market shrank last year.</p>
           <p>Above all, our sustained profitable growth is impressive. Boryung has displayed sales growth for 16 straight years since 2005 while breaking previous highs for three consecutive years since 2019.</p>
@@ -113,25 +113,23 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[ceo] { .fs(0); .p(0,70); .-box; .m(140,0);
+[ceo] { .fs(0); .p(0,70); .-box; .mt(140); .pb(140); .-box;
   .ceo-letter { .mt(84);
     .cont {
       .txt { .fs(24); .lh(36); .ls(-0.075em); .mt(18); .regular;
         p { .mb(37);
           &.date { .m(50,0,0); .ib; }
-          &.sign { .fs(30); .mt(8);
+          &.sign { .fs(30); .mt(15);
             &.en { .bold; }
           }
         }
       }
       &.cont1 {
-        .tit { .wh(514,48); .contain('/images/mo/ceo-img1.png'); }
-        .txt .sign { .mt(-10);
-          img { .wh(196,110); .ib; .vam; .m(-25,0,0,25); }
+        .txt .sign { .rel;
+          img { .wh(170,110); .abs; .lt(320,-52); }
         }
       }
       &.cont2 {
-        .tit { .wh(604,44); .contain('/images/mo/ceo-img2.png'); }
         .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
       }
     }
@@ -160,12 +158,15 @@ export default {
 
 #app {
   &.ko .ceo-letter .cont {
-    &.cont1 .tit { .contain('/images/mo/ceo-img1.png'); }
-    &.cont2 .tit { .contain('/images/mo/ceo-img2.png'); }
+    &.cont1 .tit { .wh(534,54); .contain('/images/mo/ceo-img1.png'); }
+    &.cont2 .tit { .wh(604,44); .contain('/images/mo/ceo-img2.png'); }
   }
   &.en .ceo-letter .cont {
-    &.cont1 .tit { .contain('/images/mo/ceo-img1-en.png'); }
-    &.cont2 .tit { .contain('/images/mo/ceo-img2-en.png'); }
+    &.cont1 {
+      .tit { .wh(512,45); .contain('/images/mo/ceo-img1-en.png'); }
+      .txt .sign img { .lt(470,-52); }
+    }
+    &.cont2 .tit { .wh(618,43); .contain('/images/mo/ceo-img2-en.png'); }
   }
 }
 @media screen and(min-width: 1240px) {
@@ -179,18 +180,29 @@ export default {
           }
         }
         &.cont1 {
-          .tit { .wh(596,52); .contain('/images/pc/ceo-img1.png'); }
-          .txt .sign { .mt(-10);
-            img { .wh(196,110); .m(-25,0,0,25); }
+          .txt .sign { .mt(15);
+            img { .wh(196,110); .lt(260,-52); }
           }
         }
         &.cont2 {
-          .tit { .wh(708,53); .contain('/images/pc/ceo-img2.png'); }
           .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
         }
       }
     }
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
+  }
+  #app {
+    &.ko .ceo-letter .cont {
+      &.cont1 .tit { .wh(595,54); .contain('/images/pc/ceo-img1.png'); }
+      &.cont2 .tit { .wh(708,53); .contain('/images/pc/ceo-img2.png'); }
+    }
+    &.en .ceo-letter .cont {
+      &.cont1 {
+        .tit { .wh(640,57); .contain('/images/pc/ceo-img1-en.png'); }
+        .txt .sign img { .lt(410,-52); }
+      }
+      &.cont2 .tit {  .wh(773,54); .contain('/images/pc/ceo-img2-en.png'); }
+    }
   }
 }
 </style>
