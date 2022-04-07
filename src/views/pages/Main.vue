@@ -37,7 +37,7 @@ export default {
 @import "~@/less/proj";
 @use-rem: true;
 @rem: 32;
-[main] { .fs(0); .h(1313); .pt(275); .-box; .rel;
+[main] { .fs(0); .h(1313); .pt(275); .mb(100); .-box; .rel;
   .inner {
     h1 { .wh(559,83); .contain('/images/mo/boryung.png'); opacity:1; .mh-c; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
     .page-link { .tl; .abs; .lt(50%,456); .ml(-52);
@@ -68,11 +68,11 @@ export default {
 }
 
 @media screen and(min-width:1240px) {
-  [main] { height: auto; .pt(220); .tl; .pb(110);
+  [main] { height: auto; .pt(220); .tl; .pb(110); .mb(0);
     .inner { .max-w(1240); .mh-c; .pl(60); .-box; .rel;
       h1 { .wh(592,89); .contain('/images/pc/boryung.png'); .ib; }
       .page-link { .rel; .lt; .ml(0); .mt(70);
-        li { .fs(48); .medium; .rel; .mb(5);
+        li { .fs(48); .light; .medium; .rel; .mb(5);
           a { .w(490); .ib; }
           &.news:after { .cnt; .wh(143,20); .contain('/images/pc/arr-r.png'); .abs; .lb(345,0); }
         }

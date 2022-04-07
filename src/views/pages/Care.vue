@@ -1,17 +1,22 @@
 <template>
-  <div care :class="{ready}">
-    <SelectContent title="Care In Space" list1="Intro" list2="CIS Challenge"/>
-    <div class="cont cont1" v-if="cont1">
+  <div care :class="{ready, refresh}">
+    <SelectContent title="Care In Space" :list="selectList" :active="active" @select="select"/>
+    <div class="cont cont1" v-if="active === 'cont1'">
       <div class="vision">
         <p class="bg-tit">Vision</p>
         <p class="tit">We <b>Care</b><br class="mo"> More Humanity<br> <b>in Space</b></p>
-        <ul class="vision-ul">
+        <ul class="vision-ul c-ko">
           <li>우주 환경에서 발생할 수 있는<br class="mo"> 다양한 Healthcare 관점의 문제 해결에 대한 접근</li>
           <li>기존 Human Health 관련<br class="mo"> 미 연구 분야에 대한 확장 및 투자</li>
           <li>다양한 건강 상태의 사람들을<br class="mo"> 더 많이 우주에 보낼 수 있게 하는 연구</li>
         </ul>
+        <ul class="vision-ul c-en">
+          <li>Approaches toward prospective various healthcare issues in space environment</li>
+          <li>Extension of scope of untapped human<br class="mo"> health-related research areas and<br class="mo"> investment in them</li>
+          <li>Studies aimed to send more people in various<br class="mo"> health conditions to outer space</li>
+        </ul>
       </div>
-      <ul class="divs">
+      <ul class="divs c-ko">
         <li>
           <p class="l-tit">Mission</p>
           <div>
@@ -52,13 +57,53 @@
           </div>
         </li>
       </ul>
+
+      <ul class="divs c-en">
+        <li>
+          <p class="l-tit">Mission</p>
+          <div>
+            <p class="num">01.</p><p class="txt">Discovery of new ideas by searching for various business opportunities in space and find new investment targets there</p>
+          </div>
+          <div>
+            <p class="num">02.</p><p class="txt">Preemptive positioning to play leading roles in healthcare-related research, investments and R&D projects in space ecosystem going forward</p>
+          </div>
+        </li>
+        <li>
+          <p class="l-tit">History</p>
+          <div>
+            <p class="date">2020. Oct.</p><p class="txt"> “Care In Space (CIS)” task force kicked off</p>
+          </div>
+          <div>
+            <p class="date">2021. Jan.-Dec.</p><p class="txt"> Networking and partnership forged with aerospace partners at home and abroad</p>
+          </div>
+          <div>
+            <p class="date">２022. Feb.</p><p class="txt"> Axiom Space partnership signed and investment executed</p>
+          </div>
+          <div>
+            <p class="date">2022. Apr.</p><p class="txt"> Opening of CIS Challenge</p>
+          </div>
+        </li>
+        <li>
+          <p class="l-tit">Partner</p>
+          <p class="txt">Axiom Space / Starburst</p>
+        </li>
+        <li>
+          <p class="l-tit">Network</p>
+          <p class="txt">Korea Aerospace Research Institute,<br class="mo"> Science and Technology Policy Institute, NASA</p>
+          <div class="network">
+            <img src="/images/mo/network.png" alt="">
+            <p>Space-related institutes</p>
+            <p>Startups</p>
+            <p>Academic researchers</p>
+            <p>Established aerospace<br> business companies </p>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="cont cont2" v-else>
+    <div class="cont cont2" v-if="active === 'cont2'">
       <p class="tit">국제CIS챌린지란?</p>
-      <p class="txt">
-        국제CIS챌린지 (Care in Space Challenge)는 최초의 제약/헬스케어 분야 스타트업 엑셀러레이터 프로그램(accelerator program)으로서 현재 우주에서 실현가능한 사업분야 확장을 목표로 삼고 있으며, 제약, 헬스케어 업계와 우주산업 사이의 간극 메우기 위해 노력할 것입니다. 이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트(Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.
-        이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다. 프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL)증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객관관리, 차기 투자 유치 등을 지원하고, 프로그램 참여 팀들은 스타버스트의 대규모 글로벌 네트워크 접근성을 얻게 되고, 스타버스트, 보령, 액시엄의 운영진, 저명한 항공우주 기업가, 투자자, 기업파트너, 학술연구가 등으로 구성된 우주산업 생태계의 일원이 될 것입니다.
-      </p>
+      <p class="txt">국제CIS챌린지 (Care in Space Challenge)는 최초의 제약/헬스케어 분야 스타트업 엑셀러레이터 프로그램(accelerator program)으로서 현재 우주에서 실현가능한 사업분야 확장을 목표로 삼고 있으며, 제약, 헬스케어 업계와 우주산업 사이의 간극 메우기 위해 노력할 것입니다. 이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트(Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.</p>
+      <p class="txt">이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다. 프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL)증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객관관리, 차기 투자 유치 등을 지원하고, 프로그램 참여 팀들은 스타버스트의 대규모 글로벌 네트워크 접근성을 얻게 되고, 스타버스트, 보령, 액시엄의 운영진, 저명한 항공우주 기업가, 투자자, 기업파트너, 학술연구가 등으로 구성된 우주산업 생태계의 일원이 될 것입니다.</p>
       <ul class="cont2-ul">
         <li>
           <b>Accelerator program</b>
@@ -93,7 +138,6 @@
         <img src="/images/mo/care-logo.png" alt="">
       </div>
     </div>
-    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -105,13 +149,36 @@ export default {
   data() {
     return {
       ready: true,
-      cont1: true,
-      cont2: false
+      refresh: true,
     }
   },
   mounted() {
-    setTimeout(() =>{ this.ready = false },500)
+    setTimeout(() =>{ this.ready = false },500);
+    setTimeout(() => { this.refresh = false },1600);
   },
+  computed: {
+    active() {
+      return this.$route.params.care
+    },
+    selectList() {
+      return [
+        {key: 'cont1', label: this.$t('gnb.care.cont1')},
+        {key: 'cont2', label: this.$t('gnb.care.cont2')}
+      ]
+    }
+  },
+  watch: {
+    active() {
+      this.refresh = true;
+      setTimeout(() => { this.refresh = false },200)
+    }
+  },
+  methods: {
+    select(care) {
+      if (this.active === care) return;
+      this.$router.push({ params: { care } })
+    }
+  }
 }
 </script>
 
@@ -120,9 +187,9 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[care] { .fs(0); .p(0,70); .-box; .mt(140); .rel;
+[care] { .fs(0); .p(0,70); .-box; .m(140,0); .rel;
   .mo { .ib; }
-  &:after { .cnt; .wh(100vw,147.87vw); background: url('/public/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
+  &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
   .cont { .tl;
     &.cont1 { .tc;
       .vision { .mb(180);
@@ -131,7 +198,7 @@ export default {
           b { .bold; }
         }
         .vision-ul { .mt(75);
-          li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(40);
+          li { .fs(30); .semi-bold; .ls(-0.06em); .rel; .mb(40);
             &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-25); .ml(-11); }
           }
         }
@@ -144,8 +211,8 @@ export default {
           .txt { .fs(24); .ls(-0.05em); .lh(30); }
 
           &:nth-child(1) {
-            .txt { .w(560); }
-            .num { .fs(36); .lh(36);  color:#e3d7cb; .w(70); }
+            .txt { .w(530); }
+            .num { .fs(36); .lh(36);  color:#e3d7cb; .w(60); }
             .txt, .num { .tl; .ib; .vat; }
             > div { .pl(20); .-box;
               &:nth-of-type(1) { .mb(35); }
@@ -154,7 +221,7 @@ export default {
 
           &:nth-child(2) { .tl;
             .l-tit { .block; .mh-c; .tc; }
-            > div { .w(650); .mh-c; .pl(20); .-box; }
+            > div { .w(650); .mh-c; .pl(20); .-box; .mb(5); }
             .date, .txt { .fs(24); .lh(30); .ib; .vat; .ls(-0.05em); }
             .date { .w(170); }
             .txt { .w(460); .keep-all; }
@@ -167,8 +234,8 @@ export default {
             .network { .wf; .max-w(622); .mh-c; .mt(80); .rel;
               img { .wf; }
               p { .fs(20); .lh(28); .medium; color:#a29992; .abs; .ls(-0.05em);
-                &:nth-of-type(1) { .lt(5,50%); .mt(-18%); .tl; }
-                &:nth-of-type(2) { .rt(0,50%); .mt(-18%); .tr; }
+                &:nth-of-type(1) { .lt(5,50%); .mt(-19%); .tl; }
+                &:nth-of-type(2) { .rt(0,50%); .mt(-19%); .tr; }
                 &:nth-of-type(3) { .lt(5,50%); .mt(8%); .tl; }
                 &:nth-of-type(4) { .rt(0,50%); .mt(8%); .tr; }
               }
@@ -185,56 +252,78 @@ export default {
           b { .fs(30); .lh(42); .bold; .block; }
         }
       }
-      .care-logo { .wh(610,100); .mh-c; .mt(80); .bgc(#000); .p(28,119); .-box;
+      .care-logo { .wh(610,100); .block; .mt(80); .bgc(#000); .p(28,119); .-box;
         img { .wh(372,45); }
       }
     }
   }
-  .v-bg { .hide; }
 
 
-  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
+  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
-  .cont .bg-tit { transition-delay: 1.6s; }
-  .cont .tit { transition-delay: 2.0s; }
-  .vision-ul { transition-delay: 2.4s; }
+  .cont .bg-tit { transition-delay: 0.4s; }
+  .cont .tit { transition-delay: 0.7s; }
+  .vision-ul { transition-delay: 1.0s; }
   .divs li {
-    &:nth-child(1) { transition-delay: 2.8s; }
-    &:nth-child(2) { transition-delay: 3.2s; }
-    &:nth-child(3) { transition-delay: 3.6s; }
-    &:nth-child(4) { transition-delay: 4.0s; }
+    &:nth-child(1) { transition-delay: 1.3s; }
+    &:nth-child(2) { transition-delay: 1.6s; }
+    &:nth-child(3) { transition-delay: 1.9s; }
+    &:nth-child(4) { transition-delay: 2.1s; }
   }
-  .v-bg { transform: translateX(0); transition-delay: 3.8s; }
 
-  .cont2 .tit { transition-delay: 1.6s; }
-  .cont2 .txt { transition-delay: 2.0s; }
-  .cont2-ul { transition-delay: 2.4s; }
-  .care-logo { transition-delay: 2.8s; }
+  .cont2 p {
+    &:nth-child(1) {transition-delay: 0.4s; }
+    &:nth-child(2) {transition-delay: 0.7s; }
+    &:nth-child(3) {transition-delay: 1.0s; }
+  }
+  .cont2-ul { transition-delay: 1.3s; }
+  .care-logo { transition-delay: 1.6s; }
   &.ready {
     h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100px); }
-    .v-bg { opacity:0; transform: translateX(-100%); }
+  }
+  &.refresh {
+    .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
+  }
+}
+
+#app {
+  &.ko .cont .divs {
+    &.c-ko { .block; }
+    &.c-en { .hide; }
+  }
+  &.en [care] { .p(0,50);
+    [select-cont] { .pl(20); .-box; }
+    .cont .divs {
+      &.c-ko { .hide; }
+      &.c-en { .block; }
+    }
+    .cont.cont1 .divs li {
+      > div { .pl(0);  }
+      &:nth-child(4) .network p:nth-of-type(4) { .mt(4%); }
+    }
   }
 }
 @media screen and(min-width: 1240px) {
-  [care] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+  [care] { .max-w(1240); .p(180,40,100,60)!important; .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);
       .select-box { .r(0); }
     }
     .mo { .hide; }
-    &:after { .h(984); background: url('/public/images/pc/care-bg1.png') center top; .lt(50%,-287); .ml(-50vw); }
+    &:after { .h(984); background: url('/images/pc/care-bg1.png') center top; .lt(50%,-287); .ml(-50vw); }
     .cont { .mt(20);
       &.cont1 {
         .vision { .mb(120);
           .bg-tit { .mb(14); }
           .tit { .fs(60); .lh(72); .mb(100); }
-          ul { .mt(100);
+          .vision-ul { .mt(100);
             li { .fs(24); .mb(38);
-              &:after { .cnt; .wh(22,22); .m(-10,0,0,-11); }
+              &:after { .cnt; .wh(22,22); .ml(-9); }
             }
           }
         }
         .divs {
           li { .pb(135);
+            &:last-child { .pb(0); }
             .l-tit { .w(250); .mb(30); }
             .txt { .fs(20); }
 
@@ -244,8 +333,8 @@ export default {
             &:nth-child(4) {
               .network { .max-w(612); .mt(45);
                 p {
-                  &:nth-of-type(1) { .mt(-110); }
-                  &:nth-of-type(2) { .mt(-110); }
+                  &:nth-of-type(1) { .mt(-120); }
+                  &:nth-of-type(2) { .mt(-120); }
                   &:nth-of-type(3) { .mt(50); }
                   &:nth-of-type(4) { .mt(50); }
                 }
@@ -254,7 +343,7 @@ export default {
           }
         }
       }
-      &.cont2 { .w(860); .pl(60); .-box;
+      &.cont2 { .w(860);
         .tit { .fs(36); .lh(50); .mb(15); }
         .txt { .fs(18); .lh(30); }
         .cont2-ul { .mt(30);
@@ -265,7 +354,15 @@ export default {
         .care-logo { .mt(40); }
       }
     }
-    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
+  }
+  #app {
+    &.en [care] {
+      [select-cont] { .pl(0); }
+      .cont.cont1 .divs li {
+        > div { .pl(0);  }
+        &:nth-child(4) .network p:nth-of-type(4) { .mt(25); }
+      }
+    }
   }
 }
 </style>

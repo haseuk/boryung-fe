@@ -1,7 +1,7 @@
 <template>
   <div history :class="{ready}">
     <h2>Our History.</h2>
-    <ul>
+    <ul class="c-ko">
       <li class="tit"><p>2020 ~</p></li>
       <li><p class="date">2022. 04</p><p class="txt">주식회사 보령(BORYUNG Corp.)으로 사명 변경(New CI)</p></li>
       <li><p class="date">2021. 12</p><p class="txt">카나브 패밀리 연매출 1,000억원 돌파</p></li>
@@ -40,6 +40,45 @@
       <li><p class="date">1963. 11</p><p class="txt">보령제약주식회사 창립(동영제약 인수)</p></li>
       <li><p class="date">1957. 10</p><p class="txt">종로5가 보령약국 창업</p></li>
     </ul>
+    <ul class="c-en">
+      <li class="tit"><p>2020 ~</p></li>
+      <li><p class="date">2022. 04</p><p class="txt">Company name changed to Boryung Corp. (New CI)</p></li>
+      <li><p class="date">2021. 12</p><p class="txt">Annual Kanarb line-up sales exceeded KRW100bn</p></li>
+      <li class="b"><p class="date">2021. 12</p><p class="txt">Annual operating profit hit KRW50bn mark</p></li>
+      <li><p class="date">2021. 12</p><p class="txt">Recuon, oncology company, established</p></li>
+      <li><p class="date">2021. 10</p><p class="txt">Zyprexa (rights in Korea) acquired from Eli Lilly as #2 LBA case</p></li>
+      <li><p class="date">2021. 08</p><p class="txt">Affiliate Vigencell listed on KOSDAQ</p></li>
+      <li><p class="date">2021. 08</p><p class="txt">Gelfos supply contract worth KRW100bn signed with Sinopharm of China</p></li>
+      <li><p class="date">2020. 11</p><p class="txt">GMP certification given to oncology production lines in Yesan county</p></li>
+      <li class="b"><p class="date">2020. 11</p><p class="txt">Boryung’s market cap topped KRW1tr</p></li>
+      <li><p class="date">2020. 07</p><p class="txt">Boryung Consumer Healthcare incorporated as 100%-owned subsidiary</p></li>
+      <li><p class="date">2020. 05</p><p class="txt">Gemzar (rights in Korea) acquired from Eli Lilly of US as #1 LBA case</p></li>
+      <li><p class="date">2020. 01</p><p class="txt">US subsidiary, Boryung USA, established</p></li>
+
+      <li class="tit"><p>2001 ~ 2019</p></li>
+      <li class="b"><p class="date">2019. 12</p><p class="txt">Revenue hit KRW500bn mark</p></li>
+      <li><p class="date">2019. 08</p><p class="txt">IND application approved for Phase I clinical trials of target anticancer agent BR2002 in U.S.</p></li>
+      <li><p class="date">2019. 04</p><p class="txt">Production base (campus) in Yesan completed</p></li>
+      <li><p class="date">2017. 10</p><p class="txt">60th anniversary celebrated</p></li>
+      <li><p class="date">2017. 04</p><p class="txt">Boryung’s subsidiary established in China</p></li>
+      <li><p class="date">2017. 03</p><p class="txt">Construction start of new factory in Yesan</p></li>
+      <li><p class="date">2016. 09</p><p class="txt">Participated in 26th Seoul Meeting of International Society of Hypertension (Five solo symposiums held)</p></li>
+      <li><p class="date">2014. 12</p><p class="txt">Kanarb selected as “World Class Product” (Ministry of Commerce, KOTRA)</p></li>
+      <li><p class="date">2011. 03</p><p class="txt">Kanarb, Korea’s first antihypertensive drug, launched</p></li>
+      <li><p class="date">2010. 12</p><p class="txt">Boryung’s annual revenue hit KRW300bn</p></li>
+      <li><p class="date">2007. 01</p><p class="txt">50th anniversary of Boryung</p></li>
+      <li><p class="date">2005. 11</p><p class="txt">Boryung Essay Award of Doctors established</p></li>
+      <li><p class="date">2002. 03</p><p class="txt">Boryung Cancer Academic Award established</p></li>
+
+      <li class="tit"><p>1957 ~ 2000</p></li>
+      <li class="b"><p class="date">2000. 12</p><p class="txt">Boryung’s annual revenue hit KRW100bn mark</p></li>
+      <li><p class="date">1988. 10</p><p class="txt">IPO conducted 	(stock listing)</p></li>
+      <li><p class="date">1988. 06</p><p class="txt">Ansan factory completed</p></li>
+      <li><p class="date">1985. 03</p><p class="txt">Boryung Awards for Medical Service established</p></li>
+      <li><p class="date">1980. 02</p><p class="txt">Boryung Central Research Institute newly set in place</p></li>
+      <li><p class="date">1963. 11</p><p class="txt">Boryung Pharmaceutical founded (Dongyoung Pharm. acquired)</p></li>
+      <li><p class="date">1957. 10</p><p class="txt">Boryung Pharmacy opened in Jongno 5-ga, Seoul</p></li>
+    </ul>
     <span class="v-bg"></span>
   </div>
 </template>
@@ -63,7 +102,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[history] { .fs(0); .p(0,70); .-box; .mt(140);
+[history] { .fs(0); .p(0,70); .-box; .m(140,0);
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   ul {
     &:last-child { .mb(0); }
@@ -100,8 +139,19 @@ export default {
   }
   .v-bg { .hide; }
 }
+
+#app {
+  &.ko {
+    .c-en { .hide; }
+    .c-ko { .block; }
+  }
+  &.en {
+    .c-ko { .hide; }
+    .c-en { .block; }
+  }
+}
 @media screen and(min-width: 1240px) {
-  [history] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+  [history] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
     h2 { .lh(80); .mb(105); }
     ul { .pl(150); .-box;
       li {

@@ -1,7 +1,7 @@
 <template>
-  <div reports :class="{ready}">
-    <SelectContent title="Reports" list1="연차보고서" list2="감사보고서" list3="IR"/>
-    <div class="cont cont1" v-if="cont1">
+  <div reports :class="{ready, refresh}">
+    <SelectContent title="Reports" :list="selectList" :active="active" @select="select"/>
+    <div class="cont cont1" v-if="active === 'cont1'">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -33,7 +33,7 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont2" v-else-if="cont2">
+    <div class="cont cont2" v-if="active === 'cont2'">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -90,28 +90,53 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont3" v-else>
-      <ul>
-        <li>
-          <a>재무정보</a>
-        </li>
-        <li>
-          <a>공시</a>
-        </li>
-        <li>
-          <a>주가정보</a>
-        </li>
-        <li>
-          <a>주주문의</a>
-        </li>
-        <li>
-          <a>사업보고서</a>
-        </li>
-        <li>
-          <a>IR 자료실</a>
-        </li>
-      </ul>
-      <p class="noti">* Pharma Home > IR 세부페이지가 새탭으로 열립니다.</p>
+    <div class="cont cont3" v-if="active === 'cont3'">
+      <div class="c-ko">
+        <ul>
+          <li>
+            <a>재무정보</a>
+          </li>
+          <li>
+            <a>공시</a>
+          </li>
+          <li>
+            <a>주가정보</a>
+          </li>
+          <li>
+            <a>주주문의</a>
+          </li>
+          <li>
+            <a>사업보고서</a>
+          </li>
+          <li>
+            <a>IR 자료실</a>
+          </li>
+        </ul>
+        <p class="noti">* Pharma Home > IR 세부페이지가 새탭으로 열립니다.</p>
+      </div>
+      <div class="c-en">
+        <ul>
+          <li>
+            <a>Financials</a>
+          </li>
+          <li>
+            <a>Public<br> Disclosure</a>
+          </li>
+          <li>
+            <a>Stock Info</a>
+          </li>
+          <li>
+            <a>Shareholder<br> Services</a>
+          </li>
+          <li>
+            <a>Business<br> Reports</a>
+          </li>
+          <li>
+            <a>IR<br class="mo"> Materials</a>
+          </li>
+        </ul>
+        <p class="noti">* Pharma Home> IR Subpage will be opened in a new tab.</p>
+      </div>
     </div>
     <Pagination />
     <span class="v-bg"></span>
@@ -127,14 +152,37 @@ export default {
   data() {
     return {
       ready: true,
-      cont1: true,
-      cont2: false,
-      cont3: false
+      refresh: true,
     }
   },
   mounted() {
-    setTimeout(() =>{ this.ready = false },500)
+    setTimeout(() =>{ this.ready = false },500);
+    setTimeout(() => { this.refresh = false },1600);
   },
+  computed: {
+    active() {
+      return this.$route.params.reports
+    },
+    selectList() {
+      return [
+        {key: 'cont1', label: this.$t('gnb.reports.cont1')},
+        {key: 'cont2', label: this.$t('gnb.reports.cont2')},
+        {key: 'cont3', label: this.$t('gnb.reports.cont3')},
+      ]
+    }
+  },
+  watch: {
+    active() {
+      this.refresh = true;
+      setTimeout(() => { this.refresh = false },200)
+    }
+  },
+  methods: {
+    select(reports) {
+      if (this.active === reports) return;
+      this.$router.push({ params: { reports } })
+    }
+  }
 }
 </script>
 
@@ -143,7 +191,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[reports] { .p(0,70); .-box; .mt(140);
+[reports] { .p(0,70); .-box; .m(140,0);
   .cont {
     table { .wf; table-layout: fixed; border-collapse: collapse; .-t(#a29992); .-b(#a29992);
       tbody tr {
@@ -167,29 +215,49 @@ export default {
     }
     &.cont3 { .tc;
       ul {
-        li { .fs(36); .lh(48); .wh(48%,142); .ib; .m(0,4%,30,0); .-a(#a29992); .p(45,0,0,40); .-box; .rel; .tl; .ls(-0.05em);
+        li { .fs(36); .lh(48); .wh(48%,142); .ib; .m(0,4%,30,0); .-a(#a29992); .rel; .tl; .ls(-0.05em); .vat; .-box;
           &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(28,62); pointer-events: none; }
-          a { .f; }
+          a { .f; .ib; .p(45,0,0,40); .-box; }
           &:nth-child(even) { .mr(0); }
         }
       }
-      .noti { .fs(24); color:#3b3b3c; .tl; }
+      .noti { .fs(24); color:#3b3b3c; .tl; .ls(-0.025em); .nowrap; }
+      .c-en ul li { .lh(40);
+        &:nth-child(2) a, &:nth-child(4) a, &:nth-child(5) a, &:nth-child(6) a { .pt(30)}
+      }
     }
   }
+  .cont + [pagination] { .hide; }
+  .cont2 + [pagination] { .block; }
+
   .v-bg { .hide; }
 
   h2, .select-box, .cont, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
-  .cont { transition-delay: 1.6s; }
-  [pagination] { transition-delay: 2.4s; }
+  .cont { transition-delay: 0s; }
+  [pagination] { transition-delay: 0.8s; }
   .v-bg { transform: translateX(0); transition-delay: 3.0s; }
   &.ready {
     h2, .select-box, .cont, [pagination] { opacity:0; transform: translateY(100px); }
     .v-bg { opacity:0; transform: translateX(-100%); }
   }
+  &.refresh {
+    .cont, [pagination] { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
+  }
+}
+
+#app {
+  &.ko {
+    .c-en { .hide; }
+    .c-ko { .block; }
+  }
+  &.en {
+    .c-ko { .hide; }
+    .c-en { .block; }
+  }
 }
 @media screen and(min-width: 1240px) {
-  [reports] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+  [reports] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);
       .select-box { .r(0); }
     }

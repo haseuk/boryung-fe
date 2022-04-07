@@ -1,30 +1,55 @@
 <template>
   <div mission :class="{ready}">
     <h2>Our Mission.</h2>
-    <p class="top-tit">언제 어디서나,<br class="mo">누구나 행복한 삶을 누릴 수 있도록<br>
-      <em>인류의 건강을 위해 꼭 필요한<br class="mo"> 헬스케어 기업이 되겠습니다.</em>
-    </p>
-    <p class="bg-tit">Mission</p>
-    <div class="core-values">
-      <p class="c-tit">핵심가치</p>
-      <ul>
-        <li>
-          <em>Become Irreplaceable</em>
-          대체할 수 없는 기업이 되자
-        </li>
-        <li>
-          <em>Think Long-Term</em>
-          장기적 관점으로 판단하자
-        </li>
-        <li>
-          <em>Pursue Extreme Transparency</em>
-          투명하고 깨끗한 기업이 되자
-        </li>
-        <li>
-          <em>Be Nice</em>
-          상대방에 친절한 기업이 되자
-        </li>
-      </ul>
+    <div class="c-ko">
+      <p class="top-tit">언제 어디서나,<br class="mo">누구나 행복한 삶을 누릴 수 있도록<br>
+        <em>인류의 건강을 위해 꼭 필요한<br class="mo"> 헬스케어 기업이 되겠습니다.</em>
+      </p>
+      <p class="bg-tit">Mission</p>
+      <div class="core-values">
+        <p class="c-tit">핵심가치</p>
+        <ul>
+          <li>
+            <em>Become Irreplaceable</em>
+            대체할 수 없는 기업이 되자
+          </li>
+          <li>
+            <em>Think Long-Term</em>
+            장기적 관점으로 판단하자
+          </li>
+          <li>
+            <em>Pursue Extreme Transparency</em>
+            투명하고 깨끗한 기업이 되자
+          </li>
+          <li>
+            <em>Be Nice</em>
+            상대방에 친절한 기업이 되자
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="c-en">
+      <p class="top-tit">We are committed to<br class="mo"> becoming a healthcare company<br>
+        <em>that enables people to enjoy<br class="mo"> healthier and happier life<br> anytime and anywhere.</em>
+      </p>
+      <p class="bg-tit">Mission</p>
+      <div class="core-values">
+        <p class="c-tit">Main Value</p>
+        <ul>
+          <li>
+            <em>Become Irreplaceable</em>
+          </li>
+          <li>
+            <em>Think Long-Term</em>
+          </li>
+          <li>
+            <em>Pursue Extreme Transparency</em>
+          </li>
+          <li>
+            <em>Be Nice</em>
+          </li>
+        </ul>
+      </div>
     </div>
     <span class="v-bg"></span>
   </div>
@@ -49,20 +74,20 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[mission] { .fs(0); .mt(140); .tc;
+[mission] { .fs(0); .m(140,0); .tc;
   .mo { .ib; }
-  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70);}
+  h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70); .rel; z-index: 1; }
   .top-tit { .fs(30); .medium; color:#2d2d2f; .ls(-0.05em);
     em { .fs(48); }
   }
   .bg-tit { .fs(120); .lh(150); color:#e3d7cb; .bold; .ls(-0.05em); opacity: 0.4; }
   .core-values { .mt(127);
-    .c-tit { .fs(48); .semi-bold; .ls(-0.05em); .w(252); .ib; .bgc(#fff); .rel;
-      &:before { .cnt; .wh(252,100%); .bgc(#fff); .abs; .lt(50%,0); .ml(-126); z-index: -1; }
+    .c-tit { .fs(48); .semi-bold; .ls(-0.05em); .p(0,40); .-box; .ib; .bgc(#fff); .rel; .nowrap;
+      &:before { .cnt; .wh(100%,100%); .bgc(#fff); .abs; .lt(50%,0); transform: translateX(-50%); z-index: -1; }
       &:after { .cnt; .bgc(#e3d7cb); .wh(650,1); .abs; .lt(50%,50%); .ml(-325); z-index: -2; }
     }
     ul { .mt(75);
-      li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(40);
+      li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(60);
         &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-10); .ml(-11); }
         em { .fs(48); .block; .break-all; }
         &:last-child:after { .t(-15); }
@@ -88,8 +113,20 @@ export default {
   }
   .v-bg { .hide; }
 }
+#app {
+  &.ko {
+    .c-en { .hide; }
+    .c-ko { .block; }
+  }
+  &.en {
+    .c-ko { .hide; }
+    .c-en { .block; }
+  }
+}
+
+
 @media screen and(min-width: 1200px) {
-  [mission] { .p(180,40,180,60); .max-w(1240); .-box; .mh-c; .mt(0);
+  [mission] { .p(180,40,100,60); .max-w(1240); .-box; .mh-c; .mt(0);
     .mo { .hide; }
     h2 { .lh(80); .mb(105); .ml(0); }
     .top-tit { .fs(24);
@@ -97,9 +134,7 @@ export default {
     }
     .bg-tit { .fs(120); .lh(150); .mt(10); }
     .core-values { .mt(150);
-      .c-tit { .fs(48); .w(252);
-        &:before { .cnt; .wh(252,100%); .ml(-126); }
-        &:after { .wh(652,1); .lt(50%,50%); .ml(-326); }
+      .c-tit { .fs(48);
       }
       ul { .mt(75);
         li { .fs(30); .mb(50);

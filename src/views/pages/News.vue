@@ -50,7 +50,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[news] { .mt(140); .p(0,70); .-box; .tl;
+[news] { .m(140,0); .p(0,70); .-box; .tl;
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; }
   ul { .mt(75);
     li { .pb(50); .mb(50); .-b(#a29992); .-box;
@@ -78,7 +78,7 @@ export default {
   }
 }
 @media screen and(min-width: 1240px) {
-  [news] { .max-w(1240); .p(180,40,180,60); .-box; .mh-c; .mt(0);
+  [news] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
     h2 { .lh(80); }
     ul { .mt(110);
       li { .pb(30); .w(810);

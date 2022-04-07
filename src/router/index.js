@@ -34,6 +34,10 @@ const routes = [
   },
   {
     path: 'reports',
+    redirect: 'reports/cont1'
+  },
+  {
+    path: 'reports/:reports(cont1|cont2|cont3)',
     component: page('/Reports')
   },
   {
@@ -46,6 +50,10 @@ const routes = [
   },
   {
     path: 'care',
+    redirect: 'care/cont1'
+  },
+  {
+    path: 'care/:care(cont1|cont2)',
     component: page('/Care')
   },
   {
