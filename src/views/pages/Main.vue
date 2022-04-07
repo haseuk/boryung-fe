@@ -3,13 +3,55 @@
     <div class="inner" :class="{ready}">
       <h1 class="h1">BORYUNG</h1>
       <ul class="page-link">
-        <li><RouterLink to="ceo">CEO Letter</RouterLink></li>
-        <li><RouterLink to="our-mission">Our Mission</RouterLink></li>
-        <li><RouterLink to="our-history">Our History</RouterLink></li>
-        <li><RouterLink to="reports">Reports</RouterLink></li>
-        <li class="news"><RouterLink to="news">News</RouterLink></li>
-        <li><RouterLink to="care">Care In Space</RouterLink></li>
-        <li><RouterLink to="link">Link to Sub. Co.</RouterLink></li>
+        <li @mouseover="mouseover">
+          <RouterLink to="ceo">CEO Letter
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="our-mission">Our Mission
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="our-history">Our History
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="reports">Reports
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="news">News
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="care">Care In Space
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="link">Link to Sub. Co.
+            <svg id="btm" xmlns="http://www.w3.org/2000/svg" width="144.5px" height="21.5px">
+              <path fill-rule="evenodd"  stroke="rgb(59, 59, 60)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,19.499 L140.499,19.499 L122.499,1.499 "/>
+            </svg>
+          </RouterLink>
+        </li>
       </ul>
       <div class="home">
         <a href="">Pharma HOME</a>
@@ -20,15 +62,22 @@
 </template>
 
 <script>
+import Vivus from 'vivus'
 export default {
   name: "main",
   data() {
     return {
       ready: true,
+      vivusList: {},
     }
   },
+  methods: {
+    mouseover() {
+      new Vivus('btm', {duration:30});
+    },
+  },
   mounted() {
-    setTimeout(() =>{ this.ready = false },500)
+    setTimeout(() =>{ this.ready = false },500);
   },
 }
 </script>
@@ -74,7 +123,6 @@ export default {
       .page-link { .rel; .lt; .ml(0); .mt(70);
         li { .fs(48); .light; .medium; .rel; .mb(5);
           a { .w(490); .ib; }
-          &.news:after { .cnt; .wh(143,20); .contain('/images/pc/arr-r.png'); .abs; .lb(345,0); }
         }
       }
       .home { top:auto; .rb(40,15);
