@@ -406,11 +406,13 @@ export default {
         .tit { .fs(36); .lh(50); .mb(25); }
         .txt { .fs(18); .lh(22); .rel;
           p, .top { .fs(18); }
+          p.top { .lh(22); }
           .step { .abs; .lt(130,40);
             span { .p(8,25); }
           }
           .t-tit + p { .abs; .lt(130,0); }
         }
+        .c-en .txt { .fs(18); .lh(30); .mb(0); }
         .cont2-ul { .mt(30);
           li { .fs(18); .lh(32); .mb(5);
             b { .fs(18); .lh(32); .ib; .mr(10); }
