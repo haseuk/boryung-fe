@@ -1,7 +1,7 @@
 <template>
   <div care :class="{ready, refresh}">
     <SelectContent title="Care In Space." :list="selectList" :active="active" @select="select"/>
-    <div class="cont cont1" v-if="active === 'cont1'">
+    <div class="cont cont1" v-if="active === 'intro'">
       <div class="vision">
         <p class="bg-tit">Vision</p>
         <p class="tit">We <b>Care</b><br class="mo"> More Humanity<br> <b>in Space</b></p>
@@ -100,7 +100,7 @@
         </li>
       </ul>
     </div>
-    <div class="cont cont2" v-if="active === 'cont2'">
+    <div class="cont cont2" v-if="active === 'cis'">
       <div class="c-ko">
         <p class="tit">CIS Challenge.</p>
         <div class="txt">
@@ -196,8 +196,8 @@ export default {
     },
     selectList() {
       return [
-        {key: 'cont1', label: this.$t('gnb.care.cont1')},
-        {key: 'cont2', label: this.$t('gnb.care.cont2')}
+        {key: 'intro', label: this.$t('gnb.care.intro')},
+        {key: 'cis', label: this.$t('gnb.care.cis')}
       ]
     }
   },

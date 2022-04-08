@@ -1,7 +1,7 @@
 <template>
   <div reports :class="{ready, refresh}">
     <SelectContent title="Reports." :list="selectList" :active="active" @select="select"/>
-    <div class="cont cont1" v-if="active === 'cont1'">
+    <div class="cont cont1" v-if="active === 'annual'">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -33,7 +33,7 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont2" v-if="active === 'cont2'">
+    <div class="cont cont2" v-if="active === 'audit'">
       <table cellpadding="0" cellspacing="0" border="0">
         <colgroup>
           <col width="8%">
@@ -90,7 +90,7 @@
         </tbody>
       </table>
     </div>
-    <div class="cont cont3" v-if="active === 'cont3'">
+    <div class="cont cont3" v-if="active === 'ir'">
       <div class="c-ko">
         <ul>
           <li>
@@ -164,9 +164,9 @@ export default {
     },
     selectList() {
       return [
-        {key: 'cont1', label: this.$t('gnb.reports.cont1')},
-        {key: 'cont2', label: this.$t('gnb.reports.cont2')},
-        {key: 'cont3', label: this.$t('gnb.reports.cont3')},
+        {key: 'annual', label: this.$t('gnb.reports.annual')},
+        {key: 'audit', label: this.$t('gnb.reports.audit')},
+        {key: 'ir', label: this.$t('gnb.reports.ir')},
       ]
     }
   },

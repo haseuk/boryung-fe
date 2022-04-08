@@ -15,25 +15,25 @@ export default {
       }
     },
     reports: {
-      cont1: {
+      annual: {
         en: 'Annual Report',
         ko: '연차보고서',
       },
-      cont2: {
+      audit: {
         en: 'Audit Report',
         ko: '감사보고서',
       },
-      cont3: {
+      ir: {
         en: 'IR',
         ko: 'IR',
       }
     },
     care: {
-      cont1: {
+      intro: {
         en: 'Intro',
         ko: 'Intro',
       },
-      cont2: {
+      cis: {
         en: 'CIS Challenge',
         ko: 'CIS Challenge',
       }

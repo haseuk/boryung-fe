@@ -30,16 +30,16 @@
             <li><LngLink to="our-history">Our<br class="web"> History</LngLink></li>
             <li><LngLink to="reports">Reports</LngLink>
               <div class="depth">
-                <LngLink to="reports/cont1">{{ $t('gnb.reports.cont1') }}</LngLink>
-                <LngLink to="reports/cont2">{{ $t('gnb.reports.cont2') }}</LngLink>
-                <LngLink to="reports/cont3">IR</LngLink>
+                <LngLink to="reports/annual">{{ $t('gnb.reports.annual') }}</LngLink>
+                <LngLink to="reports/audit">{{ $t('gnb.reports.audit') }}</LngLink>
+                <LngLink to="reports/ir">IR</LngLink>
               </div>
             </li>
             <li><LngLink to="news">News</LngLink></li>
             <li><LngLink to="care">Care In<br class="web"> Space</LngLink>
               <div class="depth">
-                <LngLink to="care/cont1">Intro</LngLink>
-                <LngLink to="care/cont2">CIS Challenge</LngLink>
+                <LngLink to="care/intro">Intro</LngLink>
+                <LngLink to="care/cis">CIS Challenge</LngLink>
               </div>
             </li>
             <li><LngLink to="link">Link to<br class="web"> Sub. Co.</LngLink></li>
