@@ -83,7 +83,7 @@ export default {
 
     &.ready {
       .h1, .home { transform: translateY(100px); opacity: 0; }
-      .page-link li { opacity: 0; }
+      .page-link li { opacity: 0.001; }
       .v-bg { opacity:0; transform: translateX(-100%); }
     }
   }

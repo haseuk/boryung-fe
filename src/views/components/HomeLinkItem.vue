@@ -16,9 +16,8 @@ export default {
   },
   mounted() {
     this.vivus = new Vivus(this.$el.querySelector('svg'), {duration:20});
-    console.log(this.vivus.getStatus())
-    this.vivus.stop()
-    this.vivus.reset()
+    this.vivus.stop();
+    this.vivus.reset();
   },
   methods: {
     over() {

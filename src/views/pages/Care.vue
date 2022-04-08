@@ -410,7 +410,7 @@ export default {
           .step { .abs; .lt(130,40);
             span { .p(8,25); }
           }
-          .t-tit + p { .abs; .lt(130,0); }
+          .t-tit + p { .abs; .lt(130,0); .mt(-5); }
         }
         .c-en .txt { .fs(18); .lh(30); .mb(0); }
         .cont2-ul { .mt(30);
