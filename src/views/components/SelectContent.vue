@@ -1,6 +1,7 @@
 <template>
   <div select-cont>
-    <h2>{{ tit }}<br>{{ title }}</h2>
+    <h2>{{ tit }}</h2>
+    <h2>{{ title }}</h2>
     <div class="select-box" :class="{open:isOpen}" @click="listToggle">
       <ul>
         <li v-for="item in orderList" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p>{{ item.label }}</p></li>
@@ -62,7 +63,7 @@ export default {
 }
 @media screen and(min-width: 1240px) {
   [select-cont] { .mb(0); .max-w(1240); .mh-c; .pl(60); .h(180); .-box; .rel;
-    h2 { .lh(90); .ib; }
+    h2 { .lh(90); .block; pointer-events: none; }
     .select-box { .w(300); .-b; .pb(0); .mt(0); .abs; .rt(40,0); .tr; height: auto;
       &:after { .hide; }
       ul {
