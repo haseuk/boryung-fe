@@ -22,24 +22,24 @@
           <ul>
             <li><LngLink to="ceo">CEO<br class="web"> Letter</LngLink>
               <div class="depth">
-                <LngLink to="ceo">{{ $t('gnb.ceo.kim') }}</LngLink>
-                <LngLink to="ceo">{{ $t('gnb.ceo.chang') }}</LngLink>
+                <LngLink to="ceo/kim">{{ $t('gnb.ceo.kim') }}</LngLink>
+                <LngLink to="ceo/chang">{{ $t('gnb.ceo.chang') }}</LngLink>
               </div>
             </li>
             <li><LngLink to="our-mission">Our<br class="web"> Mission</LngLink></li>
             <li><LngLink to="our-history">Our<br class="web"> History</LngLink></li>
             <li><LngLink to="reports">Reports</LngLink>
               <div class="depth">
-                <LngLink to="reports">{{ $t('gnb.reports.cont1') }}</LngLink>
-                <LngLink to="reports">{{ $t('gnb.reports.cont2') }}</LngLink>
-                <LngLink to="reports">IR</LngLink>
+                <LngLink to="reports/cont1">{{ $t('gnb.reports.cont1') }}</LngLink>
+                <LngLink to="reports/cont2">{{ $t('gnb.reports.cont2') }}</LngLink>
+                <LngLink to="reports/cont3">IR</LngLink>
               </div>
             </li>
             <li><LngLink to="news">News</LngLink></li>
             <li><LngLink to="care">Care In<br class="web"> Space</LngLink>
               <div class="depth">
-                <LngLink to="care">Intro</LngLink>
-                <LngLink to="care">CIS Challenge</LngLink>
+                <LngLink to="care/cont1">Intro</LngLink>
+                <LngLink to="care/cont2">CIS Challenge</LngLink>
               </div>
             </li>
             <li><LngLink to="link">Link to<br class="web"> Sub. Co.</LngLink></li>

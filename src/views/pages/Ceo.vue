@@ -116,7 +116,7 @@ export default {
 [ceo] { .fs(0); .p(0,70); .-box; .mt(140); .pb(140); .-box;
   .ceo-letter { .mt(84);
     .cont {
-      .txt { .fs(24); .lh(36); .ls(-0.075em); .mt(18); .regular;
+      .txt { .fs(24); .lh(36); .ls(-0.075em); .mt(25); .regular;
         p { .mb(37);
           &.date { .m(50,0,0); .ib; }
           &.sign { .fs(30); .mt(15);
@@ -163,7 +163,7 @@ export default {
   }
   &.en .ceo-letter .cont {
     &.cont1 {
-      .tit { .wh(512,45); .contain('/images/mo/ceo-img1-en.png'); }
+      .tit { .wh(475,45); .contain('/images/mo/ceo-img1-en.png'); }
       .txt .sign img { .lt(470,-52); }
     }
     &.cont2 .tit { .wh(618,43); .contain('/images/mo/ceo-img2-en.png'); }
@@ -198,7 +198,7 @@ export default {
     }
     &.en .ceo-letter .cont {
       &.cont1 {
-        .tit { .wh(640,57); .contain('/images/pc/ceo-img1-en.png'); }
+        .tit { .wh(590,57); .contain('/images/pc/ceo-img1-en.png'); }
         .txt .sign img { .lt(410,-52); }
       }
       &.cont2 .tit {  .wh(773,54); .contain('/images/pc/ceo-img2-en.png'); }

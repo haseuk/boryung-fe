@@ -111,7 +111,7 @@
         </div>
         <div class="txt">
           <p class="top">진행 절차</p>
-          <p><i></i><b>참가자 선정</b></p>
+          <p class="t-tit"><i></i><b>참가자 선정</b></p>
           <div class="step">
             <span>신청서 제출</span>
             <span>서류 심사</span>
@@ -119,16 +119,16 @@
             <span>10팀 선정</span>
           </div>
           <p class="sub"><i></i><b>Starburst 엑셀러레이터 프로그램 운영(13주)</b></p>
-          <p>투자금 10만달러 부여, 프로젝트 마일스톤 설정, 기술력 및 제품 발굴을 위한 맞춤 교육, 고객관리, 차기 투자유치 등 지원</p>
+          <p>투자금 10만달러 부여, 프로젝트 마일스톤 설정, 기술력 및 제품 발굴을 위한 맞춤 교육, 고객관리,<br class="web"> 차기 투자유치 등 지원</p>
           <p class="sub"><i></i><b>CIS 데모데이(2022년 12월 생중계)</b></p>
         </div>
         <div class="txt">
-          <p class="top">일정</p>
-          <p>2022년 4월 18일부터 7월18일까지(13주간)</p>
+          <p class="top t-tit">일정</p>
+          <p><b>2022년 4월 18일부터 7월18일까지(13주간)</b></p>
         </div>
         <div class="txt">
-          <p class="top">파트너</p>
-          <p><em>(주)보령</em>이 주관하며 우주 탐사 / 관광 전문기업 <b>Axiom Space</b>, 글로벌 항공우주 스타트업 엑셀러레이터 <b>Starburst</b>가 함께 합니다. </p>
+          <p class="top t-tit">파트너</p>
+          <p><em>(주)보령</em>이 주관하며 우주 탐사 / 관광 전문기업 <b>Axiom Space</b>,<br class="web"> 글로벌 항공우주 스타트업 엑셀러레이터 <b>Starburst</b>가 함께 합니다. </p>
         </div>
 <!--        <ul class="cont2-ul">-->
 <!--          <li>-->
@@ -233,7 +233,7 @@ export default {
           b { .bold; }
         }
         .vision-ul { .mt(75);
-          li { .fs(30); .semi-bold; .ls(-0.06em); .rel; .mb(40);
+          li { .fs(30); .semi-bold; .ls(-0.06em); .rel; .mb(40); .nowrap;
             &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-25); .ml(-11); }
           }
         }
@@ -289,8 +289,8 @@ export default {
           em { .bold; }
         }
         .step {
-          span { .fs(18); color:#2d2d2f; .ib; .p(8,15); .-a(#e3d7cb); .-box; .mr(28); .rel;
-            &:after { .cnt; .wh(14,23); .contain('/images/mo/arrow-r.png'); .abs; .rt(-23,10); }
+          span { .fs(18); color:#2d2d2f; .bold; .ib; .p(8,12); .-a(#e3d7cb); .-box; .mr(23); .rel;
+            &:after { .cnt; .wh(14,23); .contain('/images/mo/arrow-r.png'); .abs; .rt(-22,10); }
             &:last-child { .mr(0);
               &:after { .hide; }
             }
@@ -306,11 +306,12 @@ export default {
         a { .wh(610,100); .ib; .pointer; .abs; .lt; }
         img { .wh(372,45); .abs; .lt(50%,50%); transform: translate(-50%,-50%); }
       }
+      .c-en .txt { .fs(24); .medium; }
     }
   }
 
 
-  h2, .select-box, .cont .bg-tit, .cont .tit, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
+  h2, .select-box, .cont .bg-tit, .cont .tit, .cont2 .txt, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .bg-tit { transition-delay: 0.4s; }
   .cont .tit { transition-delay: 0.7s; }
@@ -321,14 +322,20 @@ export default {
     &:nth-child(3) { transition-delay: 1.9s; }
     &:nth-child(4) { transition-delay: 2.1s; }
   }
+  .cont2-ul { transition-delay: 1.3s; }
+  .care-logo { transition-delay: 1.6s; }
+
 
   .cont2 {
     .tit {transition-delay: 0.4s; }
-    .txt1 { transition-delay: 0.7s; }
-    .txt2 { transition-delay: 1.0s; }
+    .txt {
+      &:nth-of-type(1) { transition-delay: 0.7s; }
+      &:nth-of-type(2) { transition-delay: 1.0s; }
+      &:nth-of-type(3) { transition-delay: 1.3s; }
+      &:nth-of-type(4) { transition-delay: 1.6s; }
+    }
   }
-  .cont2-ul { transition-delay: 1.3s; }
-  .care-logo { transition-delay: 1.6s; }
+
   &.ready {
     h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100px); }
   }
@@ -397,10 +404,16 @@ export default {
       }
       &.cont2 {
         .tit { .fs(36); .lh(50); .mb(25); }
-        .txt { .fs(18); .lh(30); }
+        .txt { .fs(18); .lh(22); .rel;
+          p, .top { .fs(18); }
+          .step { .abs; .lt(130,40);
+            span { .p(8,25); }
+          }
+          .t-tit + p { .abs; .lt(130,0); }
+        }
         .cont2-ul { .mt(30);
           li { .fs(18); .lh(32); .mb(5);
-            b { .fs(24); .lh(32); .ib; .mr(10); }
+            b { .fs(18); .lh(32); .ib; .mr(10); }
           }
         }
         .care-logo { .mt(40); }

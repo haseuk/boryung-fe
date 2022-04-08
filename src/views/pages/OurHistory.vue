@@ -102,7 +102,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[history] { .fs(0); .p(0,70); .-box; .mt(140); .pb(140); .-box;
+[history] { .fs(0); .p(0,60,0,70); .-box; .mt(140); .pb(140); .-box;
   .web { .hide; }
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   ul {
