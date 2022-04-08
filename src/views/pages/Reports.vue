@@ -283,6 +283,7 @@ export default {
           }
         }
         .noti { .fs(18); .mt(5); }
+        .c-en { .mt(0); }
       }
     }
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
