@@ -28,6 +28,7 @@
       보령제약 장두현 대표이사는 “자이프렉사 인수로 CNS 치료제 사업의 새로운 도약의 계기를 마련하게 됐다”며 “앞으로도 보령제약의 성장에 기여할 수 있는 제품을 지속적으로 인수하기 위해, 국내외에서 임상적 가치를 인정받으며 치료제 시장을 리딩하고 있는 다수의 제품을 검토하고 있다”고 말했다.
     </div>
     <LngLink to="/news" class="list-go"><img src="/images/mo/before.png" alt="">List</LngLink>
+    <span class="v-bg"></span>
   </div>
 </template>
 
@@ -52,7 +53,7 @@ export default {
 
 [detail] { .mt(140); .p(0,70); .tl; .pb(140); .-box;
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); }
-  .news-visual { .w(610); .mh-c; .-a(#e3d7cb);
+  .news-visual { .w(610); .mh-c; .-a(#e3d7cb); .bgc(#fff);
     img { .f; }
   }
   .v-tit { .fs(30); .lh(37); .bold; color:#3b3b3c; .ls(-0.05em); .mt(48); }
@@ -60,24 +61,31 @@ export default {
   .list-go { .fs(30); .ls(-0.05em); .block; .mh-c; .mt(30); .tc;
     img { .wh(28,24); .ib; pointer-events: none; .mr(25); }
   }
-  h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:1; transform: translateY(0); transition: all 1s; transition-timing-function: ease-out; }
-  .news-visual { transition-delay: 1s; }
-  .v-tit { transition-delay: 2s; }
-  .v-txt { transition-delay: 2.6s; }
-  .list-go { transition-delay: 3.2s; }
+  .v-bg { .hide; }
+
+
+
+  h2, .news-visual, .v-tit, .v-txt, .list-go, .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
+  .news-visual { transition-delay: 0.8s; }
+  .v-tit { transition-delay: 1.2s; }
+  .v-txt { transition-delay: 1.6s; }
+  .list-go { transition-delay: 2.0s; }
+  .v-bg { transform: translateX(0); transition-delay: 2.4s; }
   &.ready {
-    h2, .news-visual, .v-tit, .v-txt, .list-go { opacity:0; transform: translateY(100px); }
+    h2, .news-visual, .v-tit, .v-txt, .list-go, .v-bg { opacity:0; transform: translateY(100px); }
+    .v-bg { opacity:0; transform: translateX(-100%); }
   }
 }
-@media screen and(min-width: 1200px) {
-  [detail] { .p(0); .mt(287px); .max-w(1200px); .mh-c; .pb(320px);
-    h2 { .fs(80px); .lh(80px); .mb(105px); .ml(60px); }
-    .news-visual { .w(800px); }
-    .v-tit { .fs(24px); .lh(37px); .mt(30px); }
-    .v-txt { .fs(16px); .lh(24px); .mt(24px); .p(45px,0,45px); }
-    .list-go { .fs(30px); .mt(40px);
-      img { .wh(28px,24px); .mr(20px); }
+@media screen and(min-width: 1240px) {
+  [detail] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0); .tl;
+    h2 {.lh(80); .mb(105); }
+    .news-visual { .w(800); .ib; }
+    .v-tit { .fs(24); .lh(37); .mt(30); }
+    .v-txt { .fs(16); .lh(24); .mt(24); .p(45,0,45); }
+    .list-go { .mt(40);
+      img { .mr(20); }
     }
+    .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; z-index: -1; }
   }
 }
 </style>
