@@ -429,6 +429,7 @@ export default {
         > div { .pl(240); .tl;
           .txt { .w(670); }
         }
+        .network { .pl(0); }
         &:nth-child(2) > div { width:auto;
           .txt { .w(730); }
         }
