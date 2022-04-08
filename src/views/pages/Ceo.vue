@@ -119,7 +119,7 @@ export default {
       .txt { .fs(24); .lh(36); .ls(-0.075em); .mt(25); .regular;
         p { .mb(37);
           &.date { .m(50,0,0); .ib; }
-          &.sign { .fs(30); .mt(15);
+          &.sign { .fs(30); .mt(15); .nowrap;
             &.en { .bold; }
           }
         }
