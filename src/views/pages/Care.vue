@@ -130,36 +130,6 @@
           <p class="top t-tit">파트너</p>
           <p><em>(주)보령</em>이 주관하며 우주 탐사 / 관광 전문기업 <b>Axiom Space</b>,<br class="web"> 글로벌 항공우주 스타트업 엑셀러레이터 <b>Starburst</b>가 함께 합니다. </p>
         </div>
-<!--        <ul class="cont2-ul">-->
-<!--          <li>-->
-<!--            <b>Accelerator program</b>-->
-<!--            스타트업을 위한 창업기획 / 지원프로그램-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Axiom Space</b>-->
-<!--            미국 우주탐사 / 관광 스타트업(민간 우주정거장건설예정)-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Starburst</b>-->
-<!--            글로벌 항공우주 스타트업 엑셀러레이터-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Demo day</b>-->
-<!--            스타트업홍보, 투자유치를 위한 행사-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Project milestone</b>-->
-<!--            프로젝트 중 중요 이정표 수립-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Technology Readiness Level</b>-->
-<!--            (TRL, 기술성숙도)-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <b>Product-Market Fit</b>-->
-<!--            (PMF, 제품시장적합성)-->
-<!--          </li>-->
-<!--        </ul>-->
       </div>
       <div class="c-en">
         <p class="tit">WHAT IS THE INTERNATIONAL<br class="web"> CARE IN SPACE CHALLENGE?</p>

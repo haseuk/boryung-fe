@@ -1,6 +1,6 @@
 <template>
   <div select-cont>
-    <h2>{{ title }}</h2>
+    <h2>{{ tit }}<br>{{ title }}</h2>
     <div class="select-box" :class="{open:isOpen}" @click="listToggle">
       <ul>
         <li v-for="item in orderList" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p>{{ item.label }}</p></li>
@@ -15,6 +15,7 @@ import _sortBy from 'lodash/sortBy'
 export default {
   name: "SelectContent",
   props: {
+    tit: { type: String, default: null },
     title: { type: String, default: null },
     list: { type: Array, default: null },
     active: { type: null, default: null }
@@ -43,7 +44,7 @@ export default {
 @rem: 32;
 
 [select-cont] { .fs(0); .mb(88);
-  h2 { .fs(80); .lh(115); .medium; .ls(-0.05em); .rel; z-index: 1; }
+  h2 { .fs(80); .lh(90); .medium; .ls(-0.05em); .rel; z-index: 1; }
   .select-box { .w(383); .-b(#2d2d2f,2px); .rel; .mt(60);
     &:after { .cnt; .wh(40,23); .contain('/images/mo/arr-d.png'); .abs; .rt(3,20); pointer-events: none; }
     ul {
@@ -61,7 +62,7 @@ export default {
 }
 @media screen and(min-width: 1240px) {
   [select-cont] { .mb(0); .max-w(1240); .mh-c; .pl(60); .h(180); .-box; .rel;
-    h2 { .lh(80); .ib; }
+    h2 { .lh(90); .ib; }
     .select-box { .w(300); .-b; .pb(0); .mt(0); .abs; .rt(40,0); .tr; height: auto;
       &:after { .hide; }
       ul {

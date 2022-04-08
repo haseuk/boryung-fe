@@ -1,6 +1,6 @@
 <template>
   <div ceo :class="{ready}">
-    <SelectContent title="CEO Letter." :list="selectList" :active="active" @select="select"/>
+    <SelectContent tit="2022" title="CEO Letter." :list="selectList" :active="active" @select="select"/>
     <div class="ceo-letter" :class="{refresh}">
       <div class="cont cont1" v-if="active === 'kim'">
         <p class="tit"></p>
@@ -10,7 +10,7 @@
           <p>저를 포함한 보령에서 함께 일하고 있는 구성원들은 제약 사업에서뿐만 아니라 범위를 넓혀 Healthcare 산업 전반에서 회사를 성장시킬 수 있는 기회가 무궁무진하다고 믿고 있습니다. 따라서 우리는 그러한 기회들을 적극적으로 찾고, 투자하여, 회사를 성장시킬 것 입니다. 이해도가 높은 분야에서 기회를 찾을 것이며, 소수 지분 투자보다는 회사나 자산에 대한 전체 인수를 우선적으로 볼 것이고, 이러한 적극적인 투자를 통해 장기적으로 회사의 이익 창출력(earning power)을 성장 시키는데 집중할 것입니다.</p>
           <p>우리는 회사 또는 자산이 장기적으로 누군가에게 꼭 필요한 지와 그 사업을 이끌고 있는 경영진의 능력을 투자의 가장 중요한 기준으로 삼을 것 입니다. 사업이 장기적으로 누군가에게 꼭 필요하고, 그 사업을 이끄는 경영진이 훌륭하다면, 우리 회사의 성장에 절대적으로 도움이 되리라 믿기 때문입니다.</p>
           <p>위에서 말씀드린 바와 같이 우리만의 기준으로 회사의 이익을 성장시킬 수 있는 사업들을 찾아내서 투자 하는 것이 최우선 과제입니다. 하지만 보령이 장기적인 관점에서 인류에게 꼭 필요한 회사가 되려면 무엇을 해야할 지 내부적으로 고민하던 중 우주라는 공간에서 그런 회사가 되면 어떨까라는 도전적이고 장기적인 프로젝트를 구상하게 되었습니다.</p>
-          <p>우리는 언제나 그래왔듯, 인류가 미지의 세계로의 도전을 멈추지 않을 것이라 믿습니다. 그렇기 때문에 보령은 인류가 우주로 나아가는데 꼭 필요한 회사가 되려면 무엇을 해야 할지 답을 찾기 위해서 미래를 함께 만들어 갈 파트너들과 함께 ‘Care In Space’ Challenge를 매년 개최하여 한 발자국씩 나아가기로 했습니다. 지금 당장의 최우선 목표가 이익 창출력 성장이라는 것은 변함이 없지만 우주라는 새롭게 열리는 기회의 공간에서 우리가 해야 하는 것들을 찾아가는 것도 꾸준히 해나갈 것입니다. 회사가 이익을 늘려나가는 이유도 결국은 더 큰 성장을 위한 미래 투자 재원을 만들기 위해서 이기 때문입니다. 홈페이지 첫 화면의 CIS 관련 링크로 들어가시면 관련 정보를 보실 수 있습니다.</p>
+          <p>우리는 언제나 그래왔듯, 인류가 미지의 세계로의 도전을 멈추지 않을 것이라 믿습니다. 그렇기 때문에 보령은 인류가 우주로 나아가는데 꼭 필요한 회사가 되려면 무엇을 해야 할지 답을 찾기 위해서 미래를 함께 만들어 갈 파트너들과 함께 ‘Care In Space Challenge'를 매년 개최하여 한 발자국씩 나아가기로 했습니다. 지금 당장의 최우선 목표가 이익 창출력 성장이라는 것은 변함이 없지만 우주라는 새롭게 열리는 기회의 공간에서 우리가 해야 하는 것들을 찾아가는 것도 꾸준히 해나갈 것입니다. 회사가 이익을 늘려나가는 이유도 결국은 더 큰 성장을 위한 미래 투자 재원을 만들기 위해서 이기 때문입니다. 홈페이지 첫 화면의 CIS 관련 링크로 들어가시면 관련 정보를 보실 수 있습니다.</p>
           <p>앞으로 매년 저의 편지와 주주총회를 통해서 보령의 과거, 현재, 미래에 대해 공감하며, 우리 구성원분들과 우리를 믿고 투자하기로 결정하신 분들과 장기적으로 함께 성장해 나갈 수 있는 자리를 만들도록 노력 하겠습니다.</p>
           <p>감사합니다.</p>
           <p class="date">2022.03.25</p>
@@ -22,11 +22,11 @@
           <p>We believe not only pharmaceuticals, but the healthcare businesses also offer limitless opportunities for growth to our company. We are determined to aggressively find new opportunities in areas familiar to us and invest in them in order to take our company one step further. To this end, we intend to acquire a promising company or assets as a whole, rather than secure a minor stake in it. With such aggressive investments, we aim to strengthen our earning power over the long term.</p>
           <p>We will make investment decisions based on the following criteria: 1) whether the corresponding company is essential to a specific population and 2) whether its management is capable of leading the corresponding business successfully. If these two preconditions are met, the company or assets should offer tremendous opportunities for our future growth.</p>
           <p>As I mentioned earlier, our top priority is to discover and invest in businesses necessary for solid profit growth looking ahead. From a long-term point of view, however, we felt the need to ponder on which projects are needed for Boryung to become irreplaceable to humanity. Then, we came up with this challenging long-term project—becoming a major player in outer space.</p>
-          <p>We believe humanity will not stop exploring uncharted territory. This is why we decided to hold a ‘Care in Space’ Challenge’ event annually with our partners in order to greatly contribute to humankind’s foray into outer space. Surely, our immediate top priority remains the growth of our earning power, but we still aim to discover promising new projects in outer space, which is a territory brimming with new opportunities. Indeed, our very reason for boosting earnings is the need to secure financial resources for future investments and facilitate stronger growth. Investors can get related information by clicking the CIS-related link on the first screen of our webpage.</p>
-          <p>We are committed to preparing various opportunities and events in order to grow together with market participants who share our views on the past, present and future of Boryung through CEO letters and shareholders’ meeting and decide to trust and invest in Boryung.</p>
+          <p>We believe humanity will not stop exploring uncharted territory. This is why we decided to hold a ‘Care in Space Challenge’ event annually with our partners in order to greatly contribute to humankind’s foray into outer space. Surely, our immediate top priority remains the growth of our earning power, but we still aim to discover promising new projects in outer space, which is a territory brimming with new opportunities. Indeed, our very reason for boosting earnings is the need to secure financial resources for future investments and facilitate stronger growth. Investors can get related information by clicking the CIS-related link on the first screen of our webpage.</p>
+          <p>We are committed to preparing various opportunities and events in order to grow together with market participants who share our views on the past, present and future of Boryung through CEO letters and shareholders’ meetings and decide to trust and invest in Boryung.</p>
           <p>Thank you.</p>
           <p class="date">2022.03.25</p>
-          <p class="sign">Boryung CEO & Chairman Jay Kim <img src="/images/mo/sign1.png" alt=""></p>
+          <p class="sign">Boryung CEO & Chairman Jay Kim</p>
         </div>
       </div>
       <div class="cont cont2" v-if="active === 'chang'">
@@ -59,7 +59,7 @@
           <p>We are certain 2022 will see Boryung lay the groundwork for a quantum leap ahead. All of Boryung’s members, including myself, are committed to pushing for relentless innovation and embracing challenges. We call for your unwavering support to help us dream bigger and set our sights on higher grounds.</p>
           <p>Thank you.</p>
           <p class="date">2022.03.25</p>
-          <p class="sign">Boryung CEO Pharma Business <img src="/images/mo/sign2.png" alt=""></p>
+          <p class="sign">Boryung CEO Pharma Business Daniel Chang</p>
         </div>
       </div>
     </div>
@@ -171,7 +171,7 @@ export default {
 }
 @media screen and(min-width: 1240px) {
   [ceo] { .p(180,0,0); .mt(0);
-    .ceo-letter { .max-w(1240); .p(0,40,0,60); .-box; .mh-c; .mt(0);
+    .ceo-letter { .max-w(1240); .p(0,40,100,60); .-box; .mh-c; .mt(105);
       .cont {
         .txt { .fs(18); .lh(36); .mt(32); .keep-all;
           p { .mb(40);
