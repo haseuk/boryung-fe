@@ -8,7 +8,7 @@ const serverBundle = require('../dist/vue-ssr-server-bundle.json');
 const clientManifest = require('../dist/vue-ssr-client-manifest.json');
 const { inject } = require('./meta');
 const sitemap = require('./sitemap');
-const proxy = require('express-http-proxy');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const renderer = createBundleRenderer(serverBundle, {
   runInNewContext: false,
@@ -26,7 +26,7 @@ server.use('/fonts', serve('../dist/fonts', true));
 server.use('/js', serve('../dist/js', true));
 server.use('/favicon.ico', serve('../dist/favicon.ico', true));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
-server.use('/api', proxy('http://localhost:8079'))
+server.use('/api', createProxyMiddleware({ target: "http://localhost:8079", changeOrigin: true }));
 
 server.get('/sitemap.xml', sitemap);
 
