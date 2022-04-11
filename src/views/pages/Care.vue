@@ -298,7 +298,7 @@ export default {
     &:nth-child(4) { transition-delay: 2.2s; }
     .network .b { transition-delay: 2.8s; }
     .network .n { transform: scale(1); transition-delay: 3.3s; }
-    .network p { transition-delay: 3.6s; }
+    .network p { transition-delay: 3.8s; }
   }
   .cont2-ul { transition-delay: 1.3s; }
   .care-logo { transition-delay: 1.6s; }
