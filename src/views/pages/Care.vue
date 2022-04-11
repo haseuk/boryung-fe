@@ -11,7 +11,7 @@
           <li>다양한 건강 상태의 사람들을<br class="mo"> 더 많이 우주에 보낼 수 있게 하는 연구</li>
         </ul>
         <ul class="vision-ul c-en">
-          <li>Approaches toward prospective various healthcare issues in space environment</li>
+          <li>Approaches toward prospective various<br class="mo"> healthcare issues in space environment</li>
           <li>Extension of scope of untapped human<br class="mo"> health-related research areas and<br class="mo"> investment in them</li>
           <li>Studies aimed to send more people in various<br class="mo"> health conditions to outer space</li>
         </ul>
@@ -49,7 +49,8 @@
           <p class="l-tit">Network</p>
           <p class="txt">KARI(한국항공우주연구원) / STEPI(과학기술정책연구원) / NASA(미국 항공우주국)</p>
           <div class="network">
-            <img src="/images/mo/network.png" alt="">
+            <img src="/images/mo/boryung-xs.png" alt="" class="b">
+            <img src="/images/mo/network.png" alt="" class="n">
             <p>우주기관</p>
             <p>스타트업</p>
             <p>산학</p>
@@ -91,7 +92,8 @@
           <p class="l-tit">Network</p>
           <p class="txt">Korea Aerospace Research Institute,<br class="mo"> Science and Technology Policy Institute, NASA</p>
           <div class="network">
-            <img src="/images/mo/network.png" alt="">
+            <img src="/images/mo/boryung-xs.png" alt="" class="b">
+            <img src="/images/mo/network.png" alt="" class="n">
             <p>Space-related institutes</p>
             <p>Startups</p>
             <p>Academic researchers</p>
@@ -119,7 +121,7 @@
             <span>10팀 선정</span>
           </div>
           <p class="sub"><i></i><b>Starburst 엑셀러레이터 프로그램 운영(13주)</b></p>
-          <p>투자금 10만달러 부여, 프로젝트 마일스톤 설정, 기술력 및 제품 발굴을 위한 맞춤 교육, 고객관리,<br class="web"> 차기 투자유치 등 지원</p>
+          <p class="txt-a">투자금 10만달러 부여, 프로젝트 마일스톤 설정, 기술력 및 제품 발굴을 위한 맞춤 교육, 고객관리,<br class="web"> 차기 투자유치 등 지원</p>
           <p class="sub"><i></i><b>CIS 데모데이(2022년 12월 생중계)</b></p>
         </div>
         <div class="txt">
@@ -191,7 +193,8 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[care] { .fs(0); .p(0,70); .rel; .mt(140); .pb(200); .-box;
+[care] { .fs(0); .p(0,50); .rel; .mt(140); .pb(200); .-box;
+  [select-cont] { .pl(20); .-box; }
   .mo { .ib; }
   .web { .hide; }
   &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
@@ -237,7 +240,8 @@ export default {
           &:nth-child(4) {
             .txt { .lh(36); .keep-all; }
             .network { .wf; .max-w(622); .mh-c; .mt(80); .rel;
-              img { .wf; }
+              .n { .wh(622,430); }
+              .b { .wh(303,45); .abs; .lt(50%,176); transform: translateX(-50%); z-index: 1; }
               p { .fs(20); .lh(28); .medium; color:#a29992; .abs; .ls(-0.05em);
                 &:nth-of-type(1) { .lt(5,50%); .mt(-19%); .tl; }
                 &:nth-of-type(2) { .rt(0,50%); .mt(-19%); .tr; }
@@ -249,14 +253,15 @@ export default {
         }
       }
     }
-    &.cont2 { .tl;
+    &.cont2 { .tl; .p(0,20); .-box;
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
       .txt { .mb(50);
         p { .fs(24); .lh(36); .ls(-0.05em); .medium;
-          &.top { .lh(28); .-l(#2d2d2f); .-r(#2d2d2f); .p(0,20); .-box; .ib; .mb(10); }
+          &.top { .lh(28); .-l(#2d2d2f); .-r(#2d2d2f); .p(0,20); .-box; .ib; .mb(20); }
           i { .wh(7,7); .br(50%); .bgc(#e3d7cb); .ib; .vam; .mr(10); }
           &.sub { .mt(30); }
           em { .bold; }
+          &.txt-a { .pl(15); .-box; }
         }
         .step {
           span { .fs(18); color:#2d2d2f; .bold; .ib; .p(8,12); .-a(#e3d7cb); .-box; .mr(23); .rel;
@@ -281,7 +286,7 @@ export default {
   }
 
 
-  h2, .select-box, .cont .bg-tit, .cont .tit, .cont2 .txt, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
+  h2, .select-box, .cont .bg-tit, .cont .tit, .cont2 .txt, .vision-ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .network .n, .network .b, .network p { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   .select-box { transition-delay: 0.8s; }
   .cont .bg-tit { transition-delay: 0.4s; }
   .cont .tit { transition-delay: 0.7s; }
@@ -290,14 +295,17 @@ export default {
     &:nth-child(1) { transition-delay: 1.3s; }
     &:nth-child(2) { transition-delay: 1.6s; }
     &:nth-child(3) { transition-delay: 1.9s; }
-    &:nth-child(4) { transition-delay: 2.1s; }
+    &:nth-child(4) { transition-delay: 2.2s; }
+    .network .b { transition-delay: 2.8s; }
+    .network .n { transform: scale(1); transition-delay: 3.3s; }
+    .network p { transition-delay: 3.6s; }
   }
   .cont2-ul { transition-delay: 1.3s; }
   .care-logo { transition-delay: 1.6s; }
 
 
   .cont2 {
-    .tit {transition-delay: 0.4s; }
+    .tit { transition-delay: 0.4s; }
     .txt {
       &:nth-of-type(1) { transition-delay: 0.7s; }
       &:nth-of-type(2) { transition-delay: 1.0s; }
@@ -307,10 +315,20 @@ export default {
   }
 
   &.ready {
-    h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { opacity:0; transform: translateY(100px); }
+    h2, .select-box, .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .network .b { opacity:0; transform: translateY(100px); }
+    .divs li .network {
+      .b { opacity: 0; }
+      .n { opacity: 0; transform: scale(0.9); }
+      p { opacity: 0; }
+    }
   }
   &.refresh {
-    .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
+    .cont .bg-tit, .cont .tit, ul, .divs li, .cont2 .tit, .cont2 .txt, .cont2-ul, .care-logo, .network .b { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
+    .divs li .network {
+      .b { opacity: 0; }
+      .n { opacity: 0; transform: scale(0.9); }
+      p { opacity: 0; }
+    }
   }
 }
 

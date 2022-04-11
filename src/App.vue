@@ -48,7 +48,7 @@ export default {
 @import "~@/less/common";
 #app { color:#2d2d2f; }
 [content-holder] {
-  min-height: calc(100vh - 3rem);
+  min-height: calc(100vh - 4rem);
 }
 
 @media screen and(min-width:768px) {

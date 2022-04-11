@@ -26,9 +26,7 @@
           <ul>
             <li><LngLink to="ceo">CEO<br class="web"> Letter</LngLink>
               <div class="depth">
-                <LngLink to="ceo/kim" class="mo">2022</LngLink>
-                <LngLink to="ceo/kim" class="web">{{ $t('gnb.ceo.kim') }}</LngLink>
-                <LngLink to="ceo/chang" class="web">{{ $t('gnb.ceo.chang') }}</LngLink>
+                <LngLink to="ceo/kim">2022</LngLink>
               </div>
             </li>
             <li><LngLink to="our-mission">Our<br class="web"> Mission</LngLink></li>
@@ -87,7 +85,7 @@ export default {
 @rem: 32;
 [app-header] { .fs(0);
   #app.home & header .h-inner .logo { .hide; }
-  .web { .hide!important; }
+  .web { .hide; }
   header { .rel; z-index: 20;
     .h-inner { .rel; .h(80);
       .logo { .wh(207,31); .contain('/images/mo/logo.png'); .ib; .abs; .lb(69,0); }
@@ -131,8 +129,7 @@ export default {
 }
 @media screen and(min-width:1240px) {
   [app-header] {
-    .web { .ib!important; }
-    .mo { .hide!important; }
+    .web { .ib; }
     header { .h(109);
       .h-inner { .max-w(1240); .mh-c; .hf; .pr(40); .-box;
         .logo { .lb(60,0); }

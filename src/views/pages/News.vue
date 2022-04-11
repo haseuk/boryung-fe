@@ -70,14 +70,14 @@ export default {
         img { .wf; transform: translateY(-50%); .mt(71) }
       }
       .l-tit { .fs(24); .bold; color:#3b3b3c; .mb(30); .ls(-0.05em); }
-      .l-txt { .fs(24); color:#a29992; .ls(-0.025em); .wf; overflow: hidden; text-overflow: ellipsis; display: -webkit-inline-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word;
+      .l-txt { .fs(24); color:#a29992; .ls(-0.025em); .wf; overflow: hidden; text-overflow: ellipsis; display: -webkit-inline-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; word-wrap:break-word; transition: color 0.4s;
         &:hover { color:#2d2d2f; }
       }
     }
   }
   .v-bg { .hide; }
 
-  h2,  ul li, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s, color 0.4s; transition-timing-function: ease-out; }
+  h2,  ul li, [pagination], .v-bg { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
   ul li {
     &:nth-child(1) { transition-delay: 1s; }
     &:nth-child(2) { transition-delay: 1.6s; }

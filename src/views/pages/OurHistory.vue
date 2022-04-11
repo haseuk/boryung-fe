@@ -43,7 +43,7 @@
     <ul class="c-en">
       <li class="tit"><p>2020 ~</p></li>
       <li><p class="date">2022. 04</p><p class="txt">Company name changed to Boryung Corp. (New CI)</p></li>
-      <li><p class="date">2022. 04</p><p class="txt"></p></li>
+      <li><p class="date">2022. 04</p><p class="txt">The 1st Annual CIS(Care In Space) Challenge </p></li>
       <li><p class="date">2021. 12</p><p class="txt">Annual Kanarb line-up sales exceeded KRW100bn</p></li>
       <li class="b"><p class="date">2021. 12</p><p class="txt">Annual operating profit hit KRW50bn mark</p></li>
       <li><p class="date">2021. 12</p><p class="txt">Recuon, oncology company, established</p></li>

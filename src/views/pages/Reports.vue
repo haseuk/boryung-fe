@@ -166,8 +166,8 @@ export default {
         td { .fs(20); .tc; .p(8,0); .-box;
           &:nth-child(1), &:nth-child(2) { .tl; }
           &:nth-child(4) { .tr; }
-          .down {  .ib;
-            img { .wh(60,45); .ib; .pr(25); }
+          .down { .wh(60,45); .ib; .mr(25);
+            img { .wh(60,45); .ib; }
           }
         }
       }
@@ -228,7 +228,8 @@ export default {
         tr {
           th { .fs(20); .p(20,0); }
           td { .p(15,0);
-            .down {
+            .down { .mr(15);
+              &:hover { box-shadow: 5px 5px 0 1px rgba(0,0,0,0.1); }
               img { .pr(20); }
             }
           }
