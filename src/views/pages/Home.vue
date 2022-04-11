@@ -26,7 +26,7 @@
         </li>
       </ul>
       <div class="home">
-        <a href="">Pharma HOME</a>
+        <a href="http://pharm.boryung.co.kr/" target="_blank">Pharma HOME</a>
       </div>
       <span class="v-bg"></span>
     </div>

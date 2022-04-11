@@ -191,7 +191,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[care] { .fs(0); .p(0,70); .rel; .mt(140); .pb(140); .-box;
+[care] { .fs(0); .p(0,70); .rel; .mt(140); .pb(200); .-box;
   .mo { .ib; }
   .web { .hide; }
   &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
@@ -332,7 +332,7 @@ export default {
   }
 }
 @media screen and(min-width: 1240px) {
-  [care] { .max-w(1240); .p(180,40,100,60)!important; .-box; .mh-c; .mt(0);
+  [care] { .max-w(1240); .p(180,40,200,60)!important; .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);
       .select-box { .r(0); }
     }

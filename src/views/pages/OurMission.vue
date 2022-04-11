@@ -34,7 +34,7 @@
       </p>
       <p class="bg-tit">Mission</p>
       <div class="core-values">
-        <p class="c-tit">Main Value</p>
+        <p class="c-tit">Core Value</p>
         <ul>
           <li>
             <em>Become Irreplaceable</em>
@@ -74,7 +74,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[mission] { .fs(0); .mt(140); .tc; .pb(140); .-box;
+[mission] { .fs(0); .mt(140); .tc; .pb(200); .-box;
   .mo { .ib; }
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); .ml(70); .rel; z-index: 1; }
   .top-tit { .fs(30); .medium; color:#2d2d2f; .ls(-0.05em);
@@ -82,7 +82,7 @@ export default {
   }
   .bg-tit { .fs(120); .lh(150); color:#e3d7cb; .bold; .ls(-0.05em); opacity: 0.4; }
   .core-values { .mt(127);
-    .c-tit { .fs(48); .semi-bold; .ls(-0.05em); .p(0,40); .-box; .ib; .bgc(#fff); .rel; .nowrap;
+    .c-tit { .fs(60); .semi-bold; .ls(-0.05em); .p(0,40); .-box; .ib; .bgc(#fff); .rel; .nowrap;
       &:before { .cnt; .wh(100%,100%); .bgc(#fff); .abs; .lt(50%,0); transform: translateX(-50%); z-index: -1; }
       &:after { .cnt; .bgc(#e3d7cb); .wh(650,1); .abs; .lt(50%,50%); .ml(-325); z-index: -2; }
     }
@@ -90,7 +90,9 @@ export default {
       li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(60);
         &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-10); .ml(-11); }
         em { .fs(48); .block; .break-all; }
-        &:last-child:after { .t(-15); }
+        &:last-child { .mb(0);
+          &:after { .t(-15); }
+        }
       }
     }
   }
@@ -126,7 +128,7 @@ export default {
 
 
 @media screen and(min-width: 1200px) {
-  [mission] { .p(180,40,100,60); .max-w(1240); .-box; .mh-c; .mt(0);
+  [mission] { .p(180,40,200,60); .max-w(1240); .-box; .mh-c; .mt(0);
     .mo { .hide; }
     h2 { .lh(80); .mb(105); .ml(0); }
     .top-tit { .fs(24);
@@ -134,8 +136,7 @@ export default {
     }
     .bg-tit { .fs(120); .lh(150); .mt(10); }
     .core-values { .mt(150);
-      .c-tit { .fs(48);
-      }
+      .c-tit { .fs(48); }
       ul { .mt(75);
         li { .fs(30); .mb(50);
           &:after { .cnt; .wh(22,22); .lt(50%,-10); .ml(-11); }

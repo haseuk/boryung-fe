@@ -4,6 +4,7 @@
     <ul class="c-ko">
       <li class="tit"><p>2020 ~</p></li>
       <li><p class="date">2022. 04</p><p class="txt">주식회사 보령(BORYUNG Corp.)으로 사명 변경(New CI)</p></li>
+      <li><p class="date">2022. 04</p><p class="txt">제1회 CIS(care In Space) challenge 대회 개최</p></li>
       <li><p class="date">2021. 12</p><p class="txt">카나브 패밀리 연매출 1,000억원 돌파</p></li>
       <li class="b"><p class="date">2021. 12</p><p class="txt">영업이익 500억원 돌파</p></li>
       <li><p class="date">2021. 12</p><p class="txt">항암제 개발 전문기업 리큐온(Recuon) 설립</p></li>
@@ -27,7 +28,6 @@
       <li><p class="date">2014. 12</p><p class="txt">카나브 '세계일류상품' 선정(산업통상자원부, 코트라)</p></li>
       <li><p class="date">2011. 03</p><p class="txt">국내 최초 고혈압 신약 카나브 발매</p></li>
       <li><p class="date">2010. 12</p><p class="txt">보령제약 3,000억원 매출 달성</p></li>
-      <li><p class="date">2007. 01</p><p class="txt">보령 창업 50주년</p></li>
       <li><p class="date">2005. 11</p><p class="txt">보령의사수필문학상 제정</p></li>
       <li><p class="date">2002. 03</p><p class="txt">보령암학술상 제정</p></li>
 
@@ -43,6 +43,7 @@
     <ul class="c-en">
       <li class="tit"><p>2020 ~</p></li>
       <li><p class="date">2022. 04</p><p class="txt">Company name changed to Boryung Corp. (New CI)</p></li>
+      <li><p class="date">2022. 04</p><p class="txt"></p></li>
       <li><p class="date">2021. 12</p><p class="txt">Annual Kanarb line-up sales exceeded KRW100bn</p></li>
       <li class="b"><p class="date">2021. 12</p><p class="txt">Annual operating profit hit KRW50bn mark</p></li>
       <li><p class="date">2021. 12</p><p class="txt">Recuon, oncology company, established</p></li>
@@ -66,7 +67,6 @@
       <li><p class="date">2014. 12</p><p class="txt">Kanarb selected as “World Class Product” (Ministry of Commerce, KOTRA)</p></li>
       <li><p class="date">2011. 03</p><p class="txt">Kanarb, Korea’s first antihypertensive drug, launched</p></li>
       <li><p class="date">2010. 12</p><p class="txt">Boryung’s annual revenue hit KRW300bn</p></li>
-      <li><p class="date">2007. 01</p><p class="txt">50th anniversary of Boryung</p></li>
       <li><p class="date">2005. 11</p><p class="txt">Boryung Essay Award of Doctors established</p></li>
       <li><p class="date">2002. 03</p><p class="txt">Boryung Cancer Academic Award established</p></li>
 
@@ -102,7 +102,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[history] { .fs(0); .p(0,60,0,70); .-box; .mt(140); .pb(140); .-box;
+[history] { .fs(0); .p(0,60,0,70); .-box; .mt(140); .pb(200); .-box;
   .web { .hide; }
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   ul {
@@ -152,7 +152,7 @@ export default {
   }
 }
 @media screen and(min-width: 1240px) {
-  [history] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
+  [history] { .max-w(1240); .p(180,40,200,60); .-box; .mh-c; .mt(0);
     .web { .ib; }
     h2 { .lh(80); .mb(105); }
     ul { .pl(150); .-box;

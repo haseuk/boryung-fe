@@ -42,7 +42,7 @@
             <a href="https://www.boryung.co.kr/ir/resource.do" target="_blank">IR 자료실</a>
           </li>
         </ul>
-        <p class="noti">* 보령제약 > IR 세부페이지가 새탭으로 열립니다.</p>
+        <p class="noti">* Pharma Home> IR 세부페이지가 새탭으로 열립니다.</p>
       </div>
       <div class="c-en">
         English materials are<br>
@@ -146,7 +146,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[reports] { .p(0,70); .-box; .mt(140); .pb(140); .-box;
+[reports] { .p(0,70); .-box; .mt(140); .pb(200); .-box;
   .cont {
     table { .wf; table-layout: fixed; border-collapse: collapse; .-t(#a29992); .-b(#a29992);
       tbody tr {
@@ -211,7 +211,7 @@ export default {
   }
 }
 @media screen and(min-width: 1240px) {
-  [reports] { .max-w(1240); .p(180,40,100,60); .-box; .mh-c; .mt(0);
+  [reports] { .max-w(1240); .p(180,40,200,60); .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);
       .select-box { .r(0); }
     }

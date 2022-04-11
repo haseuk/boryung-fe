@@ -52,7 +52,7 @@ export default {
 @use-rem: true;
 @rem: 32;
 
-[link] { .fs(0); .p(0,70); .-box;  .tl; .rel; .mt(140);  .pb(140);
+[link] { .fs(0); .p(0,70); .-box;  .tl; .rel; .mt(140);  .pb(200);
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(65); }
   .boryung { .w(86%); .p(37,0); .-box; .-t(#2d2d2f,2px); .-b(#2d2d2f,2px); .ib; .rel;
     img { .wh(303,45); }
@@ -92,7 +92,7 @@ export default {
   }
 }
 @media screen and(min-width: 1240px) {
-  [link] { .max-w(1240); .p(180,40,400,60); .-box; .mh-c; .mt(0);
+  [link] { .max-w(1240); .p(180,40,530,60); .-box; .mh-c; .mt(0);
     h2 { .lh(80); .mb(105); }
     .boryung { .w(530); .p(36,0);
       &:after { .hide; }
