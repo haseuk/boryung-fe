@@ -111,6 +111,9 @@ export default {
     active() {
       this.refresh = true;
       this.loadList(100);
+    },
+    $route() {
+      this.changePage(1)
     }
   },
   methods: {
@@ -120,7 +123,7 @@ export default {
     },
     changePage(pageNo) {
       this.params.pageNo = pageNo;
-      this.loadList()
+      this.loadList(100)
     },
     async loadList(interval) {
       this.refresh = true;

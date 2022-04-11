@@ -30,6 +30,11 @@ export default {
       params: { perPage: 3, pageNo: 1 }
     }
   },
+  watch: {
+    $route() {
+      this.changePage(1)
+    }
+  },
   methods: {
     changePage(pageNo) {
       this.params.pageNo = pageNo;
