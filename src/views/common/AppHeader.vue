@@ -67,7 +67,8 @@ export default {
   },
   methods: {
     changeLang(lang) {
-      this.$router.push({ params: { lang } });
+      if (this.$route.name === 'NewsDetail') this.$router.push(`/${lang}/news`)
+      else this.$router.push({ params: { lang } });
     }
   },
   mounted() {

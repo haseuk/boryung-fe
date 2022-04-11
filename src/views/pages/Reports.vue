@@ -1,95 +1,7 @@
 <template>
   <div reports :class="{ready, refresh}">
     <SelectContent title="Reports." :list="selectList" :active="active" @select="select"/>
-    <div class="cont cont1" v-if="active === 'annual'">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <colgroup>
-          <col width="8%">
-          <col width="55%">
-          <col width="17%">
-          <col width="20%">
-        </colgroup>
-        <thead>
-        <tr>
-          <th>No.</th>
-          <th>Title</th>
-          <th>Date</th>
-          <th>Download</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>2</td>
-          <td>2021년 보령제약 연차 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>2021년 보령제약 연차 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="cont cont2" v-if="active === 'audit'">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <colgroup>
-          <col width="8%">
-          <col width="55%">
-          <col width="17%">
-          <col width="20%">
-        </colgroup>
-        <thead>
-        <tr>
-          <th>No.</th>
-          <th>Title</th>
-          <th>Date</th>
-          <th>Download</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>6</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
 
-        <tr>
-          <td>1</td>
-          <td>2021년 보령제약 감사 보고서</td>
-          <td>2021.05.03</td>
-          <td><a class="down"><img src="/images/mo/ico-down.png" alt=""></a></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
     <div class="cont cont3" v-if="active === 'ir'">
       <div class="c-ko">
         <ul>
@@ -137,7 +49,33 @@
         not available on this page.
       </div>
     </div>
-    <Pagination />
+    <div class="cont cont1" v-else>
+      <table cellpadding="0" cellspacing="0" border="0">
+        <colgroup>
+          <col width="8%">
+          <col width="55%">
+          <col width="17%">
+          <col width="20%">
+        </colgroup>
+        <thead>
+        <tr>
+          <th>No.</th>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Download</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(item, index) in list" :key="item.sq">
+          <td>{{ paging.listCount - (paging.pageNo - 1) * paging.perPage - index }}</td>
+          <td>{{ item.title }}</td>
+          <td>{{ date(item.dt) }}</td>
+          <td><a class="down" :href="download(item)"><img src="/images/mo/ico-down.png" alt=""></a></td>
+        </tr>
+        </tbody>
+      </table>
+      <Pagination  :paging="paging" @go="changePage"/>
+    </div>
     <span class="v-bg"></span>
   </div>
 </template>
@@ -145,6 +83,7 @@
 <script>
 import SelectContent from "@/views/components/SelectContent";
 import Pagination from "@/views/components/Pagination";
+import axios from "axios";
 export default {
   name: "reports",
   components: {Pagination, SelectContent},
@@ -152,11 +91,9 @@ export default {
     return {
       ready: true,
       refresh: true,
+      list: null,
+      paging: null
     }
-  },
-  mounted() {
-    setTimeout(() =>{ this.ready = false },500);
-    setTimeout(() => { this.refresh = false },1600);
   },
   computed: {
     active() {
@@ -173,15 +110,34 @@ export default {
   watch: {
     active() {
       this.refresh = true;
-      setTimeout(() => { this.refresh = false },200)
+      this.loadList(100);
     }
   },
   methods: {
     select(reports) {
       if (this.active === reports) return;
       this.$router.push({ params: { reports } })
+    },
+    changePage(pageNo) {
+      this.params.pageNo = pageNo;
+      this.loadList()
+    },
+    async loadList(interval) {
+      this.refresh = true;
+      if (this.active !== 'ir') {
+        const {data} = await axios.get(`/api/board/${this.lang}/${this.active}`, {params: this.params})
+        this.list = data.list;
+        this.paging = data.paging;
+      }
+      await this.sleep(interval)
+      this.refresh = false;
     }
-  }
+  },
+  mounted() {
+    setTimeout(() =>{ this.ready = false },500);
+    this.loadList(1500)
+  },
+
 }
 </script>
 

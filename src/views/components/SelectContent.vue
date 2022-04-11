@@ -4,7 +4,7 @@
     <h2>{{ title }}</h2>
     <div class="select-box" :class="{open:isOpen}" @click="listToggle">
       <ul>
-        <li v-for="item in orderList" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p>{{ item.label }}</p></li>
+        <li v-for="item in list" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p>{{ item.label }}</p></li>
       </ul>
     </div>
   </div>

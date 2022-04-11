@@ -1,28 +1,81 @@
 <template>
   <div pagination>
-    <a class="first"></a>
-    <a class="prev"></a>
+    <a class="first" @click="first" :class="{disabled: pageNow === 1}"></a>
+    <a class="prev" @click="prev" :class="{disabled: pageNow === 1}"></a>
     <div class="page-go">
-      <a>1</a>
-      <a>2</a>
-      <a>3</a>
-      <a>4</a>
-      <a>5</a>
+      <a v-for="page in pageList" :key="page" :class="{on: page === pageNow }" @click="$emit('go', page)">{{ page }}</a>
     </div>
-    <a class="next"></a>
-    <a class="last"></a>
+    <a class="next" @click="next" :class="{disabled: totalPages === pageNow}"></a>
+    <a class="last" @click="end" :class="{disabled: totalPages === pageNow}"></a>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Pagination",
+  props: {
+    paging: { type: Object, default: null },
+  },
   data() {
-    return {}
+    return {
+      totalPages: 0,
+      pageNow: 0,
+      pageStart: 0,
+      pageEnd: 0,
+      pageList: null,
+    };
+  },
+  watch: {
+    paging: 'update',
+  },
+  methods: {
+    first() {
+      if (this.pageNow === 1) return;
+      this.$emit('go', 1);
+    },
+    prev() {
+      if (this.pageNow === 1) return;
+      this.$emit('go', this.pageNow - 1);
+    },
+    next() {
+      if (this.pageNow === this.totalPages) return;
+      this.$emit('go', this.pageNow + 1);
+    },
+    end() {
+      if (this.pageNow === this.totalPages) return;
+      this.$emit('go', this.totalPages);
+    },
+    update() {
+      const result = [];
+      if (!this.paging) {
+        result.push(1);
+        return result;
+      }
+      if (this.paging) {
+        const len = 5;
+        const c = this.paging.pageNo - 1;
+        const t = this.paging.pageCount;
+        const s = (Math.floor(c / len) * len) + 1;
+        const e = s + (t - s > len - 1 ? len - 1 : t - s);
+        this.pageNow = this.paging.pageNo;
+        this.totalPages = t;
+        this.pageStart = s;
+        this.pageEnd = e;
+        for (let i = s; i <= e; i += 1) result.push(i);
+      } else {
+        this.pageNow = 0;
+        this.totalPages = 0;
+        this.pageStart = 0;
+        this.pageEnd = 0;
+        result.push(1);
+      }
+      this.pageList = result;
+    }
+  },
+  mounted() {
+    this.update()
   }
-}
+};
 </script>
-
 <style lang="less">
 @import "~@/less/proj";
 @use-rem: true;
@@ -38,9 +91,12 @@ export default {
       &:after { .cnt; .wh(1,100%); .abs; .rt(-30,0); .bgc(#e3d7cb); }
     }
     &.last { .wh(23,24); .contain('/images/mo/last-go.png'); }
+    &.disabled { .o(0.2); cursor: default }
   }
   .page-go { .ib; .vam; .p(0,30); .-box;
-    a { .fs(30); .lh(34); .ls(-0.05em); .w(40); .ib; }
+    a { .fs(30); .lh(34); .ls(-0.05em); .w(40); .ib; .c(#a29992);
+      &.on { .c(#3b3b3c); }
+    }
   }
 }
 @media screen and(min-width: 1200px) {

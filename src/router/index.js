@@ -45,7 +45,8 @@ const routes = [
     component: page('/News')
   },
   {
-    path: 'news/detail',
+    path: 'news/detail/:sq',
+    name: 'NewsDetail',
     component: page('/NewsDetail')
   },
   {
