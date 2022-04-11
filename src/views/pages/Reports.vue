@@ -229,7 +229,7 @@ export default {
           th { .fs(20); .p(20,0); }
           td { .p(15,0);
             .down { .mr(15);
-              &:hover { box-shadow: 5px 5px 0 1px rgba(0,0,0,0.1); }
+              &:hover { box-shadow: 5px 5px 0 1px rgba(0,0,0,0.1); transition:all 0.5s; }
               img { .pr(20); }
             }
           }
