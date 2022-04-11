@@ -68,7 +68,7 @@
         <tbody>
         <tr v-for="(item, index) in list" :key="item.sq">
           <td>{{ paging.listCount - (paging.pageNo - 1) * paging.perPage - index }}</td>
-          <td>{{ item.title }}</td>
+          <td><a :href="file(item)" target="_blank">{{ item.title }}</a></td>
           <td>{{ date(item.dt) }}</td>
           <td><a class="down" :href="download(item)"><img src="/images/mo/ico-down.png" alt=""></a></td>
         </tr>
