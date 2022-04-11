@@ -92,7 +92,8 @@ export default {
       ready: true,
       refresh: true,
       list: null,
-      paging: null
+      paging: null,
+      params: { perPage: 5, pageNo: 1 }
     }
   },
   computed: {
