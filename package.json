@@ -21,6 +21,7 @@
     "core-js": "^3.6.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
+    "express-http-proxy": "^1.6.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "qs": "^6.10.1",
@@ -70,3 +71,6 @@
     "not dead"
   ]
 }
+
+
+
