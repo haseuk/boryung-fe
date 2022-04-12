@@ -50,6 +50,10 @@ export default {
     br { .block; content: ''; .h(15); }
     strong { .bold; color: #666; }
     h3 { .fs(26); line-height: 1.5; .bold; color: #333; .m(0); }
+    img { .max-w(100%) }
+    em { font-style: italic; }
+    a { color:#5D90CC; .medium; .underline; }
+    blockquote { .tc; .m(0); }
   }
   .list-go { .fs(30); .ls(-0.05em); .block; .mh-c; .mt(30); .tc;
     img { .wh(28,24); .ib; pointer-events: none; .mr(25); }
