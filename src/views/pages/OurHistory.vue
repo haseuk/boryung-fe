@@ -3,8 +3,8 @@
     <h2>Our History.</h2>
     <ul class="c-ko">
       <li class="tit"><p>2020 ~</p></li>
-      <li><p class="date">2022. 04</p><p class="txt">주식회사 보령(BORYUNG Corp.)으로 사명 변경(New CI)</p></li>
       <li><p class="date">2022. 04</p><p class="txt">제1회 CIS(care In Space) challenge 대회 개최</p></li>
+      <li><p class="date">2022. 04</p><p class="txt">주식회사 보령(BORYUNG Corp.)으로 사명 변경(New CI)</p></li>
       <li><p class="date">2021. 12</p><p class="txt">카나브 패밀리 연매출 1,000억원 돌파</p></li>
       <li class="b"><p class="date">2021. 12</p><p class="txt">영업이익 500억원 돌파</p></li>
       <li><p class="date">2021. 12</p><p class="txt">항암제 개발 전문기업 리큐온(Recuon) 설립</p></li>
@@ -42,8 +42,8 @@
     </ul>
     <ul class="c-en">
       <li class="tit"><p>2020 ~</p></li>
-      <li><p class="date">2022. 04</p><p class="txt">Company name changed to Boryung Corp. (New CI)</p></li>
       <li><p class="date">2022. 04</p><p class="txt">The 1st Annual CIS(Care In Space) Challenge </p></li>
+      <li><p class="date">2022. 04</p><p class="txt">Company name changed to Boryung Corp. (New CI)</p></li>
       <li><p class="date">2021. 12</p><p class="txt">Annual Kanarb line-up sales exceeded KRW100bn</p></li>
       <li class="b"><p class="date">2021. 12</p><p class="txt">Annual operating profit hit KRW50bn mark</p></li>
       <li><p class="date">2021. 12</p><p class="txt">Recuon, oncology company, established</p></li>
