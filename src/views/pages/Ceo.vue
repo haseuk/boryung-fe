@@ -197,9 +197,12 @@ export default {
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
   #app {
-    &.en .ceo-letter .cont {
-      &.cont1 {
-        .txt .sign img { .lt(410,-52); }
+    &.en {
+      [select-cont] .select-box ul li:nth-child(2) { .pr(0); }
+      .ceo-letter .cont {
+        &.cont1 {
+          .txt .sign img { .lt(410,-52); }
+        }
       }
     }
   }
