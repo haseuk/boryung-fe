@@ -66,6 +66,10 @@ export default {
   watch: {
     $route() {
       this.gnb = false
+    },
+    gnb(v) {
+      if (v) this.$scroll.freeze();
+      else this.$scroll.release();
     }
   },
   methods: {
@@ -106,9 +110,9 @@ export default {
       }
     }
   }
-  .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30;
+  .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30; .h(100vh);
     .dim { .fix; .f; .lt; .bgc(#000); opacity: 0.95; }
-    .gnb-list { .abs; .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,0,70); .-box; .tl;
+    .gnb-list { .abs; .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,110,70); .-box; .tl; overflow-y: auto;
       .lang-ch { .abs; .rt(129,45);
         a { .fs(30); color:#a29992; .medium; }
       }
