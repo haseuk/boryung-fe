@@ -67,8 +67,11 @@ export default {
     $route() {
       this.gnb = false
     },
-    gnb(v) {
-      if (v) this.$scroll.freeze();
+    async gnb(v) {
+      if (v) {
+        await this.sleep(10)
+        this.$scroll.freeze(this.$el.querySelector('.gnb-list').offsetHeight);
+      }
       else this.$scroll.release();
     }
   },
@@ -112,7 +115,7 @@ export default {
   }
   .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30; .min-h(100%);
     .dim { .fix; .f; .lt; .bgc(#000); opacity: 0.95; }
-    .gnb-list { .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,70,70); .-box; .tl;
+    .gnb-list { .lt; .wf; .bgc(#fff); .rel; z-index: 1; .p(42,66,70,70); .-box; .tl;
       .lang-ch { .abs; .rt(129,45);
         a { .fs(30); color:#a29992; .medium; }
       }

@@ -32,12 +32,11 @@ class ScrollAgency {
 
   #update = () => {
     this.#scrollTarget = window.pageYOffset;
-    if (!this.inertia && !this.#frozen) this.#scrollUpdate(this.#scrollTarget);
+    if (!this.inertia) this.#scrollUpdate(this.#scrollTarget);
   };
 
   #tick = () => {
     if (!this.inertia) return;
-    if (this.#frozen) return;
     if (this.#scrollBody && this.#scrollBody.offsetHeight !== this.#scrollHeight) {
       this.#scrollHeight = this.#scrollBody.offsetHeight;
       this.#pseudoBody.style.height = this.#scrollHeight + 'px';
@@ -133,7 +132,7 @@ class ScrollAgency {
   addListener = listener => this.#listeners.push(listener);
   removeListener = listener => this.#listeners.splice(this.#listeners.indexOf(listener), 1);
 
-  freeze() {
+  freeze(minHeight) {
     if (this.#frozen) return;
     if (document.documentElement.scrollHeight <= window.innerHeight) return;
     document.documentElement.style.overflowY = 'scroll';
@@ -142,7 +141,7 @@ class ScrollAgency {
     this.#holder.$el.style.position = 'absolute';
     this.#holder.$el.style.width = '100%';
     this.#holder.$el.style.height = '100%';
-    this.#holder.$el.style.minHeight = '800px';
+    this.#holder.$el.style.minHeight = minHeight+'px';
     this.#holder.$el.style.overflow = 'hidden';
     if (!this.inertia) this.#scrollBody.style.top = `-${this.#frozenScroll}px`;
     this.#store.commit('scrollAgency/freeze');
