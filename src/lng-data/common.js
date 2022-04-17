@@ -8,7 +8,7 @@ export default {
       kim: {
         pos: {
           en: 'CEO • Chairman',
-          ko: '대표이사 • 이사회의장',
+          ko: '대표이사 &nbsp;&middot;&nbsp; 이사회의장',
         },
         nm: {
           en: 'Jay KIM',

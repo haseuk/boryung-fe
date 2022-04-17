@@ -215,7 +215,7 @@ export default {
         }
       }
     }
-    &.cont2 { .tl; .p(0,20); .-box;
+    &.cont2 { .tl; .p(0,10); .-box;
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
       .txt { .fs(24); .lh(40); .medium; .ls(-0.05em); .mb(35); .tl; }
       .c-cnt { .mt(60);
