@@ -137,11 +137,11 @@ export default {
       }
       &.cont1 {
         .txt .sign { .rel;
-          img { .wh(170,110); .abs; .lt(350,-52); }
+          img { .wh(171,68); .abs; .lt(360,-29); }
         }
       }
       &.cont2 {
-        .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
+        .txt .sign img { .wh(137,54); .ib; .vam; .m(-30,0,0,30); }
       }
     }
   }

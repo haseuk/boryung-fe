@@ -6,36 +6,58 @@ export default {
   gnb: {
     ceo: {
       kim: {
-        en: 'CEO Jay Kim',
-        ko: '김정균 대표이사',
+        pos: {
+          en: 'CEO • Chairman',
+          ko: '대표이사 • 이사회의장',
+        },
+        nm: {
+          en: 'Jay KIM',
+          ko: '김정균',
+        }
       },
       chang: {
-        en: 'CEO Daniel Chang',
-        ko: '장두현 대표이사',
+        pos: {
+          en: 'CEO(Pharma Biz)',
+          ko: '대표이사(제약사업부문)',
+        },
+        nm: {
+          en: 'Daniel Chang',
+          ko: '장두현',
+        },
       }
     },
     reports: {
       annual: {
-        en: 'Annual Report',
-        ko: '연차보고서',
+        nm: {
+          en: 'Annual Report' ,
+          ko: '연차보고서' ,
+        }
       },
       audit: {
-        en: 'Audit Report',
-        ko: '감사보고서',
+        nm: {
+          en: 'Audit Report',
+          ko: '감사보고서',
+        }
       },
       ir: {
-        en: 'IR',
-        ko: 'IR',
+        nm: {
+          en: 'IR',
+          ko: 'IR',
+        }
       }
     },
     care: {
       intro: {
-        en: 'Intro',
-        ko: 'Intro',
+        nm: {
+          en: 'Intro',
+          ko: 'Intro',
+        }
       },
       cis: {
-        en: 'CIS Challenge',
-        ko: 'CIS Challenge',
+        nm: {
+          en:'CIS Challenge',
+          ko:'CIS Challenge',
+        }
       }
     }
   }

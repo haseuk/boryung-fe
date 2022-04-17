@@ -33,8 +33,8 @@
             <li><LngLink to="our-history">Our<br class="web"> History</LngLink></li>
             <li><LngLink to="reports">Reports</LngLink>
               <div class="depth">
-                <LngLink to="reports/annual">{{ $t('gnb.reports.annual') }}</LngLink>
-                <LngLink to="reports/audit">{{ $t('gnb.reports.audit') }}</LngLink>
+                <LngLink to="reports/annual">{{ $t('gnb.reports.annual.nm') }}</LngLink>
+                <LngLink to="reports/audit">{{ $t('gnb.reports.audit.nm') }}</LngLink>
                 <LngLink to="reports/ir">IR</LngLink>
               </div>
             </li>

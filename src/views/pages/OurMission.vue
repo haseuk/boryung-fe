@@ -2,8 +2,8 @@
   <div mission :class="{ready}">
     <h2>Our Mission.</h2>
     <div class="c-ko">
-      <p class="top-tit">언제 어디서나,<br class="mo">누구나 행복한 삶을 누릴 수 있도록<br>
-        <em>인류의 건강을 위해 꼭 필요한<br class="mo"> 헬스케어 기업이 되겠습니다.</em>
+      <p class="top-tit">
+        <em>인류의 건강을 위해<br class="mo"> 꼭 필요한 기업이 되겠습니다.</em>
       </p>
       <p class="bg-tit">Mission</p>
       <div class="core-values">
@@ -11,26 +11,26 @@
         <ul>
           <li>
             <em>Become Irreplaceable</em>
-            대체할 수 없는 기업이 되자
+            대체할 수 없는 기업
           </li>
           <li>
             <em>Think Long-Term</em>
-            장기적 관점으로 판단하자
+            장기적 관점으로 판단하는 기업
           </li>
           <li>
             <em>Pursue Extreme Transparency</em>
-            투명하고 깨끗한 기업이 되자
+            투명하고 깨끗한 기업
           </li>
           <li>
             <em>Be Nice</em>
-            상대방에 친절한 기업이 되자
+            상대방에 친절한 기업
           </li>
         </ul>
       </div>
     </div>
     <div class="c-en">
-      <p class="top-tit">We are committed to<br class="mo"> becoming a healthcare company<br>
-        <em>that enables people to enjoy<br class="mo"> healthier and happier life<br> anytime and anywhere.</em>
+      <p class="top-tit">
+        <em>Boryung will devote itself<br class="mo"> to become an indispensable<br> contributor to human health.</em>
       </p>
       <p class="bg-tit">Mission</p>
       <div class="core-values">
@@ -81,17 +81,17 @@ export default {
     em { .fs(48); }
   }
   .bg-tit { .fs(120); .lh(150); color:#e3d7cb; .bold; .ls(-0.05em); opacity: 0.4; }
-  .core-values { .mt(127);
+  .core-values { .mt(150);
     .c-tit { .fs(60); .semi-bold; .ls(-0.05em); .p(0,40); .-box; .ib; .bgc(#fff); .rel; .nowrap;
       &:before { .cnt; .wh(100%,100%); .bgc(#fff); .abs; .lt(50%,0); transform: translateX(-50%); z-index: -1; }
       &:after { .cnt; .bgc(#e3d7cb); .wh(650,1); .abs; .lt(50%,50%); .ml(-325); z-index: -2; }
     }
     ul { .mt(75);
       li { .fs(30); .semi-bold; .ls(-0.05em); .rel; .mb(60);
-        &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-10); .ml(-11); }
+        &:after { .cnt; .wh(22,22); .ls(-0.05em); .bgc(#e3d7cb); .br(50%); .abs; .lt(50%,-20); .ml(-11); }
         em { .fs(48); .block; .break-all; }
         &:last-child { .mb(0);
-          &:after { .t(-15); }
+          &:after { .t(-25); }
         }
       }
     }
@@ -130,18 +130,16 @@ export default {
 @media screen and(min-width: 1200px) {
   [mission] { .p(180,40,200,60); .max-w(1240); .-box; .mh-c; .mt(0);
     .mo { .hide; }
-    h2 { .lh(80); .mb(105); .ml(0); }
+    h2 { .mb(105); .ml(0); }
     .top-tit { .fs(24);
       em { .fs(36); .mt(13); .ib; }
     }
-    .bg-tit { .fs(120); .lh(150); .mt(10); }
-    .core-values { .mt(150);
+    .bg-tit { .mt(10); }
+    .core-values {
       .c-tit { .fs(48); }
-      ul { .mt(75);
-        li { .fs(30); .mb(50);
-          &:after { .cnt; .wh(22,22); .lt(50%,-10); .ml(-11); }
-          em { .fs(48); .lh(67); }
-          &:last-child:after { .t(-15); }
+      ul { .mt(90);
+        li { .mb(70);
+          em { .lh(67); }
         }
       }
     }

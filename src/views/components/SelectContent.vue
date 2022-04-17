@@ -4,7 +4,7 @@
     <h2>{{ title }}</h2>
     <div class="select-box" :class="{open:isOpen}" @click="listToggle">
       <ul>
-        <li v-for="item in list" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p>{{ item.label }}</p></li>
+        <li v-for="item in list" :key="item.key" @click="$emit('select', item.key)" :class="{ active: active === item.key }"><p><s>{{ item.label.pos }}</s>{{ item.label.nm }}</p></li>
       </ul>
     </div>
   </div>
@@ -47,9 +47,12 @@ export default {
 [select-cont] { .fs(0); .mb(88);
   h2 { .fs(80); .lh(90); .medium; .ls(-0.05em); .rel; z-index: 1; }
   .select-box { .w(383); .-b(#2d2d2f,2px); .rel; .mt(60);
-    &:after { .cnt; .wh(40,23); .contain('/images/mo/arr-d.png'); .abs; .rt(3,20); pointer-events: none; }
+    &:after { .cnt; .wh(40,23); .contain('/images/mo/arr-d.png'); .abs; .rt(0,20); pointer-events: none; }
     ul {
-      li { .fs(40); .bold; .mb(15); .pointer; .hide; .ls(-0.075em);
+      li { .mb(15); .pointer; .hide;
+        p { .fs(40); .bold; .ls(-0.075em);
+          s { .fs(24); .mr(10); }
+        }
         &.active { .ib; }
       }
     }

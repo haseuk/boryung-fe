@@ -45,8 +45,8 @@
         <p class="noti">* Pharma Home> IR 세부페이지가 새탭으로 열립니다.</p>
       </div>
       <div class="c-en">
-        English materials are<br>
-        not available on this page.
+        The materials on this page are<br class="mo"> only available in Korean.
+
       </div>
     </div>
     <div class="cont cont1" v-else>
