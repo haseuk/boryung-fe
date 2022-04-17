@@ -71,7 +71,7 @@ export default {
       &:after { .hide; }
       ul {
         li { .-b; .block;
-          p { .fs(24); color:#e3d7cb; .pb(5); .pr(2); .-box; .min-w(130); .-b(#e3d7cb,2px); .ls(-0.075em); .nowrap; .ib; .rel;
+          p { .fs(24); color:#e3d7cb; .pb(5); .pr(2); .-box; .min-w(130); .-b(#e3d7cb,2px); .ls(-0.075em); .nowrap; .ib; .rel; .tr;
             s { .fs(18); }
             &:before { .cnt; .wh(0,2); .abs; .lb(0,-2); .bgc(#2d2d2f); transition: width 0.5s; }
           }

@@ -82,7 +82,7 @@
     <div class="cont cont2" v-if="active === 'cis'">
       <div class="c-ko">
         <p class="tit">CIS Challenge.</p>
-        <p class="txt txt1">CIS Challenge는 우주 공간을 대상으로 개최되는 최초의 헬스케어 엑셀러레이터 프로그램으로써 현재 우주에서 실현 가능한 사업 분야 확장을 목표로 삼고 있습니다.</p>
+        <p class="txt txt1">CIS Challenge는 우주 공간을 대상으로 개최되는 최초의 헬스케어 엑셀러레이터 프로그램으로서 현재 우주에서 실현 가능한 사업 분야 확장을 목표로 삼고 있습니다.</p>
         <p class="txt txt2">이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트 (Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여 기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.</p>
         <p class="txt txt3">이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다.</p>
         <p class="txt txt4">프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업 리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL) 증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객 관리, 차기 투자 유치 등을 지원합니다.</p>
@@ -95,7 +95,7 @@
         <div class="c-cnt c-cnt2">
           <p class="t">파트너</p>
           <p>보령이 주관하며 우주 개발 전문기업 Axiom Space,<br class="mo"> 글로벌 항공우주 스타트업 엑셀러레이터 Starburst Aerospace가 함께 합니다.</p>
-          <p>아래 배너를 누르시면 해당 홈페이지로 연결됩니다.</p>
+          <p>아래 배너를 누르시면 CIS Challenge 홈페이지로 연결됩니다.</p>
         </div>
         <div class="care-logo">
           <a href="https://www.cischallenge.com" target="_blank">
@@ -110,7 +110,7 @@
         <p class="txt txt3">The program is designed to equip companies with the skills, connections, and expertise they need to successfully develop and grow their businesses. The program is composed of lectures, workshops, pitch practice sessions, networking opportunities, and special events, culminating with a demo day. Each team selected for the program will receive personalized instruction and engage with industry leaders, subject matter experts, potential partners, customers, and investors. CIS will helps teams set milestones, advance Technology Readiness Level, define product-market fit, build customer relationships, and secure their next round of funding. Teams will have access to Starburst’s extensive global network and become part of an ecosystem that includes Starburst, Boryung, and Axiom's executive teams, established aerospace entrepreneurs, investors, corporate partners, customers, academic researchers, and more.</p>
         <div class="c-cnt">
           <p class="t">Schedule</p>
-          <p><s>Application period </s>: April 18 to June 17, 2022</p>
+          <p><s class="sch-s">Application period </s> : April 18 to June 17, 2022</p>
           <p><s>Pitch day</s>: 28 July 2022</p>
           <p><s>Demo day</s>: 15 December 2022</p>
         </div>
@@ -219,7 +219,7 @@ export default {
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
       .txt { .fs(24); .lh(40); .medium; .ls(-0.05em); .mb(35); .tl; }
       .c-cnt { .mt(60);
-        p { .fs(24); .bold; .mb(5);
+        p { .fs(24); .bold; .mb(5); .ls(-0.05em);
           s { .ib; .w(145); .rel; .pl(20); .-box;
             &:after { .cnt; .wh(8,8); .bgc(#e3d7cb); .br(50%); .abs; .lt(0,50%); transform: translateY(-50%); }
           }
@@ -296,10 +296,14 @@ export default {
       &.c-ko { .hide; }
       &.c-en { .block; }
     }
-    .cont.cont1 .divs li {
-      > div { .pl(0);  }
-      &:nth-child(2) .network p:nth-of-type(4) { .mt(4%); }
+    .cont.cont1 {
+      .c-en .vision .tit { .fs(54); .tc; .bold; }
+      .divs li {
+        > div { .pl(0);  }
+        &:nth-child(2) .network p:nth-of-type(4) { .mt(4%); }
+      }
     }
+    .cont2 .c-en .c-cnt .sch-s { width: auto; }
   }
 }
 [select-cont] .select-box s { .hide; }
@@ -341,7 +345,9 @@ export default {
           }
         }
         .c-cnt2 { .mt(60);
-          p { .mb(35); }
+          p { .mb(35);
+            &:last-child { .mb(20); }
+          }
         }
       }
     }
@@ -349,8 +355,11 @@ export default {
   #app {
     &.en [care] {
       [select-cont] { .pl(0); }
-      .cont.cont1 .divs li {
-        &:nth-child(2) .network p:nth-of-type(4) { .mt(35); }
+      .cont.cont1 {
+        .c-en .vision .tit { .tl; }
+        .divs li {
+          &:nth-child(2) .network p:nth-of-type(4) { .mt(35); }
+        }
       }
     }
   }

@@ -189,11 +189,8 @@ export default {
         }
         &.cont1 {
           .txt .sign { .mt(15);
-            img { .wh(196,110); .lt(290,-52); }
+            img { .l(300); }
           }
-        }
-        &.cont2 {
-          .txt .sign img { .wh(82,33); .ib; .vam; .m(-15,0,0,25); }
         }
       }
     }
