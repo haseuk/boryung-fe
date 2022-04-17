@@ -102,9 +102,9 @@ export default {
     },
     selectList() {
       return [
-        {key: 'annual', label: this.$t('gnb.reports.annual')},
-        {key: 'audit', label: this.$t('gnb.reports.audit')},
-        {key: 'ir', label: this.$t('gnb.reports.ir')},
+        {key: 'annual', label: 'gnb.reports.annual'},
+        {key: 'audit', label: 'gnb.reports.audit'},
+        {key: 'ir', label: 'gnb.reports.ir'},
       ]
     }
   },
@@ -214,6 +214,7 @@ export default {
     .c-en { .block; }
   }
 }
+[select-cont] .select-box s { .hide; }
 @media screen and(min-width: 1240px) {
   [reports] { .max-w(1240); .p(180,40,200,60); .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);

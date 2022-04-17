@@ -98,8 +98,8 @@ export default {
     },
     selectList() {
       return [
-        {key: 'kim', label: this.$t('gnb.ceo.kim')},
-        {key: 'chang', label: this.$t('gnb.ceo.chang')}
+        {key: 'kim', label: 'gnb.ceo.kim'},
+        {key: 'chang', label: 'gnb.ceo.chang'}
       ]
     }
   },
@@ -168,9 +168,12 @@ export default {
 }
 
 #app {
-  &.en .ceo-letter .cont {
-    &.cont1 {
-      .txt .sign img { .lt(470,-52); }
+  &.en {
+    [select-cont] .select-box ul li:nth-child(2) { .pr(60); .-box; }
+    .ceo-letter .cont {
+      &.cont1 {
+        .txt .sign img { .lt(470,-52); }
+      }
     }
   }
 }
