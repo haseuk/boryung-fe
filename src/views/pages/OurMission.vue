@@ -115,16 +115,6 @@ export default {
   }
   .v-bg { .hide; }
 }
-#app {
-  &.ko {
-    .c-en { .hide; }
-    .c-ko { .block; }
-  }
-  &.en {
-    .c-ko { .hide; }
-    .c-en { .block; }
-  }
-}
 
 
 @media screen and(min-width: 1200px) {

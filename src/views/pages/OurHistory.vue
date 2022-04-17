@@ -81,6 +81,6 @@ export default {
   }
 }
 #app {
-  &.en .txt2 { .fs(24); }
+  &.en [history] .txt2 { .fs(24); }
 }
 </style>

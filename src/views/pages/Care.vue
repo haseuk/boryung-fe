@@ -287,16 +287,8 @@ export default {
 }
 
 #app {
-  &.ko .cont .divs {
-    &.c-ko { .block; }
-    &.c-en { .hide; }
-  }
   &.en [care] { .p(0,50,140);
     [select-cont] { .pl(20); .-box; }
-    .cont .divs {
-      &.c-ko { .hide; }
-      &.c-en { .block; }
-    }
     .cont.cont1 {
       .c-en .vision .tit { .fs(54); .tc; .bold; }
       .divs li {

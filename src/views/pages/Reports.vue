@@ -205,16 +205,6 @@ export default {
   [select-cont] .select-box s { .hide; }
 }
 
-#app {
-  &.ko {
-    .c-en { .hide; }
-    .c-ko { .block; }
-  }
-  &.en {
-    .c-ko { .hide; }
-    .c-en { .block; }
-  }
-}
 @media screen and(min-width: 1240px) {
   [reports] { .max-w(1240); .p(180,40,200,60); .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);

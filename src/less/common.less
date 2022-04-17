@@ -7,3 +7,13 @@ html { font-size: 16px; }
 #app { font-family: 'Noto Serif KR', serif; }
 #app[data-server-rendered] { .hide; }
 #app.fetching { .o(0.5); }
+#app{
+  &.ko {
+    .c-ko { .block; }
+    .c-en { .hide; }
+  }
+  &.en {
+    .c-ko { .hide; }
+    .c-en { .block; }
+  }
+}

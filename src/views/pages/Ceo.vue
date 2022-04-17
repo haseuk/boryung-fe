@@ -168,7 +168,7 @@ export default {
 }
 
 #app {
-  &.en {
+  &.en [ceo] {
     [select-cont] .select-box ul li:nth-child(2) { .pr(60); .-box; }
     .ceo-letter .cont {
       &.cont1 {
@@ -197,7 +197,7 @@ export default {
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
   #app {
-    &.en {
+    &.en [ceo] {
       [select-cont] .select-box ul li:nth-child(2) { .pr(0); }
       .ceo-letter .cont {
         &.cont1 {
