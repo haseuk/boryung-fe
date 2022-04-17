@@ -142,6 +142,7 @@ class ScrollAgency {
     this.#holder.$el.style.position = 'absolute';
     this.#holder.$el.style.width = '100%';
     this.#holder.$el.style.height = '100%';
+    this.#holder.$el.style.minHeight = '800px';
     this.#holder.$el.style.overflow = 'hidden';
     if (!this.inertia) this.#scrollBody.style.top = `-${this.#frozenScroll}px`;
     this.#store.commit('scrollAgency/freeze');

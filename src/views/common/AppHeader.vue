@@ -110,9 +110,9 @@ export default {
       }
     }
   }
-  .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30; .h(100vh);
+  .gnb { .abs; .lt; .pl(33%); .-box; .f; z-index: 30; .min-h(100%);
     .dim { .fix; .f; .lt; .bgc(#000); opacity: 0.95; }
-    .gnb-list { .abs; .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,110,70); .-box; .tl; overflow-y: auto;
+    .gnb-list { .lt; .f; .bgc(#fff); .rel; z-index: 1; .p(42,66,70,70); .-box; .tl;
       .lang-ch { .abs; .rt(129,45);
         a { .fs(30); color:#a29992; .medium; }
       }
