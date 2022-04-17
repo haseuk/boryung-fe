@@ -283,6 +283,7 @@ export default {
       p { opacity: 0; }
     }
   }
+  [select-cont] .select-box s { .hide; }
 }
 
 #app {
@@ -306,7 +307,6 @@ export default {
     .cont2 .c-en .c-cnt .sch-s { width: auto; }
   }
 }
-[select-cont] .select-box s { .hide; }
 @media screen and(min-width: 1240px) {
   [care] { .max-w(1240); .p(180,40,200,60)!important; .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);

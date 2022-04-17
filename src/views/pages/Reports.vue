@@ -202,6 +202,7 @@ export default {
   &.refresh {
     .cont, [pagination] { transition: opacity 0s, transform 0s; transition-delay: 0s; opacity:0; transform: translateY(100px); }
   }
+  [select-cont] .select-box s { .hide; }
 }
 
 #app {
@@ -214,7 +215,6 @@ export default {
     .c-en { .block; }
   }
 }
-[select-cont] .select-box s { .hide; }
 @media screen and(min-width: 1240px) {
   [reports] { .max-w(1240); .p(180,40,200,60); .-box; .mh-c; .mt(0);
     [select-cont] { .pl(0);
