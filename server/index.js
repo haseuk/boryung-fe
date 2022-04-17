@@ -26,7 +26,7 @@ server.use('/fonts', serve('../dist/fonts', true));
 server.use('/js', serve('../dist/js', true));
 server.use('/favicon.ico', serve('../dist/favicon.ico', true));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
-server.use('/api', createProxyMiddleware({ target: "http://localhost:8079", changeOrigin: true }));
+server.use('/api', createProxyMiddleware({ target: "http://localhost:8080", changeOrigin: true }));
 
 server.get('/sitemap.xml', sitemap);
 
