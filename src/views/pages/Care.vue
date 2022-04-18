@@ -311,7 +311,7 @@ export default {
       &.cont1 {
         .vision {
           .tit { .mb(80); }
-          .txt { .ls(-0.05em); .keep-all; }
+          .txt { .fs(20); .lh(36); .ls(-0.05em); .keep-all; }
         }
         .divs {
           li { .pb(150);
@@ -329,7 +329,7 @@ export default {
       }
       &.cont2 { .p(0);
         .tit { .fs(36); .lh(48); }
-        .txt { .fs(18); .lh(36); }
+        .txt { .fs(20); .lh(36); }
         .c-cnt { .mt(100);
           p { .fs(18); .mb(10);
             s { .ib; .w(120); }
