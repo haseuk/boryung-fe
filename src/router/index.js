@@ -70,6 +70,10 @@ export default () => new VueRouter({
   routes: [
     { path: '/', redirect: '/ko/' },
     {
+      path: '/index.do',
+      redirect: '/ko/'
+    },
+    {
       path: '/:lang(en|ko)',
       component: page('/language-root'),
       children: routes
