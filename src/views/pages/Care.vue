@@ -4,7 +4,7 @@
     <div class="cont cont1" v-if="active === 'intro'">
       <div class="c-ko">
         <div class="vision">
-          <p class="bg-tit">Can we send sick people<br class="mo"> into space?</p>
+          <p class="bg-tit">Can we send sick people<br> into space?</p>
           <p class="tit">아픈 사람은 우주로 갈 수 있나요?</p>
           <p class="txt txt1">미국 휴스턴에 있는 Johnson Space Center에 방문할 기회가 있어, 현지 NASA 고위직급자에게 실제로 했던 질문입니다. “우리도 아직 모릅니다(We do not know yet)”가 그의 답변이었고  이 것이 보령의 우주를 향한 여정의 시작이었습니다.</p>
           <p class="txt txt2">우주로의 여행과 우주에서의 일상적인 삶은 언제나 공상과학 영화 속의 상상이었습니다. 앞으로도 그럴까요? 이미 SpaceX, Blue Origin, Virgin Galatic과 같은 글로벌 우주항공 기업들은 민간인들에게 티켓을 판매하며 우주관광을 상업화하고 있습니다. 2022년 4월 Axiom Space는 인류 역사상 최초로 회사 소속의 민간 우주인을 국제우주정거장으로 상업적 목적을 가지고 보냈습니다. NASA는 2030년까지 달과 화성에 사람을 보낼 계획을 가지고 나아가고 있습니다.  어쩌면 ‘우주시대’는 멀지 않은 시기에 우리 앞에 펼쳐질 것입니다.</p>
@@ -42,7 +42,7 @@
       </div>
       <div class="c-en">
         <div class="vision">
-          <p class="tit">Can we send<br class="mo"> sick people into space?</p>
+          <p class="tit">Can we send sick people<br> into space?</p>
           <p class="txt txt1">This is the question I actually asked to a senior NASA official when I visited the Johnson Space Center in Houston, Texas. "We do not know yet," he answered and this was the beginning of Boryung's journey to space.</p>
           <p class="txt txt2">Traveling into space and enjoying daily life there has always been an imagination embodied in science fiction movies. Will this remain in our imagination? Already, global aerospace companies like SpaceX, Blue Origin and Virgin Galactic are commercializing space tourism by selling tickets to civilians. In April 2022, Axiom Space sent private astronauts to the International Space Station for commercial purposes for the first time in human history. NASA is also moving forward with plans to send humans to the Moon and Mars by 2030. The space era will not be in distant future than we have anticipated perhaps.</p>
           <p class="txt txt3">In the meantime, who is doing the research to protect people’s health and cure diseases when people get sick while traveling or living in space? Unfortunately, it is an unexplored field that has attracted little interest. Boryung, a healthcare company with a mission to become an indispensible contributor for human health, will be a pioneer.</p>
