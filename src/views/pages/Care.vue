@@ -185,7 +185,7 @@ export default {
       .vision { .mb(180);
         .bg-tit { .fs(54); .lh(48); .bold; color:#e3d7cb; .ls(-0.05em); .mb(36); }
         .tit { .fs(40); .lh(60); .medium; .ls(-0.05em); .mb(60); }
-        .txt { .fs(20); .lh(30); .medium; .mb(35); .tl; }
+        .txt { .fs(24); .lh(30); .medium; .mb(35); .tl; }
       }
       .divs {
         li { .pb(105); .-box;
