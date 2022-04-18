@@ -29,7 +29,7 @@ export default {
         { vmid: 'title', content: this.$t('meta.title'), },
         { vmid: 'description', content: this.$t('meta.description'), },
         { vmid: 'keywords', content: this.$t('meta.keywords'), },
-        { vmid: 'image', content: '/images/og.png', },
+        { vmid: 'image', content: '/images/og.jpg', },
         { vmid: 'path', content: this.$route.path.replace(/^\/(ko|en)/, '') },
       ],
     }
