@@ -49,7 +49,7 @@ export default {
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   p { .ls(-0.05em); color:#2d2d2f; .medium; }
   .tit { .fs(44); .mb(60); .ls(-0.07em); }
-  .txt { .fs(20); .lh(36); .mb(45); }
+  .txt { .fs(24); .lh(40); .mb(45); }
   .txt2 { .fs(30); .lh(48);
     em { .bold; }
   }
@@ -77,6 +77,7 @@ export default {
     > div { .w(765); .ml(150);
       p { .keep-all; }
     }
+    .txt { .fs(20); .lh(36); }
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
 }

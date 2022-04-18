@@ -100,7 +100,7 @@ export default {
   }
 }
 @media screen and(min-width: 1200px) {
-  [pagination] { .mt(40px);
+  [pagination] { .w(815); .mt(40px);
     > a { .mt(4px);
       &.first { .wh(24px,26px); }
       &.prev { .wh(14px,26px); .ml(70px);
