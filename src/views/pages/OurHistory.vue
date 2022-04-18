@@ -8,7 +8,7 @@
       <p class="txt">1963년에는 의약품 도소매업에서 본격적인 의약품 제조업으로 진출했으며, 단순히 의약품을 생산하는 것을 넘어 환자에게 꼭 필요한 신약 개발에 투자하고자 했던 보령의 도전은 2011년 3월 국내 최초 ARB계열 고혈압 신약 “카나브”를 발매하면서 제약 사업의 장기적 성장의 토대를 마련하게 되었습니다.</p>
       <p class="txt">2022년 4월에는 우리 앞에 펼쳐질 우주 시대를 맞아 새로운 기회를 찾고, “인류 건강에 꼭 필요한 기업이 되자”는 우리의 미션을 수행하기 위한 하나의 도전으로서 첫번째 ‘Care in Space(CIS) Challenge’를 개최합니다.</p>
       <p class="txt">1957년 "아픈 이를 위해서 없는 약도 구해 주겠다”는 작지만 큰 진심이 오늘날 “인류의 건강에 꼭 필요한 기업이 되겠다”는 우리의 미션으로 확장되어 이어가고 있습니다.</p>
-      <p class="txt txt2">2022년, 새 이름 <em>보령</em>으로 펼쳐갈<br> 새로운 도전과 여정을 지켜봐 주십시오.</p>
+      <p class="txt">2022년, 새 이름 <em>보령</em>으로 펼쳐갈<br> 새로운 도전과 여정을 지켜봐 주십시오.</p>
       <p class="txt">감사합니다.</p>
     </div>
     <div v-else>
@@ -18,7 +18,7 @@
       <p class="txt">Boryung, which had been in the pharmaceutical wholesale industry, advanced into the pharmaceutical manufacturing in 1963. Boryung’s attempt to invest in the development of vital medicines for patients, rather than being a mere drug manufacturer, laid the foundation for long-term growth in the pharmaceutical business when the company released "Kanarb," the first ARB antihypertensive in South Korea in March 2011.</p>
       <p class="txt">In April 2022, Boryung will hold the first Care in Space (CIS) Challenge to find new opportunities and fulfill its mission to become “an indispensable contributor to human health" in the space era that lies ahead of us.</p>
       <p class="txt">The founder’s deep devotion with great sincerity to provide “medicine for the sick” has been expanded since 1957 and passed onto out current mission to become an indispensable to human health.</p>
-      <p class="txt txt2">We kindly ask for your consistent attention to our new challenges and journey under the new name <em>Boryung</em> in 2022.</p>
+      <p class="txt">We kindly ask for your consistent attention to our new challenges and journey under the new name <em>Boryung</em> in 2022.</p>
       <p class="txt">Thank you.</p>
     </div>
     <span class="v-bg"></span>
@@ -49,8 +49,7 @@ export default {
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   p { .ls(-0.05em); color:#2d2d2f; .medium; }
   .tit { .fs(44); .mb(60); .ls(-0.07em); }
-  .txt { .fs(24); .lh(40); .mb(45); }
-  .txt2 { .fs(30); .lh(48);
+  .txt { .fs(24); .lh(40); .mb(45);
     em { .bold; }
   }
   h2, p { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }
@@ -80,8 +79,5 @@ export default {
     .txt { .fs(20); .lh(36); }
     .v-bg { .wh(170,1141); .contain('/images/pc/boryung-ver.png'); .abs; .lt(50%,32); .ml(-690); .ib; }
   }
-}
-#app {
-  &.en [history] .txt2 { .fs(24); }
 }
 </style>
