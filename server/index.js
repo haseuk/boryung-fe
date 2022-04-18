@@ -26,6 +26,8 @@ server.use('/fonts', serve('../dist/fonts', true));
 server.use('/js', serve('../dist/js', true));
 server.use('/favicon.ico', serve('../dist/favicon.ico', true));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
+server.use('/robots.txt', serve('../dist/robots.txt', false));
+server.use('/index.do', (req, res) => res.redirect('/ko'));
 server.use('/api', createProxyMiddleware({ target: "http://localhost:8080", changeOrigin: true }));
 
 server.get('/sitemap.xml', sitemap);
@@ -46,7 +48,7 @@ server.get('*', (req, res) => {
       }
     } else {
       res.header('Content-Type', 'text/html');
-      res.end(inject(html, context, /^\/(ko|ja|zh|en)/.exec(req.url)[1]));
+      res.end(inject(html, context, /^\/(ko|en)/.exec(req.url)[1]));
     }
   });
 });
