@@ -9,37 +9,37 @@
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/financial.do" target="_blank">재무정보</a>
+            <a href="https://pharm.boryung.co.kr/ir/financial.do" target="_blank">재무정보</a>
           </li>
           <li>
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/report.do" target="_blank">공시</a>
+            <a href="https://pharm.boryung.co.kr/ir/report.do" target="_blank">공시</a>
           </li>
           <li>
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/stock.do" target="_blank">주가정보</a>
+            <a href="https://pharm.boryung.co.kr/ir/stock.do" target="_blank">주가정보</a>
           </li>
           <li>
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/contactir.do" target="_blank">주주문의</a>
+            <a href="https://pharm.boryung.co.kr/ir/contactir.do" target="_blank">주주문의</a>
           </li>
           <li>
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/Businessreport.do" target="_blank">사업보고서</a>
+            <a href="https://pharm.boryung.co.kr/ir/Businessreport.do" target="_blank">사업보고서</a>
           </li>
           <li>
             <svg class="box" xmlns="http://www.w3.org/2000/svg" width="346.5px" height="143.5px">
               <path fill-rule="evenodd"  stroke="rgb(162, 153, 146)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none" d="M0.499,0.499 L345.499,0.499 L345.499,142.499 L0.499,142.499 L0.499,0.499 Z"/>
             </svg>
-            <a href="https://www.boryung.co.kr/ir/resource.do" target="_blank">IR 자료실</a>
+            <a href="https://pharm.boryung.co.kr/ir/resource.do" target="_blank">IR 자료실</a>
           </li>
         </ul>
         <p class="noti">* Pharma Home> IR 세부페이지가 새탭으로 열립니다.</p>
