@@ -28,11 +28,11 @@ server.use('/favicon.ico', serve('../dist/favicon.ico', true));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
 server.use('/robots.txt', serve('../dist/robots.txt', false));
 server.use('/index.do', (req, res) => res.redirect('/ko'));
-server.use('/eng', (req, res) => res.redirect('https://pharm.boryung.co.kr/eng/index.do'));
 server.use('/eng/rnd/pipeline.do', (req, res) => res.redirect('https://pharm.boryung.co.kr/eng/rnd/pipeline.do'));
 server.use('/eng/index.do', (req, res) => res.redirect('https://pharm.boryung.co.kr/eng/product/mainProduct.do'));
 server.use('/eng/product/list.do', (req, res) => res.redirect('https://pharm.boryung.co.kr/eng/product/list.do'));
 server.use('/eng/company/about.do', (req, res) => res.redirect('/en'));
+server.use('/eng', (req, res) => res.redirect('https://pharm.boryung.co.kr/eng/index.do'));
 server.use('/api', createProxyMiddleware({ target: "http://localhost:8080", changeOrigin: true }));
 
 server.get('/sitemap.xml', sitemap);
