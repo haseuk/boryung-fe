@@ -44,7 +44,7 @@
         <div class="vision">
           <p class="tit">Can we send sick people<br> into space?</p>
           <p class="txt txt1">This is the question I actually asked to a senior NASA official when I visited the Johnson Space Center in Houston, Texas. "We do not know yet," he answered and this was the beginning of Boryung's journey to space.</p>
-          <p class="txt txt2">Traveling into space and enjoying daily life there has always been an imagination embodied in science fiction movies. Will this remain in our imagination? Already, global aerospace companies like SpaceX, Blue Origin and Virgin Galactic are commercializing space tourism by selling tickets to civilians. In April 2022, Axiom Space sent private astronauts to the International Space Station for commercial purposes for the first time in human history. NASA is also moving forward with plans to send humans to the Moon and Mars by 2030. The space era will not be in distant future than we have anticipated perhaps.</p>
+          <p class="txt txt2">Traveling or enjoying daily life in space have always been imaginations embodied in science fiction movies. Will this remain in our imagination? Already, global aerospace companies like SpaceX, Blue Origin and Virgin Galactic are commercializing space tourism by selling tickets to civilians. In April 2022, Axiom Space sent private astronauts to the International Space Station for commercial purposes for the first time in human history. NASA is also moving forward with plans to send humans to the Moon and Mars by 2030. The space era will not be in distant future than we have anticipated perhaps.</p>
           <p class="txt txt3">In the meantime, who is doing the research to protect people’s health and cure diseases when people get sick while traveling or living in space? Unfortunately, it is an unexplored field that has attracted little interest. Boryung, a healthcare company with a mission to become an indispensible contributor for human health, will be a pioneer.</p>
           <p class="txt txt4">In October 2020, Boryung organized a task force team to research healthcare in space and collected information from relevant institutions, organizations, and researchers at universities at home and abroad. The team was officially established in January 2022 and the project was named ‘CIS (Care In Space)’. As the first step towards exploring and systematically solving space healthcare issues, Boryung will host the International CIS Challenge (for more information, please see the relevant pages on our website). This is the first step and Boryung will take further in the hope that one day humanity will be able to live as healthy and comfortable a life in space as it does on Earth. We would greatly appreciate your relentless support.</p>
         </div>
@@ -82,10 +82,12 @@
     <div class="cont cont2" v-if="active === 'cis'">
       <div class="c-ko">
         <p class="tit">CIS Challenge.</p>
-        <p class="txt txt1">CIS Challenge는 우주 공간을 대상으로 개최되는 최초의 헬스케어 엑셀러레이터 프로그램으로서 현재 우주에서 실현 가능한 사업 분야 확장을 목표로 삼고 있습니다.</p>
-        <p class="txt txt2">이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트 (Starburst)는 전략적으로 협력하며, 유망 기업가와 스타트업 대상으로 13주동안 진행될 엑셀러레이터 프로그램 참여 기회와 10만달러의 투자금을 제공합니다. 이를 통해 헬스케어 기업의 제조 역량을 액시엄의 우주선 관련 미션에 활용하는데 기여할 것입니다.</p>
-        <p class="txt txt3">이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 끝으로 데모데이(demo day)가 열리며 대단원의 막을 내리게 됩니다.</p>
+        <p class="txt txt1">CIS Challenge는 우주 공간을 대상으로 개최되는 최초의 헬스케어 엑셀러레이터 프로그램으로써 현재 우주에서 실현 가능한 사업 분야 확장을 목표로 삼고 있습니다.</p>
+        <p class="txt txt2">이를 위해 보령, 액시엄 스페이스 (Axiom Space), 스타버스트 (Starburst Aerospace)는 전략적으로 협력하며, 세계 각국의 다양한 아이디어를 보유한 참가자 및 유망 기업가와 스타트업을 대상으로 스페이스 헬스케어의 아이디어를 모집하고 검증하는 기회를 제공합니다. 이를 통해 참가자들은 10만 달러의 투자금을 비롯해 13주 동안 진행될 엑셀러레이터 프로그램 참여의 기회를 부여 받게 됩니다.</p>
+        <p class="txt txt3">이 CIS챌린지는 사업을 성공적으로 출범시켜 성장하는데 필요한 기술, 인적 네트워크, 전문지식을 지원/양성하기 위해 고안되었습니다. 강연, 피칭 훈련, 네트워킹 기회, 특별 이벤트 등이 제공될 것이며, 글로벌 챌린지 스케일에 맞는 수준 높은 다양한 전문가 및 파트너사들과 함께 스페이스 헬스케어 아이디어에 대한 발굴/탐색, 검증을 바탕으로 기존 연구와의 상호 연계 및 사업화 검토 등의 작업을 활발히 진행할 것입니다.</p>
         <p class="txt txt4">프로그램에 선발된 각 팀은 맞춤교육을 받고, 산업 리더, 각 분야 전문가, 잠재적 파트너사, 고객, 그리고 투자자들과 연을 맺게 됩니다. CIS챌린지는 각 팀들의 프로젝트 마일스톤 설정, 기술성숙도(TRL) 증진, 유망시장이 필요로 하는 제품 발굴(PMF), 고객 관리, 차기 투자 유치 등을 지원합니다.</p>
+        <p class="txt txt5">프로그램 참여 팀들은 대규모 글로벌 네트워크 접근성을 얻게 되고, 스타버스트, 보령, 액시엄의 운영진, 저명한 항공우주 기업가, 투자자, 기업파트너, 학술연구가 등으로 구성된 우주산업 생태계의 일원이 될 것입니다.</p>
+        <p class="txt txt6">나아가 프로그램의 결과물인 연구 및 제조 역량은 액시엄의 우주 인프라를 활용하여 더욱 구체화 될 것이며, 실제 우주선 관련 미션에 활용하는데도 기여할 예정입니다.</p>
         <div class="c-cnt">
           <p class="t">일정</p>
           <p><s>지원 접수 </s>: 2022년 4월 18일 ~ 6월 17일</p>
@@ -105,9 +107,12 @@
       </div>
       <div class="c-en">
         <p class="tit">CIS Challenge.</p>
-        <p class="txt txt1">The CIS Challenge, the first space healthcare accelerator program, aims to expand the scope of businesses that are feasible in space.</p>
-        <p class="txt txt2">Boryung, Axiom Space, and Starburst are strategically coming together to offer aspiring entrepreneurs and participating startup companies the opportunity to receive admission into a 13-week accelerator program along with a $100,000 equity investment that will help bring healthcare manufacturing capabilities into space aboard an Axiom Spacecraft.</p>
-        <p class="txt txt3">The program is designed to equip companies with the skills, connections, and expertise they need to successfully develop and grow their businesses. The program is composed of lectures, workshops, pitch practice sessions, networking opportunities, and special events, culminating with a demo day. Each team selected for the program will receive personalized instruction and engage with industry leaders, subject matter experts, potential partners, customers, and investors. CIS will helps teams set milestones, advance Technology Readiness Level, define product-market fit, build customer relationships, and secure their next round of funding. Teams will have access to Starburst’s extensive global network and become part of an ecosystem that includes Starburst, Boryung, and Axiom's executive teams, established aerospace entrepreneurs, investors, corporate partners, customers, academic researchers, and more.</p>
+        <p class="txt txt1">The CIS Challenge, the first space healthcare accelerator program, aims to expand the scope of businesses that can operate in space.</p>
+        <p class="txt txt2">Boryung, Axiom Space and Starburst Aerospace are strategically coming together to provide opportunities for aspiring entrepreneurs, startups and people from around the world to explore and develop ideas for healthcare in space. Participants will have the chance to participate in a 13-week accelerator program that includes $100,000 in funding.</p>
+        <p class="txt txt3">The CIS Challenge will offer lectures, workshops, pitch-practice sessions, networking opportunities, and special events to equip companies with the skills, connections, and expertise for successful business growth. Throughout the challenge, healthcare ideas in space will be actively explored to find ways to integrate with existing research and evaluate the possibility of commercialization through in-depth assessments with a variety of leading professionals and partners.</p>
+        <p class="txt txt4">Each team selected for the program will receive individual support and engage with industry leaders, experts from various sectors, potential partners, customers, and investors. CIS will help teams set milestones, advance Technology Readiness Level (TRL), define product-market fit, build customer relationships, and secure their next round of funding.</p>
+        <p class="txt txt5">Teams will have access to an extensive global network and become part of an ecosystem that includes Starburst, Boryung, and Axiom Space's executive teams, established aerospace entrepreneurs, investors, corporate partners, customers, academic researchers, and more.</p>
+        <p class="txt txt6">The research and manufacturing capabilities resulting from the program will be further materialized through implementation into Axiom's space infrastructure and will also contribute to spacecraft-related missions.</p>
         <div class="c-cnt">
           <p class="t">Schedule</p>
           <p><s class="sch-s">Application period </s> : April 18 to June 17, 2022</p>
@@ -181,11 +186,12 @@ export default {
   .web { .hide; }
   &:after { .cnt; .wh(100vw,147.87vw); background: url('/images/mo/care-bg1.png') center top; .cover; .abs; .lt(0,-280); z-index: -1; }
   .cont { .tl;
+    .txt { text-align: justify; }
     &.cont1 { .tc;
       .vision { .mb(180);
         .bg-tit { .fs(54); .lh(48); .bold; color:#e3d7cb; .ls(-0.05em); .mb(36); }
         .tit { .fs(40); .lh(60); .medium; .ls(-0.05em); .mb(60); }
-        .txt { .fs(24); .lh(40); .medium; .mb(35); .tl; }
+        .txt { .fs(24); .lh(40); .medium; .mb(35); }
       }
       .divs {
         li { .pb(105); .-box;
@@ -217,13 +223,14 @@ export default {
     }
     &.cont2 { .tl; .p(0,10); .-box;
       .tit { .fs(48); .lh(60); .medium; .ls(-0.05em); .mb(45); }
-      .txt { .fs(24); .lh(40); .medium; .ls(-0.05em); .mb(35); .tl; }
+      .txt { .fs(24); .lh(40); .medium; .ls(-0.05em); .mb(35); }
       .c-cnt { .mt(60);
         p { .fs(24); .bold; .mb(5); .ls(-0.05em);
           s { .ib; .w(145); .rel; .pl(20); .-box;
             &:after { .cnt; .wh(8,8); .bgc(#e3d7cb); .br(50%); .abs; .lt(0,50%); transform: translateY(-50%); }
           }
           &.t { .medium; .lh(26); .-l(#2d2d2f); .-r(#2d2d2f); .ib; .p(0,20); .-box; .mb(20); }
+          &.t + p { text-align: justify; }
         }
       }
       .c-cnt2 p { .medium; .mb(35); }
@@ -261,10 +268,12 @@ export default {
       &.txt2 { transition-delay: 1.7s; }
       &.txt3 { transition-delay: 2.0s; }
       &.txt4 { transition-delay: 2.3s; }
+      &.txt5 { transition-delay: 2.6s; }
+      &.txt6 { transition-delay: 2.9s; }
     }
-    .c-cnt { transition-delay: 2.6s; }
-    .c-cnt2 { transition-delay: 2.9s; }
-    .care-logo { transition-delay: 3.2s; }
+    .c-cnt { transition-delay: 3.3s; }
+    .c-cnt2 { transition-delay: 3.6s; }
+    .care-logo { transition-delay: 3.9s; }
   }
 
   &.ready {

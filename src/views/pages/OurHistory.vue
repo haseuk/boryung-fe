@@ -17,7 +17,7 @@
       <p class="txt">The history of Boryung began in 1957 with the opening of the Boryung Pharmacy in Jongno 5-ga, based on the spirit of the founder Kim Seung-ho, who used to ride his bicycle around the city to get medicines for sick people no matter how hard they were to find.</p>
       <p class="txt">Boryung, which had been in the pharmaceutical wholesale industry, advanced into the pharmaceutical manufacturing in 1963. Boryung’s attempt to invest in the development of vital medicines for patients, rather than being a mere drug manufacturer, laid the foundation for long-term growth in the pharmaceutical business when the company released "Kanarb," the first ARB antihypertensive in South Korea in March 2011.</p>
       <p class="txt">In April 2022, Boryung will hold the first Care in Space (CIS) Challenge to find new opportunities and fulfill its mission to become “an indispensable contributor to human health" in the space era that lies ahead of us.</p>
-      <p class="txt">The founder’s deep devotion with great sincerity to provide “medicine for the sick” has been expanded since 1957 and passed onto out current mission to become an indispensable to human health.</p>
+      <p class="txt">The founder’s deep devotion with great sincerity to provide “medicine for the sick” has been expanded since 1957 and passed onto our current mission to become an indispensable to human health.</p>
       <p class="txt">We kindly ask for your consistent attention to our new challenges and journey under the new name <em>Boryung</em> in 2022.</p>
       <p class="txt">Thank you.</p>
     </div>
@@ -49,7 +49,7 @@ export default {
   h2 { .fs(80); .lh(100); .medium; .ls(-0.05em); .tl; .mb(75); }
   p { .ls(-0.05em); color:#2d2d2f; .medium; }
   .tit { .fs(44); .mb(60); .ls(-0.07em); }
-  .txt { .fs(24); .lh(40); .mb(45);
+  .txt { .fs(24); .lh(40); .mb(45); text-align: justify;
     em { .bold; }
   }
   h2, p { opacity:1; transform: translateY(0); transition: opacity 1s, transform 1s; transition-timing-function: ease-out; }

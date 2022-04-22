@@ -61,7 +61,7 @@ export default {
   }
   .other-link { .w(86%); .pl(21%); .-box; .mt(80);
     li { .wh(100%,63); .rel; .mb(56);
-      &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(5,42);  }
+      &:after { .cnt; .wh(56,20); .contain('/images/mo/arr-r-xl.png'); .abs; .rt(5,42); pointer-events: none; }
       &:last-child:after { .hide; }
       a { .wh(100%,63); .rel;
         &:after { .cnt; .wh(240,63); }
@@ -104,7 +104,7 @@ export default {
     .other-link { .w(385); .pl(0); .mt(0); .abs; .lt(660,400);
       li {
         &:after { .rt(0,42); .hide; }
-        .arrow { .ib; .abs; .rt(0,42); }
+        .arrow { .ib; .abs; .rt(0,42); pointer-events: none; }
         &:hover {
           .arrow { stroke-dasharray: 200; stroke-dashoffset: 200; animation: dash 0.7s linear; animation-fill-mode: both; }
         }

@@ -46,7 +46,6 @@
       </div>
       <div class="c-en">
         The materials on this page are<br class="mo"> only available in Korean.
-
       </div>
     </div>
     <div class="cont cont1" v-else>
